@@ -3,7 +3,7 @@ _Note: This page serves to coalesce development-oriented documentation on the ar
 ## Getting started
 
 [[Accessing Git repository]]  
-[[Compiling LMMS]]
+[[Compiling LMMS]]  
 [[FAQ]]
 
 ## Getting involved

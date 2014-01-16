@@ -1,12 +1,12 @@
 _Note: This page serves to coalesce development-oriented documentation on the architecture of LMMS. The user wiki is located at <http://lmms.sourceforge.net/wiki/>_
 
-## Getting started
+### Getting started ###
 
 [[Accessing Git repository]]  
 [[Compiling LMMS]]  
 [[FAQ]]
 
-## Getting involved
+### Getting involved ###
 If you'd like to help developing LMMS, the following resources might help you getting an idea of what can to be done:
 
 [Issue tracker](https://github.com/LMMS/lmms/issues?state=open)  
@@ -19,7 +19,7 @@ If you have found something you'd like to do, please first consider the projects
 [[Plugin development]]  
 [[Submitting a patch]]
 
-## Contact us
+### Contact us ###
 There are several possibilities to communicate with LMMS developers and users.
 
 **IRC Channel**

@@ -26,7 +26,7 @@ The next step is to stage the changes you've made. To stage a file, run
 $ git add FILENAME
 ```
 
-Then, you have to commit your staged changes. To do so, run
+After that, you have to commit your staged changes. To do so, run
 ```
 $ git commit
 ```

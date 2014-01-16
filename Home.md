@@ -10,7 +10,7 @@ _Note: This page serves to coalesce development-oriented documentation on the ar
 If you'd like to help developing LMMS, the following resources might help you getting an idea of what can to be done:
 
 [Issue tracker](https://github.com/LMMS/lmms/issues?state=open)  
-[[LMMS ToDo (Roadmap)]]  
+[[LMMS ToDo (Roadmap)|Roadmap]]  
 [[Developer Discussion]]
 
 If you have found something you'd like to do, please first consider the projects coding conventions before writing any code or filing a pull request.

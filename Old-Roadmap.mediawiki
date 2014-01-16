@@ -1,4 +1,4 @@
-_Note: This roadmap was transferred from the old wiki at SourceForge. It may contain outdated information that don't apply to the current development state of LMMS any more._
+''Note: This roadmap was transferred from the old wiki at SourceForge. It may contain outdated information that don't apply to the current development state of LMMS any more.''
 
 == 0.4.x series ==
 See [[Roadmap/0.4]] for details.

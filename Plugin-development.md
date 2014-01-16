@@ -11,16 +11,18 @@ Your plugin has to define a plugin meta data structure in the following style:
 	extern "C"
 	{
 
-	plugin::descriptor YourPluginNameHere_plugin_descriptor =
+	Plugin::Descriptor PLUGIN_EXPORT YourPluginNameHere_plugin_descriptor =
 	{
-	       STRINGIFY_PLUGIN_NAME( PLUGIN_NAME ),
+	       STRINGIFY( PLUGIN_NAME ),
 	       "YourPluginNameHere",
 	       QT_TRANSLATE_NOOP( "pluginBrowser",
 		                       "YourPluginDescriptionHere" ),
 	       "YourNameHere <YourEmailAdressHere>",
 	       0x0100,
-	       plugin::INSTRUMENT,
-	       PLUGIN_NAME::findEmbeddedData( "logo.png" )
+	       Plugin::Instrument,
+               new PluginPixmapLoader( "logo" ),
+               NULL,
+               NULL
 	} ;
 
 	}
@@ -34,16 +36,16 @@ LMMS can find your plugin only if you have the following C-style code in your cl
 	{
 
 	// neccessary for getting instance out of shared lib
-	plugin * lmms_plugin_main( void * _data )
+	Plugin * PLUGIN_EXPORT lmms_plugin_main( Model *, void * _data )
 	{
-		return( new yourInstrumentClassNameHere( static_cast<channelTrack *>( _data ) ) )
+		return( new yourInstrumentClassNameHere( static_cast<InstrumentTrack *>( _data ) ) )
 	}
 
 	}
 ```
 Note: This is in the source (.cpp) file for your plugin
 
-### Makefiles ###
+### Makefiles (out of date) ###
 * Copy _Makefile.am_ from another plugin to in your plugin-directory and edit it to fit your needs
 * Edit the _Makefile.am_ in the plugin-base-directory. Add your plugin-directory to the statement `SUBDIRS = `
 * Edit configure.in in lmms-base-directory and add your Makefile to the AC_CONFIG_FILES-list
@@ -51,7 +53,7 @@ Note: This is in the source (.cpp) file for your plugin
 * Run _configure_, _make_ and _make install_
 
 ### Artwork ###
-Create two PNG files. One called "logo.png" which will be displayed as plugin logo in the plugin browser. The other is "artwork.png" which will be the background/wallpaper for your plugin.
+Create two PNG files. One called "logo.png" (48x48 px) which will be displayed as plugin logo in the plugin browser. The other is "artwork.png" (250x250 px) which will be the background/wallpaper for your plugin.
 
 ### Hints ###
 * Do _not_ give the plugin and the class the same name as this causes conflicts of your classname and your plugin namespace - of course you can use compiler's case-sensitivity, e.g. PLUGIN_NAME in Makefile.am is "myplugin" and your class is called "myPlugin"

@@ -1,0 +1,35 @@
+''Note: This roadmap was transferred from the old wiki at SourceForge. It may contain outdated information that doesn't apply to the current development state of LMMS any more.''
+
+*<span style="color:black"> '''Adding auto-save/crash recovery'''
+*<span style="color:gray"> FX mixer  (done)
+**<span style="color:gray"> Mute FX-line  (done)
+**<span style="color:gray"> Per-FX-line rendering  (done)
+*<span style="color:gray"> Better mute/solo for tracks  (done)
+*<span style="color:gray"> Pan-knob for instrument settings widget  (done)
+*<span style="color:gray"> Time-signatures other than 4/4  (done)
+*<span style="color:gray"> Support for third-notes.  Ideally this can be done by changing the minimum division of a beat to be a multiple of three.  (done)
+*<span style="color:gray"> Controllers core  (done)
+**<span style="color:gray"> LFO Controller  (done)
+**<span style="color:gray"> MIDI CC Controller  (done)
+**<span style="color:orange"> '''Peak Controller (partial)'''
+**<span style="color:black"> '''X-Y Controller''' 
+**<span style="color:orange"> '''More options for Controller <-> model-view link  (partial)'''
+***<span style="color:black"> '''Smoothing''' 
+***<span style="color:black"> '''Mapping function'''
+**<span style="color:orange"> '''Complete GUI dialogs and usability  (partial)'''
+*<span style="color:gray"> Integrate new plug-in artwork  (done)
+*<span style="color:gray"> Oxygen icons and GUI updates  (done)
+*<span style="color:gray"> Soundfont2 Player  (done)
+**<span style="color:gray"> Core  (done)
+**<span style="color:gray"> Finish SF2 player GUI  (done)
+*<span style="color:gray"> Unify context-menu-code for all automatable model-views  (done)
+*<span style="color:black"> '''clean-up keyboard and mouse shortcuts'''
+*<span style="color:gray"> Windows support  (done)
+*<span style="color:gray"> Pulse Audio support  (done)
+*<span style="color:gray"> Various bug fixes  (done)
+*<span style="color:gray"> Qt4 stuff  (done)
+**<span style="color:gray"> Remove Qt3-support (done)
+**<span style="color:gray"> Improve Qt4-support (done)
+**<span style="color:gray"> Improve parallelization by introducing worker-threads (done)
+**<span style="color:orange"> '''Better undo-/redo-framework (incomplete)'''
+*<span style="color:gray"> Native VST-support for win32-build (done)

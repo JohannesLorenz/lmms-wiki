@@ -11,7 +11,7 @@ If you'd like to help developing LMMS, the following resources might help you ge
 
 [Issue tracker](https://github.com/LMMS/lmms/issues?state=open)  
 [[LMMS ToDo (Roadmap)|Roadmap]]  
-[[Developer Discussion]]
+([[Developer Discussion]])
 
 If you have found something you'd like to do, please first consider the projects coding conventions before writing any code or filing a pull request.
 

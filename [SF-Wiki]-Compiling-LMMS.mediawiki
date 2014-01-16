@@ -1,0 +1,157 @@
+This is meant to be a basic tutorial on compiling LMMS from source code.
+
+
+= http://a.fsdn.com/con/icons/pr/progit@sf.net/git.logo.gif Installing LMMS from Git =
+
+To install manually from Git (Examples provided assume you're running Debian or Ubuntu GNU/Linux, and that you have '''git''' and '''cmake''' installed):
+
+First you need to clone the Git repository - or update your sources - if you're upgrading from a previous version. The following commands will do this for you inside a newly created folder named "lmms".
+
+ git clone git://lmms.git.sourceforge.net/gitroot/lmms/lmms
+ cd lmms
+ git checkout -b stable-0.4 origin/stable-0.4
+
+Next resolve any unmet dependencies (see section "[[Compiling LMMS#Resolving_dependencies|Resolving dependencies]]" below for more on this topic)
+Then you have to configure LMMS:
+
+ mkdir build target
+ cd build
+ cmake .. -DCMAKE_INSTALL_PREFIX=../target
+
+If this step fails, and you have no multilib on your 64-bit machine, it's looking in the wrong place.  Change back to the main directory of the source and run the command
+
+ sed -i 's/lib64/lib/' cmake/modules/DetectMachine.cmake
+
+and rerun the cmake command prior.
+
+Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise '''"make"''' is just fine. )
+
+ make -j2
+
+Finally you can install LMMS:
+
+ make install
+
+and, of course, run it:
+
+ ../target/bin/lmms
+
+
+== Resolving dependencies ==
+
+To compile LMMS from sources you need several development libraries, from graphical to sound ones. Some are essential and some are optional.
+
+=== Required libraries ===
+
+<!--TODO: Probably want to assume user has knowledge of installing on their system, or just separate these into definite sections.-->
+
+* Qt >= 4.3 libs + development files (Qt 4.4 recommended for optimal performance, Qt 4.5 heavily improves GUI performance) 
+** under Debian based distributions (including Ubuntu) run: 
+ sudo aptitude install libqt4-dev qt4-dev-tools build-essential
+** under Fedora (as root) run:
+ yum -y install git cmake qt-devel gcc 
+* sound file library - for reading and writing files containing sampled audio data
+** under Debian based distributions (including Ubuntu) run: 
+ sudo aptitude install ''libsndfile1-dev''
+** under Fedora (as root) run:
+ yum -y install libsndfile-devel
+
+Next you need to allow LMMS to communicate with your audio hardware, so you have to choose one or more of the following setups and provide corresponding development libraries:
+* [http://www.alsa-project.org/ ALSA] - Advanced Linux Sound Architecture - apart from libs and -dev libs, you need ALSA modules for your soundcard (built-in with 2.6.x kernels) and those modules loaded - see [http://www.alsa-project.org/ http://www.alsa-project.org/] and [http://alsa.opensrc.org/ http://alsa.opensrc.org/] for info - '''ALSA is the recommended audio-interface to use with LMMS'''.
+** under Debian run ''sudo aptitude install libasound2-dev''
+** under Fedora (as root) run ''alsa-libs-devel''
+* [http://jackaudio.org/ JACK] - Jack Audio Connection Kit - a low latency audio server that allows the connection of multiple applications to an audio device (typically an ALSA one), as well as allowing them to share audio between themselves
+** under Debian run ''sudo aptitude install libjack0.100.0-dev libjackasyn-dev''
+** under Fedora (as root) run ''jack-libs-devel''
+* [http://www.libsdl.org/index.php SDL] - Simple Directmedia Layer - a layer that allows LMMS to output it's sound to sound servers like aRts, esd (otherwise you need to kill them ''before'' starting LMMS)
+** under Debian run ''sudo aptitude install libsdl-sound1.2-dev libsdl1.2-dev libsdl-mixer1.2-dev''
+* [http://www.opensound.com/ OSS] - Open Sound System - now replaced by [http://www.alsa-project.org/ ALSA]
+* [http://www.pulseaudio.org/ PulseAudio]
+** under Fedora (as root) run ''pulseaudio-libs-devel''
+
+=== Optional (but strongly recommended) libraries ===
+
+To make use of the full LMMS potential you may need to install some extra libraries. Here is a list of some of them:
+
+* ogg-vorbis libraries - to decode/encode .ogg samples and/or songs
+** under Debian run sudo aptitude install ''libvorbis-dev libvorbisfile3 libvorbisenc2''
+* samplerate conversion tools - to downsample and upsample audio from 4Hz up to 192kHz
+** under Debian run sudo aptitude install ''libsamplerate0-dev''
+* asynchronous library for interfacing with the JACK sound server - to convert programs that do sound input or output via the OSS system into JACK clients by starting them with the jacklaunch command
+* STK library + headers for using STK (Sound Synthesis Toolkit)
+** under Debian run sudo aptitude install ''libstk0-dev stk''
+* WINE + devel-packages for being able to use VST-plugins within LMMS
+** under Debian run sudo aptitude install ''wine-dev libwine-dev libwine''
+* FFTW3 - used by the SpectrumAnalyzer plugin
+** under Debian run sudo aptitude install ''libfftw3-dev''
+* Fluidsynth - required to build the powerful Sf2Player plugin
+** under Debian run sudo aptitude install ''libfluidsynth-dev''
+
+If you don't install all the libraries '''before''' running cmake, you'll receive warnings afterwards. So remove CMakeCache.txt and run cmake again until you get the desired result.
+
+= http://gsmartcontrol.berlios.de/home/images/os_icons/windows.png How to compile LMMS on Windows =
+Note!! This guide is incomplete! I can't get past the libsndfile step.
+
+# install git: http://code.google.com/p/msysgit/downloads/list
+#* select Run Git from the Windows Command Prompt
+#* Use OpenSSH
+#* Use Unix style line endings
+# Now you need to [[Accessing_Git_repository|clone the git repository]].
+#* open command prompt
+#* go to some folder where you want to store your working copy of lmms
+#* then follow the guide to clone lmms. Do not run cmake or try to compile yet.
+# Installing the Dependencies:
+#* '''libsndfile: Unknown. I can't get it to compile for windows in such a way that cmake recognizes it'''
+#* list other dependencies here
+# install cmake: http://www.cmake.org/cmake/resources/software.html
+# add cmake to the path for all users
+# install qt creator
+#* components: make sure mingw and qt are checked
+#* add the qt bin folder and the mingw bin folder to path for all users
+# run qt creator
+#* file->open->navigate to lmms and open CMakeLists.txt
+#* click Run cmake
+
+And you should be good to go! you can test the program with F5 and it will build correctly and automatically set up the debugger. you can also check in your edits with the qtcreator git plugin
+
+
+= Other Notes =
+
+After running cmake you might get the following cmake error:
+
+   CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+   Please set them or make sure they are set and tested correctly in the CMake files:
+   X11_Xft_LIB (ADVANCED)
+      linked by target "remote_zynaddsubfx" in directory /home/kizzo/lmms-work/lmms/plugins/z
+   ynaddsubfx
+
+I forgot exactly how I arrived to this solution: sudo aptitude install libxft-dev libfreetype6-dev .
+
+''(KoenR: had the same issue, but resolved it using sudo aptitude install libxinerama1 libxinerama-dev)''
+
+See also: [[Tuning LMMS-installation]]
+
+= Ubuntu =
+
+Fetch needed packages with:
+
+ sudo apt-get build-dep lmms
+ sudo apt-get install wine-dev
+
+64-bit also asks for:
+
+ sudo apt-get install gcc-multilib g++-multilib
+
+Due to problems with 64-bit winegcc, not everything may compile properly in 64-bit.
+
+= Navigation =
+
+{| style="border: 1px solid black;"
+|-
+| Prev: [[Installation]]
+| Up: [[0.4:Manual]]
+| Next: [[Terms and Conventions]]
+|}
+
+[[Category:0.3-Manual]]
+[[Category:0.4-Manual]]

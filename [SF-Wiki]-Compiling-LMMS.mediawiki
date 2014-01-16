@@ -1,3 +1,5 @@
+''Note: This article was transferred from the old wiki at SourceForge. It may contain outdated information that doesn't apply to the current development state of LMMS any more.''
+
 This is meant to be a basic tutorial on compiling LMMS from source code.
 
 = Installing LMMS from Git =

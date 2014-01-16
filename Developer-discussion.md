@@ -1,0 +1,1 @@
+_From SF Wiki: [New Song Editor](http://lmms.sourceforge.net/wiki/index.php/Developer_Discussion_-_New_Song_Editor)_

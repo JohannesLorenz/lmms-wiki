@@ -24,23 +24,28 @@ For building, you'll also need:
 
 ### Building on Linux
 
-Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create two new directories needed for you build.
+**Note for Ubuntu users:** You may run into problems compiling LMMS on Ubuntu 12.04 or above, as the `ia32-libs` package has been removed from the repositories. See this page for more information: <http://askubuntu.com/questions/107230/what-happened-to-the-ia32-libs-package>
 
+Instructions on compiling and installing LMMS:
+
+1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create two new directories needed for you build.
+```
 	mkdir build target
 	cd build
-
-Then configure LMMS with CMake, using the previously created target directory.
-
+```
+2. Then configure LMMS with CMake, using the previously created target directory.
+```
 	cmake .. -DCMAKE_INSTALL_PREFIX=../target
-
-Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
-
+```
+3. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
+```
 	make -j2
+```
 
-Finally you can install LMMS:
-
+4. Finally you can install LMMS (Optional):
+```
 	make install
-
-and, of course, run it:
+```
+5. and, of course, run it:
 
 	../target/bin/lmms

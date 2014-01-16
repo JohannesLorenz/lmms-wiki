@@ -32,3 +32,8 @@ This list is designated for all people involved in LMMS-development or intereste
 **LMMS-users**
 This list is open for discussion between LMMS-users.  
 <http://lists.sourceforge.net/lists/listinfo/lmms-users>
+
+**Contacting the Maintainer**
+If you want to contact the maintainer of LMMS (e.g. for sending a [[localization|[SF Wiki] Creating a localization]]), use the following e-mail-address:
+
+![](http://lmms.sourceforge.net/graphics/mailaddr_bw.gif)

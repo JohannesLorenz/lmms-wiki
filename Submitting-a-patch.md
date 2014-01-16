@@ -1,6 +1,6 @@
 The common way to contribute code to a project on GitHub is by forking it and creating a pull request after the changes are done. This is the workflow we recommend. 
 
-If you don't have a GitHub account and don't want to register, you may just [create a patch file](#Patch) and send it to us.
+If you don't have a GitHub account and don't want to sign up either, you may just [create a patch file](#Patch) and send it to us.
 
 ## Using GitHub
 ### Fork the official LMMS repository

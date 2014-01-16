@@ -1,1 +1,1 @@
-_From SF Wiki: [New Song Editor](http://lmms.sourceforge.net/wiki/index.php/Developer_Discussion_-_New_Song_Editor)_
+_From SF Wiki: [New Song Editor](http://sourceforge.net/tracker/?func=detail&aid=2759622&group_id=105168&atid=640437)_

@@ -1,0 +1,72 @@
+''Note: This roadmap was transferred from the old wiki at SourceForge. It may contain outdated information that doesn't apply to the current development state of LMMS any more.''
+
+== Features ==
+
+=== Core ===
+
+* ResourcesDB framework:
+** identify files not just by filename but also by various other properties
+** resolve file references (samples, plugins etc.) in projects from other people
+* FX mixer
+** sends
+** surround-support?
+* channel layering support
+* capture support for all audio interfaces
+* heavy improvements to sample track:
+** able to drag and drop samples from the side bar directly into the sample track (creating a new segment where dropped).
+** sample open dialog defaults to 'all files' rather than '*.raw files'.
+** able to stretch or squash samples to fit in a given time.  This could be done e.g. by shift-dragging the end of the sample.  It could also either be a resampling (changing pitch) or some reworking that would keep the pitch.  The ability to crop the sample as currently implemented should not be lost.
+** allow sample loop-points for fitting a sample to a note (a-la FruityLoops)
+** ability to change the start point of a sample.
+** ability to pan the sample track left-to-right and front-to back.
+** position of cloned track below source track
+* project file versioning support
+
+=== GUI ===
+
+* universal resource-browser with intelligent filtering
+* a time-display on the top - being able to switch between bars/beats/quanta and MM:SS:HHth would be very useful too.
+* add vector-mode to automation-editor
+* export as an mp3 file	 
+* develop a classical note-editor or an interface for using widgets from Rosegarden, NoteEdit or similiar	 
+* MIDI autofocus feature
+* master-knob tool
+* LVSL: on host-side create automatableModels for all controls of VST-plugin:
+** possibility to show knobs/faders for all controls (mainly needed for GUI-less VST plugins)
+** all controls become automatable inside LMMS
+** ease saving/loading settings
+
+
+
+== Changes ==
+
+=== Core ===
+* change root note to C5 and increase NumOfOctaves
+* add a spinbox for setting range of pitch knob (like in FLS)
+* improved AudioFileProcessor
+** cross-fade in loop mode
+** ping-pong loop mode
+** pitching with constant sample length
+* generate basic plugin skeleton based on a plugin description file
+
+
+=== GUI ===
+* FLUIQ based GUI
+* re-designed toolbars
+* rewritten setup dialog
+* control-linking: allow unlinking and save linked state
+* show a tiny level meter rather than the fading activity LED
+* Space bar should pause / play the song no matter which window you're in. If you're in a window that this doesn't make sense for (FX mixer), it should play as if you pressed the play button on the song editor.
+* improvements on piano-roll such as
+** Show the piano note being pressed downwards when clicked on or a note plays in the piano roll
+** Select notes by region, but don't keep that region box around. It's getting in the way of dragging the notes left. Instead, just have those notes selected.
+** This also gives you the chance to allow multiple selection by holding down CTRL when selecting, and selecting individual notes by clicking on them.  These are fairly common tool paradigms that I think we need to obey.
+** You can then also do away with the 'move' tool by allowing the selected notes to be dragged by clicking on one note in the selection and dragging it.  Space and non-selected notes can still forget the old selection and pick up the new.
+** Because you don't have a region any more, the newly pasted notes can be set as selected. This then allows the user to grab them, even if some have gone on top of other notes, and move them as a whole.
+* use QGraphicView framework for TCO/track/trackContainer views
+
+
+== Non-trivial bug fixes ==
+
+* make sample-track-TCOs also play when starting to play beyond their start-position
+* When you press the button to the right of a channel in the pattern editor, the button that plays the channel, instead of playing the root note, it plays the A5, the default root note.

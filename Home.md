@@ -11,6 +11,7 @@ If you'd like to help developing LMMS, the following resources might help you ge
 
 [Issue tracker](https://github.com/LMMS/lmms/issues?state=open)  
 [[LMMS ToDo (Roadmap)|Roadmap]]  
+[[Creating a localization]]  
 ([[Developer Discussion]])
 
 If you have found something you'd like to do, please refer to the following articles on how to contribute:
@@ -34,6 +35,6 @@ This list is open for discussion between LMMS-users.
 <http://lists.sourceforge.net/lists/listinfo/lmms-users>
 
 **Contacting the Maintainer**
-If you want to contact the maintainer of LMMS (e.g. for sending a [[localization|[SF Wiki] Creating a localization]]), use the following e-mail-address:
+If you want to contact the maintainer of LMMS (e.g. for sending a [[localization|Creating a localization]]), use the following e-mail-address:
 
 ![](http://lmms.sourceforge.net/graphics/mailaddr_bw.gif)

@@ -45,12 +45,10 @@ LMMS can find your plugin only if you have the following C-style code in your cl
 ```
 Note: This is in the source (.cpp) file for your plugin
 
-### Makefiles (out of date) ###
-* Copy _Makefile.am_ from another plugin to in your plugin-directory and edit it to fit your needs
-* Edit the _Makefile.am_ in the plugin-base-directory. Add your plugin-directory to the statement `SUBDIRS = `
-* Edit configure.in in lmms-base-directory and add your Makefile to the AC_CONFIG_FILES-list
-* Run _aclocal_, _autoconf_ and _automake_ in the lmms-base-directory
-* Run _configure_, _make_ and _make install_
+### Makefiles ###
+* Copy CMakeLists.txt from another plugin source directory and edit it to fit your plugin
+* Edit CMakelists.txt in the plugins directory, add a ``` ADD_SUBDIRECTORY(your_plugin_dir) ``` line
+* Run cmake, make, make install (anything else? make clean first?)
 
 ### Artwork ###
 Create two PNG files. One called "logo.png" (48x48 px) which will be displayed as plugin logo in the plugin browser. The other is "artwork.png" (250x250 px) which will be the background/wallpaper for your plugin.

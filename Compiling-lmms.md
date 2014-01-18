@@ -5,6 +5,8 @@ The following dependencies should be met before compiling LMMS:
 Required libraries:
 
 * Qt >= 4.3.0 with devel-files (4.4.x recommended)
+* libsndfile
+* fftw3
 
 Optional, but strongly recommended (with devel-files each):
 * JACK
@@ -12,11 +14,9 @@ Optional, but strongly recommended (with devel-files each):
 * libalsa
 * SDL
 * libsamplerate (>= 0.1.7)
-* libsndfile
 * WINE
 * stk, libstk
 * libfluidsynth
-* fftw3
 
 For building, you'll also need:
 * GCC with g++

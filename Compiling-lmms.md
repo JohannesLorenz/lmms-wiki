@@ -11,13 +11,14 @@ Required libraries:
 Optional, but strongly recommended (with devel-files each):
 * libvorbis & libogg
 * libsamplerate (>= 0.1.7)
-* WINE
+* wine
 * stk, libstk
 * libfluidsynth
 * JACK
 * SDL
 * libalsa
 * libportaudio
+
 The last four dependencies on the list are necessary for audio playback. You may provide one or more of those, depending on what sound server(s) you'd like to use with LMMS.
 
 For building, you'll also need:

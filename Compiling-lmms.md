@@ -4,26 +4,27 @@ The following dependencies should be met before compiling LMMS:
 
 Required libraries:
 
-* Qt >= 4.3.0 with devel-files (4.4.x recommended)
-* libsndfile
-* fftw3
+* [Qt](http://qt-project.org/) >= 4.3.0 with devel-files (4.4.x recommended)
+* [libsndfile](http://www.mega-nerd.com/libsndfile/)
+* [FFTW3](http://www.fftw.org/)
 
 Optional, but strongly recommended (with devel-files each):
-* libvorbis & libogg
-* libsamplerate (>= 0.1.7)
-* wine
-* stk, libstk
-* libfluidsynth
-* JACK
-* SDL
-* libalsa
-* libportaudio
+* [libvorbis](http://xiph.org/vorbis/)
+* [libogg](http://xiph.org/ogg/)
+* [libsamplerate](http://www.mega-nerd.com/SRC/) (>= 0.1.7)
+* [wine](http://www.winehq.org/)
+* [libstk](http://www.libstk.net/)
+* [libfluidsynth](http://fluidsynth.sourceforge.net/)
+* [JACK](http://jackaudio.org/)
+* [SDL](http://www.libsdl.org/)
+* [libalsa](http://www.alsa-project.org/)
+* [libportaudio](http://www.portaudio.com/)
 
 The last four dependencies on the list are necessary for audio playback. You may provide one or more of those, depending on what sound server(s) you'd like to use with LMMS.
 
 For building, you'll also need:
-* GCC with g++
-* CMake (>= 2.4.5 required, >=2.6.0 recommended)
+* [GCC](http://gcc.gnu.org/) with g++
+* [CMake](http://www.cmake.org/) (>= 2.4.5 required, >=2.6.0 recommended)
 
 For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
 ```

@@ -24,6 +24,11 @@ For building, you'll also need:
 * GCC with g++
 * CMake (>= 2.4.5 required, >=2.6.0 recommended)
 
+For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
+```
+sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev libfluidsynth-dev portaudio19-dev wine-dev
+```
+
 ### Building on Linux
 
 **Note for Ubuntu users:** You may run into problems compiling LMMS on Ubuntu 12.04 or above, as the `ia32-libs` package has been removed from the repositories. See this page for more information: <http://askubuntu.com/questions/107230/what-happened-to-the-ia32-libs-package>

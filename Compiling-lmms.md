@@ -26,7 +26,9 @@ For building, you'll also need:
 
 For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
 ```
-sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev libfluidsynth-dev portaudio19-dev wine-dev
+sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev \
+libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev \
+libfluidsynth-dev portaudio19-dev wine-dev
 ```
 
 ### Building on Linux

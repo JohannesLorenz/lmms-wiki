@@ -15,6 +15,7 @@ Optional, but strongly recommended (with devel-files each):
 * [wine](http://www.winehq.org/)
 * [libstk](http://www.libstk.net/)
 * [libfluidsynth](http://fluidsynth.sourceforge.net/)
+* [libfreetype](http://www.freetype.org/) (Needed by ZynAddSubFx)
 * [JACK](http://jackaudio.org/)
 * [SDL](http://www.libsdl.org/)
 * [libalsa](http://www.alsa-project.org/)
@@ -28,9 +29,13 @@ For building, you'll also need:
 
 For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
 ```
+sudo apt-get build-dep lmms
+```
+Or, manually:
+```
 sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev \
 libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev \
-libfluidsynth-dev portaudio19-dev wine-dev
+libfluidsynth-dev portaudio19-dev libfreetype6-dev wine-dev
 ```
 
 ### Building on Linux

@@ -56,6 +56,15 @@ $ git push
 In order for your changes to be merged into the official repository, you should create a pull request.
 You can find instructions on this topic in GitHubs article [Using Pull Requests](https://help.github.com/articles/using-pull-requests).
 
+### Further commits
+Later on, if you want to make another commit, you must first (preferably
+before making changes) rebase your fork on the upstream, ie. sync it
+with the main LMMS repository. You can do this with the command:
+
+```
+$ git pull --rebase git://github.com/LMMS/lmms.git stable-0.4
+```
+
 ## Using only a patch file <a name="Patch"></a>
 To have your changes applied without using GitHub, create a patch file containing your changes by running
 ```

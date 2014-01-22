@@ -10,12 +10,11 @@ This must be only done once. Follow [this tutorial](https://help.github.com/arti
 ### Fork the official LMMS repository
 Do these steps:
 * Go to [our github home](https://github.com/LMMS/lmms) and hit the fork button (top right).
-* Clone your fork:
+* Type
 ```
 $ git clone git@github.com:yourusername/lmms.git
 ```
-
-For more instructions on how to fork LMMS, see the GitHub help article [Fork A Repo](https://help.github.com/articles/fork-a-repo). Having forked LMMS and cloned it to your hard drive, you can start working on the code.
+to clone your fork. More information in [this github article](https://help.github.com/articles/fork-a-repo). Having forked LMMS and cloned it to your hard drive, you can start working on the code.
 
 ### Pushing your changes to GitHub
 After you made your changes and implemented your ideas, it's about time to push them to your git repository.
@@ -51,10 +50,16 @@ $ git push
 ```
 
 ### Contributing your changes
-(TODO: write down what exactly has to be done)
 
-In order for your changes to be merged into the official repository, you should create a pull request.
-You can find instructions on this topic in GitHubs article [Using Pull Requests](https://help.github.com/articles/using-pull-requests).
+Pull requests request the admins to pull from your branch. For more help, read [this github article](https://help.github.com/articles/using-pull-requests).
+
+You need to do these steps:
+* Go to your projects github site
+* Click on "Pull Requests"
+* Hit "New pull request"
+* Check whether the diffs make sense
+* Click on "Click here to create a pull request for this comparison"
+* Click on "Send pull request"
 
 ### Further commits
 Later on, if you want to make another commit, you must first (preferably

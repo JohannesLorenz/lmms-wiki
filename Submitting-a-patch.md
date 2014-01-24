@@ -1,78 +1,83 @@
 The common way to contribute code to a project on GitHub is by forking it and creating a pull request after the changes are done. This is the workflow we recommend. 
 
-If you don't have a GitHub account and don't want to sign up neither, you may just [create a patch file](#Patch) and send it to us.
+If you don't have a GitHub account and don't want to sign up neither, you may just create a patch file and send it to us. Follow the instructions at the very [bottom of this page](#Patch) on how to do this.
 
 ## Using GitHub
+If you have already set up a SSH key and forked our repo, first update your local copy as described [below](#update) and then continue with [step 2](#push).
+### 1. Initial setup (must be done only once)
 
-### Add an SSH key
-This must be only done once. Follow [this tutorial](https://help.github.com/articles/generating-ssh-keys) to generate and add SSH keys to your github account.
+#### 1.1 Add an SSH key
+Follow [this tutorial](https://help.github.com/articles/generating-ssh-keys) to generate and add SSH keys to your github account.
 
-### Fork the official LMMS repository
-Do these steps:
-* Go to [our github home](https://github.com/LMMS/lmms) and hit the fork button (top right).
-* Type
-```
+#### 1.2 Fork the official LMMS repository
+First, visit [our repo's main site](https://github.com/LMMS/lmms) and hit the fork button on the top right.  
+After you have done that, clone your newly created fork and configure remotes by running:
+```sh
+# Clone your repo into the subdirectory "lmms"
 $ git clone git@github.com:yourusername/lmms.git
+# Switch to new source root directory
+$ cd lmms
+# Add upstream repository for later updates
+$ git remote add upstream git://github.com/LMMS/lmms.git
 ```
-to clone your fork. More information in [this github article](https://help.github.com/articles/fork-a-repo). Having forked LMMS and cloned it to your hard drive, you can start working on the code.
+For more information on how to fork LMMS, see the GitHub help article [Fork A Repo](https://help.github.com/articles/fork-a-repo).  
+Having forked LMMS and cloned it to your hard drive, you can start working on the code.
 
-### Pushing your changes to GitHub
+<a name="push" />
+### 2. Pushing your changes to GitHub 
 After you made your changes and implemented your ideas, it's about time to push them to your git repository.
 For doing this, you may use the command line, as it's explained below, or use `git gui` to open a graphical user interface, which can make things a lot easier if you're uncomfortable with the command line.
 
-#### Reviewing your changes
+#### 2.1 Reviewing your changes
 You can list all changed files by running
-```
+```sh
 $ git status
 ```
 inside the source root directory. A more detailed view on what exactly has been changed is provided by
-```
+```sh
 $ git diff
 ```
 
-#### Staging and committing
+#### 2.2 Staging and committing
 The next step is to stage the changes you've made. To stage a file, run
-```
+```sh
 $ git add FILENAME
 ```
 
 After that, you have to commit your staged changes. To do so, run
-```
+```sh
 $ git commit
 ```
-You'll be asked to enter a commit message to summarize what you did. The staging area can also be skipped by just typing
-```
-$ git commit -a
-```
-This way all changes you made will automatically be staged and committed. Finally, push your commit:
-```
-$ git push
+You'll be asked to enter a commit message to summarize what you did. Finally, push your commit:
+```sh
+$ git push origin
 ```
 
-### Contributing your changes
+### 3. Contributing your changes
 
 Pull requests request the admins to pull from your branch. For more help, read [this github article](https://help.github.com/articles/using-pull-requests).
 
 You need to do these steps:
-* Go to your projects github site
-* Click on "Pull Requests"
-* Hit "New pull request"
+* Go to your fork's GitHub site
+* Click on *Pull Requests*
+* Hit *New pull request*
 * Check whether the diffs make sense
-* Click on "Click here to create a pull request for this comparison"
-* Click on "Send pull request"
+* Click on *Click here to create a pull request for this comparison*
+* Click on *Send pull request*
 
-### Further commits
-Later on, if you want to make another commit, you must first (preferably
-before making changes) rebase your fork on the upstream, ie. sync it
-with the main LMMS repository. You can do this with the command:
+<a name="update"></a>
+### 4. Pull in upstream changes
+Later on, if you want to make another commit, you must first (preferably before making changes) rebase your fork on the upstream, i.e. sync it with the main LMMS repository. You can do this with the command:
 
-```
-$ git pull --rebase git://github.com/LMMS/lmms.git stable-0.4
+```sh
+$ git rebase upstream/stable-0.4
 ```
 
 ## Using only a patch file <a name="Patch"></a>
 To have your changes applied without using GitHub, create a patch file containing your changes by running
-```
+```sh
+# Fetches new changes without modifying your files
+$ git fetch upstream
 $ git diff > my-patch-for-lmms.diff
 ```
 in the source root directory. Now you have a patch file we can easily apply. Just [contact us](https://github.com/LMMS/lmms/wiki#contact-us) about it.

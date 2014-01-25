@@ -37,6 +37,7 @@ sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev \
 libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev \
 libfluidsynth-dev portaudio19-dev libfreetype6-dev wine-dev
 ```
+On 64 bits systems you may also have to install gcc-multilib and g++-multilib.
 
 ### Building on Linux
 

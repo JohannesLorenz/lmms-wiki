@@ -67,17 +67,16 @@ You need to do these steps:
 
 <a name="update"></a>
 ### 4. Pull in upstream changes
-Later on, if you want to make another commit, you must first (preferably before making changes) rebase your fork on the upstream, i.e. sync it with the main LMMS repository. You can do this with the command:
+Later on, if you want to make another commit, you must first (preferably before making changes) rebase your fork on the upstream, i.e. sync it with the main LMMS repository. You can do this with the commands:
 
 ```sh
+$ git fetch upstream # Fetches new changes without modifying your files
 $ git rebase upstream/stable-0.4
 ```
 
 ## Using only a patch file <a name="Patch"></a>
 To have your changes applied without using GitHub, create a patch file containing your changes by running
 ```sh
-# Fetches new changes without modifying your files
-$ git fetch upstream
 $ git diff > my-patch-for-lmms.diff
 ```
 in the source root directory. Now you have a patch file we can easily apply. Just [contact us](https://github.com/LMMS/lmms/wiki#contact-us) about it.

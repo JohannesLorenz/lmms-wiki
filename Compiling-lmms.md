@@ -64,5 +64,6 @@ Instructions on compiling and installing LMMS:
 	make install
 ```
 5. and, of course, run it:
-
+```
 	../target/bin/lmms
+```

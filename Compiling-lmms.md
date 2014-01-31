@@ -46,24 +46,28 @@ On 64 bits systems you may also have to `sudo apt-get install libc6-dev-i386 gcc
 Instructions on compiling and installing LMMS:
 
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create two new directories needed for you build.
-```
-	mkdir build target
-	cd build
-```
-2. Then configure LMMS with CMake, using the previously created target directory.
-```
-	cmake .. -DCMAKE_INSTALL_PREFIX=../target
-```
-3. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
-```
-	make -j2
-```
 
+    ```
+    mkdir build target
+    cd build
+    ```
+2. Then configure LMMS with CMake, using the previously created target directory.
+
+    ```
+    cmake .. -DCMAKE_INSTALL_PREFIX=../target
+    ```
+3. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
+
+    ```
+    make -j2
+    ```
 4. Finally you can install LMMS (Optional):
-```
-	make install
-```
+
+    ```
+    make install
+    ```
 5. and, of course, run it:
-```
-	../target/bin/lmms
-```
+
+    ```
+    ../target/bin/lmms
+    ```

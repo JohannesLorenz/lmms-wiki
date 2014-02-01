@@ -1,3 +1,4 @@
+```
 ==27042== Memcheck, a memory error detector
 ==27042== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
 ==27042== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
@@ -12238,3 +12239,4 @@ Couldn't create MIDI-client, neither with ALSA nor with OSS. Will use dummy-MIDI
 ==27042== For counts of detected and suppressed errors, rerun with: -v
 ==27042== Use --track-origins=yes to see where uninitialised values come from
 ==27042== ERROR SUMMARY: 1204 errors from 859 contexts (suppressed: 2 from 2)
+```

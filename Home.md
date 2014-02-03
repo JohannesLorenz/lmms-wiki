@@ -50,5 +50,3 @@ http://img18.imageshack.us/img18/1241/textxpatch.png [[Submitting a patch]]<br>
 http://img709.imageshack.us/img709/1681/addit.png [[Plugin development tutorial|Plugin Development]]<br>
 http://img27.imageshack.us/img27/3229/configlanguage.png [[Creating a localization]]<br>
 --->
-
-mikobuntu test

@@ -7,7 +7,7 @@ So, you finally decided to contribute a plugin to LMMS! That's cool! First of al
 
 ### Plugin meta data ###
 Your plugin has to define a plugin meta data structure in the following style:
-```
+```C++
 	extern "C"
 	{
 
@@ -31,7 +31,7 @@ Note: This should be in the source (.cpp) file of your plugin.
 
 ### Plugin callback ###
 LMMS can find your plugin only if you have the following C-style code in your class file. This code is called by LMMS everytime a new instance of the plugin is created.
-```
+```C++
 	extern "C"
 	{
 
@@ -51,7 +51,7 @@ Note: This is in the source (.cpp) file for your plugin
 * Run cmake, make, make install (anything else? make clean first?)
 
 ### Artwork ###
-Create two PNG files. One called "logo.png" (48x48 px) which will be displayed as plugin logo in the plugin browser. The other is "artwork.png" (250x250 px) which will be the background/wallpaper for your plugin.
+Create two PNG files. One called _logo.png_ (48x48 px) which will be displayed as plugin logo in the plugin browser. The other is _artwork.png_ (250x250 px) which will be the background/wallpaper for your plugin.
 
 ### Hints ###
-* Do _not_ give the plugin and the class the same name as this causes conflicts of your classname and your plugin namespace - of course you can use compiler's case-sensitivity, e.g. PLUGIN_NAME in Makefile.am is "myplugin" and your class is called "myPlugin"
+* Do __not__ give the plugin and the class the same name as this causes conflicts of your classname and your plugin namespace - of course you can use compiler's case-sensitivity, e.g. PLUGIN_NAME in _Makefile.am_ is "myplugin" and your class is called "myPlugin"

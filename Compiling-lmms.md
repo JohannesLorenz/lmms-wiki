@@ -45,29 +45,43 @@ On 64 bits systems you may also have to `sudo apt-get install libc6-dev-i386 gcc
 
 Instructions on compiling and installing LMMS:
 
-1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create two new directories needed for you build.
+1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directoriy which is needed for you build.
 
     ```
-    mkdir build target
+    mkdir build
+    ```
+2. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
+
+    ```
+    mkdir target
+    ```
+3. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
+
+    ```
     cd build
-    ```
-2. Then configure LMMS with CMake, using the previously created target directory.
-
-    ```
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
-3. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
+4. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
 
     ```
     make -j2
     ```
-4. Finally you can install LMMS (Optional):
+5. Finally, install LMMS (This is **not optional**, you **must** run this command for LMMS to function properly):
 
     ```
     make install
     ```
-5. and, of course, run it:
+6. and, of course, run it:
 
     ```
     ../target/bin/lmms
     ```
+7. Note: If you have an older version of LMMS installed, you may run into some GUI problems and glitches. This is because LMMS 1.0.0 is no longer compatible with old 0.4.x themes. To solve the problem: 
+
+    - Run LMMS
+
+    - Go to settings and select the folder tab 
+
+    - Clear the "artwork directory" setting so that it's empty 
+
+    - Restart LMMS

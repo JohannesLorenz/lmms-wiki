@@ -10,4 +10,5 @@ It is programmed with C++ and Qt4 and you can visit the [[LMMS Roadmap|Roadmap]]
 A fast and easy way to, not only manipulate the frequencies of many notes at once, but many buttons and knobs can also be manipulated as well using the Automation tracks. Automation is a beautiful thing in that it 'automatically' adjusts to the settings that you created. Another way of thinking about Automation, let's say volume manipulation, is that it can automatically fade in from adjusting the dB levels from 0 to 7 (most commonly). So after you set the Automation track to adjust the volume levels from 0dB to 7dB, when you play back from the playlist, it will automatically fade in the volume for the Volume Controller (or volume knob) as the song progresses during play-back. Refer to the Documentation for more information.
 
 **I installed the latest version of LMMS, but the interface is broken! Why?** 
+
 You most likely have an older version of LMMS installed in parallel, and thus still have the older LMMS theme selected in the settings. Older themes (from 0.4.x and older) no longer work in LMMS 1.0.0 and newer. You need to set LMMS to use the new default theme.

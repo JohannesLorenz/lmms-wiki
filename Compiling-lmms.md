@@ -45,6 +45,12 @@ On 64 bits systems you may also have to `sudo apt-get install libc6-dev-i386 gcc
 
 Instructions on compiling and installing LMMS:
 
+1. If you're building a version newer than 1.0, you have to fetch the ZynAddSubFx source first:
+
+    ```
+    git submodule update --init --recursive
+    ```
+
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
     ```

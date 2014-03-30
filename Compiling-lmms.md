@@ -29,7 +29,7 @@ For building, you'll also need:
 
 For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
 ```
-sudo apt-get build-dep lmms
+sudo apt-get build-dep lmms && sudo apt-get install libfltk1.3-dev
 ```
 Or, manually:
 ```

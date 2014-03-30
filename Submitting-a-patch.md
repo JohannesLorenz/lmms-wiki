@@ -71,7 +71,7 @@ Later on, if you want to make another commit, you must first (preferably before 
 
 ```sh
 $ git fetch upstream # Fetches new changes without modifying your files
-$ git rebase upstream/stable-0.4
+$ git rebase upstream/stable-1.0 # Replace stable-1.0 with the branch you're targeting (e.g. master)
 ```
 
 ## Using only a patch file <a name="Patch"></a>

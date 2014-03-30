@@ -45,7 +45,7 @@ On 64 bits systems you may also have to `sudo apt-get install libc6-dev-i386 gcc
 
 Instructions on compiling and installing LMMS:
 
-1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directoriy which is needed for you build.
+1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
     ```
     mkdir build
@@ -66,7 +66,7 @@ Instructions on compiling and installing LMMS:
     ```
     make -j2
     ```
-5. Finally, install LMMS (This is **not optional**, you **must** run this command for LMMS to function properly):
+5. Finally, install LMMS into the previously specified directory:
 
     ```
     make install

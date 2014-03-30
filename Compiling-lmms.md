@@ -28,11 +28,11 @@ For building, you'll also need:
 * [CMake](http://www.cmake.org/) (>= 2.4.5 required, >=2.6.0 recommended)
 
 For example, for installing all dependencies on Ubuntu 12.04 (or later) at once, run:
-```
+```sh
 sudo apt-get build-dep lmms && sudo apt-get install libfltk1.3-dev
 ```
 Or, manually:
-```
+```sh
 sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev \
 libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev \
 libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev
@@ -47,39 +47,39 @@ Instructions on compiling and installing LMMS:
 
 1. If you're building a version newer than 1.0, you have to fetch the ZynAddSubFx source first:
 
-    ```
+    ```sh
     git submodule update --init --recursive
     ```
 
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
-    ```
+    ```sh
     mkdir build
     ```
 2. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
 
-    ```
+    ```sh
     mkdir target
     ```
 3. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
 
-    ```
+    ```sh
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
 4. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
 
-    ```
+    ```sh
     make -j2
     ```
 5. Finally, install LMMS into the previously specified directory:
 
-    ```
+    ```sh
     make install
     ```
 6. and, of course, run it:
 
-    ```
+    ```sh
     ../target/bin/lmms
     ```
 7. Note: If you have an older version of LMMS installed, you may run into some GUI problems and glitches. This is because LMMS 1.0.0 is no longer compatible with old 0.4.x themes. To solve the problem: 

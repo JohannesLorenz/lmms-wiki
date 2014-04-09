@@ -10,7 +10,7 @@ If you have already set up a SSH key and forked our repo, first update your loca
 Follow [this tutorial](https://help.github.com/articles/generating-ssh-keys) to generate and add SSH keys to your github account.
 
 #### 1.2 Fork the official LMMS repository
-First, visit [our repo's main site](https://github.com/LMMS/lmms) and hit the fork button on the top right.  
+First, fork LMMS by clicking [here](https://github.com/LMMS/lmms/fork). 
 After you have done that, clone your newly created fork and configure remotes by running:
 ```sh
 # Clone your repo into the subdirectory "lmms"

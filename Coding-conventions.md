@@ -6,7 +6,7 @@ Mixing tabs and spaces is evil. Please, please, please make sure your editor is 
 **Try to limit line lengths to 80 characters**  
 Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do.
 
-**Do not prefix header guard macros with an underscore** 
+**Do not prefix header guard macros with an underscore**  
 Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.
 
 **All kind of types (class names, enums, structs) begin with an upper case letter**  

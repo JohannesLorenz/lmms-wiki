@@ -2,7 +2,6 @@
 
 ### Prerequisites
  1. Download the latest source code per [Accessing git repository](Accessing-git-repository) page
- 2. Fulfill all requirements listed in the [Compiling lmms](Compiling-lmms) page
 
 ### Installing packages for cross compiling
  1. Add Toby's cross-compiling repo
@@ -19,10 +18,10 @@ sudo add-apt-repository ppa:tobydox/mingw
 sudo apt-get update
    ```
 
- 1. Install additional dependencies
+ 1. Install build requirements
 
    ```sh
-sudo apt-get install nsis cloog-isl libmpc2 mingw32
+sudo apt-get install build-essential cmake nsis cloog-isl libmpc2 mingw32
    ```
    > **Note:** Newer distros have replaced `libmpc2` with `libmpc3` requiring the download of libmpc2 manually [here]( http://packages.ubuntu.com/saucy/libmpc2) and install using `sudo dpkg -i`
 
@@ -37,7 +36,7 @@ mingw32-x-libsamplerate mingw32-x-pkgconfig mingw32-x-pthreads \
 mingw32-x-binutils mingw32-x-gcc
    ```
 
- 1. And again for mingw64 (500MB)
+ 1. Optionally, again for mingw64 (500MB)
 
    ```sh
 sudo apt-get install mingw64-x-qt mingw64-x-sdl mingw64-x-libvorbis \

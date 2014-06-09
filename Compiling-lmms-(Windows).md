@@ -2,6 +2,7 @@
 
 ### Prerequisites
  1. Download the latest source code per [Accessing git repository](Accessing-git-repository) page
+ 2. Fulfill all requirements listed in the [Compiling lmms](Compiling-lmms) page
 
 ### Installing packages for cross compiling
  1. Add Toby's cross-compiling repo

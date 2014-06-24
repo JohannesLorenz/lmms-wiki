@@ -34,8 +34,9 @@ sudo apt-get build-dep lmms && sudo apt-get install libfltk1.3-dev
 Or, manually:
 ```sh
 sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev fftw3-dev \
-libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev libstk0-dev \
-libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev libxinerama-dev libxft-dev
+libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev \
+libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev \
+libxinerama-dev libxft-dev
 ```
 On 64 bits systems you may also have to `sudo apt-get install libc6-dev-i386 gcc-multilib g++-multilib`. (Fixes *"compilation terminated.  winegcc: g++ failed"*)
 

@@ -95,7 +95,8 @@ bzr branch ubuntu:utopic/lmms lmms
 bzr merge-upstream  ../relativePath/to/program.tar.gz
 # OR, if the watch file is done right
 bzr merge-upstream
-# This will automatically download and merge the upstream based on what is in the watch file.
+# This will automatically download and merge the upstream based on what is
+# in the watch file.
 
 # Then, edit the debian/changelog & commit your changes with:
 bzr commit

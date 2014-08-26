@@ -103,7 +103,8 @@ bzr commit
 #                               TO TEST YOUR FIX                           #
 ############################################################################
 
-# This command is one I have needed occasionally... but it isn't as good as below
+# This command is one I have needed occasionally... but it isn't as good as 
+# below
 # bzr builddeb -S --package-merge
 
 # Run this and THEN pbuilder each time you change something to test the fix
@@ -135,7 +136,7 @@ bzr commit
 #                      PUSHING THE CHANGE TO LAUNCHPAD                     #
 ############################################################################
 
-# bzr push lp:/~<user>/ubuntu/<dist>/<package>/<specific package with version #>
+# bzr push lp:/~<user>/ubuntu/<dist>/<package>/<specific package with ver #>
 bzr push lp:/~israeldahl/ubuntu/trusty/lmms/lmms_1.1.0
 # If you are hosting your code on lp it is different
 # bzr push lp:<project-name>

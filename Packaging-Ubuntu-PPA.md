@@ -1,4 +1,4 @@
-> **Note:** This is a BZR packaging cheatsheet from a community member.  This wiki (and all wikis in general) are maintained by community members.  If find this article useful and can improve upon it, please do!
+> **Note:** This is a BZR packaging cheatsheet from a community member.  This wiki (and all wikis in general) are maintained by community members.  If you find this article useful and can improve upon it, please do!
 
 ---
 

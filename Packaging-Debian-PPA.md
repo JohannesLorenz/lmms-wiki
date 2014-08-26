@@ -49,7 +49,8 @@ gpg --decrypt gpg.txt
 # Make your ssh key
 ssh-keygen -t rsa
 # Choose default filename, enter a password 2x
-# Open the file (pico doesn't copy the comment on the end)... so use gedit (maybe others)
+# Open the file (pico doesn't copy the comment on the end)... so use 
+# gedit (maybe others)
 gedit ~/.ssh/id_rsa.pub
 goto  https://launchpad.net/~/+editsshkeys
 

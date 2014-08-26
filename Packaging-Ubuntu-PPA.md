@@ -1,6 +1,7 @@
 Israel's Cheat Sheet
 
 ```bash
+WARNING: THIS IS NOT A SCRIPT, IT IS A CHEAT-SHEET
 ############################################################################
 #                    GET SET UP TO USE BZR && PBUILDER                     #
 ############################################################################

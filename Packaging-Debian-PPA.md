@@ -6,7 +6,8 @@ Israel's Cheat Sheet
 ############################################################################
 
 # Install all the things you need
-sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file packaging-dev
+sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb \
+apt-file packaging-dev
 
 # Make your gpg key
 gpg --gen-key

@@ -57,17 +57,17 @@ goto  https://launchpad.net/~/+editsshkeys
 
 # Configure bzr
 # bzr whoami "Name <email@host.org>
-bzr whoami "Doctor Who <thedoctor@lmms.com>"
+bzr whoami "John Doe <jdoe@lmms.io>"
 # bzr launchpad-login lpname
-bzr launchpad-login drwho
+bzr launchpad-login jdoe
 
 # Configure BASH
 gedit ~/.bashrc
 # Add these lines
 # export DEBFULLNAME="Name Comment(optional)"
-export DEBFULLNAME="Doctor Who"
-# export DEBEMAIL="email@ghost.org"
-export DEBEMAIL="dummy@lmms.io"
+export DEBFULLNAME="John Doe"
+# export DEBEMAIL="email@host.org"
+export DEBEMAIL="jdoe@lmms.io"
 # Restart bash
 source ~/.bashrc
 

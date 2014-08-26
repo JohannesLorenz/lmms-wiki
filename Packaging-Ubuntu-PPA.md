@@ -1,6 +1,6 @@
 Israel's Cheat Sheet
 
-**Note:** This is a BZR packaging cheatsheet from a community member.  This wiki is maintained by community members.  If you can improve this article, please do.
+**Note:** This is a BZR packaging cheatsheet from a community member.  This wiki (and all wikis in general) are maintained by community members.  If find this article useful and can improve upon it, please do!
 
 ```bash
 WARNING: THIS IS NOT A SCRIPT, THIS IS A CHEAT-SHEET

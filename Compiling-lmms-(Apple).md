@@ -108,6 +108,6 @@
  1. Reproduce the crash.  Hit CTRL+C.  Type this command from lldb for a backtrace:
 
     ```sh
-    thread back-trace all
+    thread backtrace all
     ```
  1. Post the back-trace to https://gist.github.com/ and paste the link to a new bug report.

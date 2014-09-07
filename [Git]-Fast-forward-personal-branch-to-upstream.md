@@ -21,8 +21,8 @@ pushed to your github repo, you'll have to do a forced push next time
 git push
 ```
 
-The script for `stable-1.1` is the same, just replace `master` with
-`stable-1.1`. The only thing to be careful about here is to always run the
-correct script or you'll risk totally messing up your local branch...
+The script for `stable-x.x` is the same, just replace `master` with
+`stable-x.x`. The only thing to be careful about here is to always run the
+correct branch name or you'll risk totally messing up your local branch...
 but as long as you keep track of where your changes are headed towards,
 you should be fine.

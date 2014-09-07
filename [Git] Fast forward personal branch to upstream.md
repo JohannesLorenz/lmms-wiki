@@ -2,6 +2,7 @@ Assuming you've already cloned your branch to your computer using:
 
 ```
 git clone -b master http://github.com/my_personal_branch/lmms
+cd lmms
 ```
 
 

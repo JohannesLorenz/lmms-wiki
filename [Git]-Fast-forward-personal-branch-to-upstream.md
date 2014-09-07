@@ -27,4 +27,4 @@ correct branch name or you'll risk totally messing up your local branch...
 but as long as you keep track of where your changes are headed towards,
 you should be fine.
 
-*Adapted from a conversation with Vesa :jack_o_lantern:*
+*Adapted from a conversation with Vesa (@diizy) :jack_o_lantern:*

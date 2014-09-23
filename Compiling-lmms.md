@@ -38,11 +38,16 @@ libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-de
 libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev \
 libxinerama-dev libxft-dev
 ```
+
+On some Debian based system if you receive `No rule to make target /usr/bin/fluid`, install fluid manually:
+```sh
+sudo apt-get install fluid
+```
+
 On 64 bits systems you may also have to:
 ```sh
 sudo apt-get install libc6-dev-i386 gcc-multilib g++-multilib
 ```
-
  (Fixes *"compilation terminated.  winegcc: g++ failed"*)
 
 ### Building on Linux

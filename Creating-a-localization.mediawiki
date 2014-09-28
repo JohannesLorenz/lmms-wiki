@@ -1,4 +1,4 @@
-=== Why creating a localization? ===
+=== Why create a localization? ===
 Of course everybody prefers to use a program using their own language. Therefore localizations for each language are required. As LMMS isn't available in all common languages yet, there's still a need for people creating or just improving translations of LMMS. If you're sure, there's no translation for your language yet, you can start up by creating a new one. The following short article will guide you through the process of creating a translation.
 
 === How to create a translation ===

@@ -1,4 +1,4 @@
-_Note: This page serves to coalesce development-oriented documentation on the architecture of LMMS. The user wiki is located at <http://lmms.sourceforge.net/wiki/>_
+_Note: This page serves to coalesce development-oriented documentation on the architecture of LMMS. The user wiki is located at <http://lmms.io/documentation/>_
 
 ### Getting started ###
 

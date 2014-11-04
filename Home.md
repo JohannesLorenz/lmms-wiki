@@ -12,7 +12,8 @@ If you'd like to help developing LMMS, the following resources might help you ge
 [Issue tracker](https://github.com/LMMS/lmms/issues?state=open)  
 [[LMMS ToDo (Roadmap)|Roadmap]]  
 [[Creating a localization]]  
-([[Developer Discussion]])
+([[Developer Discussion]])  
+[Get Involved Page (lmms.io)](https://lmms.io/get-involved/)
 
 If you have found something you'd like to do, please refer to the following articles on how to contribute:
 

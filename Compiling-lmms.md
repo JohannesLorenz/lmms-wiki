@@ -73,6 +73,9 @@ Instructions on compiling and installing LMMS:
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
+
+   **Note:**  On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`
+
 4. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
 
     ```sh

@@ -36,7 +36,7 @@ Or, manually:
 sudo apt-get install build-essential cmake libqt4-dev libsndfile-dev libfftw3-dev \
 libvorbis-dev libogg-dev libasound2-dev libjack-dev libsdl-dev libsamplerate0-dev \
 libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev \
-libxinerama-dev libxft-dev
+libxinerama-dev libxft-dev libgig-dev
 ```
 
 On some Debian based system if you receive `No rule to make target /usr/bin/fluid`, install fluid manually:

@@ -67,7 +67,7 @@ If you're familiar with C++ and Qt4 and are looking for some way to contribute t
 ==== Modifications ====
 
 * '''Interface''':
-*** ability to have one bar at a different length or time signature (break whitin pattern).
+*** ability to have one bar at a different length or time signature (break within pattern).
 ** Support for rhythm swing (groove/shuffle)
 ** FX Mixer: when grabbing a volume slider and moving it, it should tell you what dB you're moving it to. It's important to be able to see details in some status bar or tool tip so users can know what settings they are applying.
 ** When adding a new channel, the channel name becomes "Default" or "Default Preset". It would be better if the default channel name was the name of the instrument or plugin. "Default TripleOscillator" or "Sine" would be acceptable.

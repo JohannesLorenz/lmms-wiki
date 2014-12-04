@@ -32,8 +32,8 @@ sudo apt-get install build-essential cmake nsis cloog-isl libmpc2 mingw32
 sudo apt-get install mingw32-x-qt mingw32-x-sdl mingw32-x-libvorbis \
 mingw32-x-fluidsynth mingw32-x-stk mingw32-x-glib2 mingw32-x-portaudio \
 mingw32-x-libsndfile mingw32-x-fftw mingw32-x-flac mingw32-x-fltk \
-mingw32-x-libsamplerate mingw32-x-pkgconfig mingw32-x-binutils \
-mingw32-x-gcc mingw32-x-runtime
+mingw32-x-libgig mingw32-x-libsamplerate mingw32-x-pkgconfig \
+mingw32-x-binutils mingw32-x-gcc mingw32-x-runtime
    ```
 
  1. Optionally, again for mingw64 (500MB)
@@ -42,8 +42,8 @@ mingw32-x-gcc mingw32-x-runtime
 sudo apt-get install mingw64-x-qt mingw64-x-sdl mingw64-x-libvorbis \
 mingw64-x-fluidsynth mingw64-x-stk mingw64-x-glib2 mingw64-x-portaudio \
 mingw64-x-libsndfile mingw64-x-fftw mingw64-x-flac mingw64-x-fltk \
-mingw64-x-libsamplerate mingw64-x-pkgconfig mingw64-x-binutils \
-mingw64-x-gcc mingw64-x-runtime
+mingw64-x-libgig mingw64-x-libsamplerate mingw64-x-pkgconfig \
+mingw64-x-binutils mingw64-x-gcc mingw64-x-runtime 
    ```
 
  1. Prepare the mingw build environment

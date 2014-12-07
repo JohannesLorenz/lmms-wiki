@@ -5,11 +5,16 @@ $ git clone -b master http://github.com/my_personal_branch/lmms
 $ cd lmms
 ```
 
+Add an upstream remote by doing:
+
+```bash
+$ git remote add upstream https://github.com/LMMS/lmms.git
+```
 
 To sync a personal `master` based branch with the upstream `master` branch:
 
 ```bash
-$ git pull --rebase git://github.com/LMMS/lmms.git master
+$ git pull --rebase upstream master
 ```
 
 > This simply pulls everything from the upstream master branch and if there

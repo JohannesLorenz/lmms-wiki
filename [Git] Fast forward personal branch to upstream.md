@@ -17,7 +17,7 @@ To sync a personal `master` based branch with the upstream `master` branch:
 $ git pull --rebase upstream master
 ```
 
-> This simply pulls everything from the upstream master branch and if there
+This simply pulls everything from the upstream master branch and if there
 are changes in the currently selected local branch, they get applied on
 top of upstream. Bear in mind, if you do that after you've already
 pushed to your github repo, you'll have to do a forced push next time

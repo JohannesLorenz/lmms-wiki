@@ -12,7 +12,7 @@ Header guards should not begin with an underscore. Identifiers that begin with a
 **All kind of types (class names, enums, structs) begin with an upper case letter**  
 Example:
 
-```
+```c++
 	class ResourcesDB;
 	enum MyEnum
 	{
@@ -25,30 +25,30 @@ Example:
 
 **Variable and method names begin with a lower case letter**  
 Example:
-```
+```c++
 	void doThis(int a);
 	int myLocalVariable;
 ```
 
 **Member variables are prefixed with "m_"**  
 Example:
-```
+```c++
 	Knob * m_chordRangeKnob;
 ```
 **Function parameters are _not_ prefixed with "_" anymore**  
 Example:
-```
+```c++
 	void clearS16Buffer(outputSampleType* outbuf, Uint32 frames)
 ```
 **Infix operators (=, +, -, *, /, etc.) should have a space before and after**  
 Example:
-```
+```c++
 	sub_note_key_base = base_note_key + octave_cnt * NOTES_PER_OCTAVE;
 ```
 
 **`if`, `else`, `for`, and `while` should use explicit blocking**  
 Example:
-```
+```c++
 	if(m_sample > 0)
 	{
 	       --m_sample;
@@ -56,7 +56,7 @@ Example:
 ```
 **Make sure, there're 4 lines of space between functions declarations**  
 Example:
-```
+```c++
 	void foo(int bar)
 	{
 		...
@@ -72,7 +72,7 @@ Example:
 ```
 **Return without paranthesis (NEW)**  
 Example:
-```
+```c++
 	int foo()
 	{
 		return bar;
@@ -81,7 +81,7 @@ Example:
 
 **Standard true/false constants (NEW)**  
 Example:
-```
+```c++
 	if(a == true)
 	{
 		b = false;

@@ -26,7 +26,7 @@ Example:
 **Variable and method names begin with a lower case letter**  
 Example:
 ```
-	void doThis( int a );
+	void doThis(int a);
 	int myLocalVariable;
 ```
 
@@ -38,22 +38,18 @@ Example:
 **Function parameters are _not_ prefixed with "_" anymore**  
 Example:
 ```
-	void clearS16Buffer( outputSampleType * outbuf, Uint32 frames )
+	void clearS16Buffer(outputSampleType* outbuf, Uint32 frames)
 ```
 **Infix operators (=, +, -, *, /, etc.) should have a space before and after**  
 Example:
 ```
 	sub_note_key_base = base_note_key + octave_cnt * NOTES_PER_OCTAVE;
 ```
-**Open parenthesis "(" should be followed by a space and close parenthesis ")" should be preceded by a space, except for function calls without parameters**  
-Example:
-```
-	if( ( _n->baseNote() && m_arpDirection == OFF ) || _n->arpNote() )
-```
+
 **`if`, `else`, `for`, and `while` should use explicit blocking**  
 Example:
 ```
-	if( m_sample > 0 )
+	if(m_sample > 0)
 	{
 	       --m_sample;
 	}
@@ -61,7 +57,7 @@ Example:
 **Make sure, there're 4 lines of space between functions declarations**  
 Example:
 ```
-	void foo( int bar )
+	void foo(int bar)
 	{
 		...
 	}
@@ -69,7 +65,7 @@ Example:
 	
 	
 	
-	void bar( int foo )
+	void bar(int foo)
 	{
 		...
 	}
@@ -86,7 +82,7 @@ Example:
 **Standard true/false constants (NEW)**  
 Example:
 ```
-	if( a == true )
+	if(a == true)
 	{
 		b = false;
 	}

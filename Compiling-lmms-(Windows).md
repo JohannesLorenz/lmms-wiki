@@ -50,7 +50,6 @@ cd
 cd lmms
 mkdir build target
 cd build
-chmod u+x ../build_mingw*
    ```
 
 ### Compile

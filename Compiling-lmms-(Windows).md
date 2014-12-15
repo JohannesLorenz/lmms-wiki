@@ -1,4 +1,4 @@
-> **Note:**  This tutorial was written for Ubuntu 12.04 x64.  The steps may work on other Debian-based distros with slight adjustments.
+> **Note:**  This tutorial is written for Ubuntu 14.04 x64.  The steps may work on other Debian-based distros with slight adjustments.
 
 ### Prerequisites
  1. Download the latest source code per [Accessing git repository](Accessing-git-repository) page
@@ -18,10 +18,9 @@ sudo apt-get update
  1. Install build requirements
 
    ```sh
-sudo apt-get install build-essential cmake nsis cloog-isl libmpc2 mingw32
+sudo apt-get install build-essential cmake nsis cloog-isl libmpc3 mingw32
    ```
-   > **Note:** Newer distros have replaced `libmpc2` with `libmpc3` requiring the download of libmpc2 manually [here]( http://packages.ubuntu.com/saucy/libmpc2) and install using `sudo dpkg -i`
-
+   > **Note:** Older may require `libmpc2` in the place of `libmpc3`
  
  1. Fetch the mingw32 dependencies (700MB)
 

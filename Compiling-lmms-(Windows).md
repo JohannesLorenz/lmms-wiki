@@ -10,9 +10,6 @@
 sudo add-apt-repository ppa:tobydox/mingw
    ```
 
- > **Note:**  Newer distros may need `trusty` changed to `precise` in 
-`/etc/apt/sources.list.d/tobydox-mingw-trusty.list`
-
  1. Refresh available packages
    ```sh
 sudo apt-get update

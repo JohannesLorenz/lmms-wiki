@@ -43,7 +43,7 @@ mingw64-x-libgig mingw64-x-libsamplerate mingw64-x-pkgconfig \
 mingw64-x-binutils mingw64-x-gcc mingw64-x-runtime 
    ```
 
- 1. Prepare the mingw build environment
+ 1. Prepare the mingw build environment (assumes you've already cloned the repo per [Accessing git repository](Accessing-git-repository) page)
 
    ```sh
 cd

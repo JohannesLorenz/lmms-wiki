@@ -3,6 +3,7 @@
 **The following dependencies should be met before compiling LMMS:**
 
 * [Apple OS X Mavericks 10.9](https://itunes.apple.com/app/id675248567) (5.3GB)
+ * Note, see *Compiling: Step 4* for building against older systems
 * [MacPorts](https://www.macports.org/install.php)
 * [Xcode 5.1](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities (Xcode Preferences menu, Downloads tab, Command Line Tools, Install)
@@ -56,18 +57,24 @@
     ```sh
     mkdir build
     ```
-2. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
+1. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
     <br>*Warning, If you choose something other than `$HOME/lmms/target` you will later need to modify data/create_apple_installer.sh.*
 
     ```sh
     mkdir target
     ```
-3. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
+1. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
 
     ```sh
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
+
+    > **Note:** To build for older versions (i.e. OS X 10.7), you will need the corresponding XCode SDK installed.
+    > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.7`
+    > * To get the XCode visit [developer.apple.com](https://developer.apple.com/downloads/index.action?name=Xcode#).
+    > * For XCode 3.6 dmg (Lion) click here [xcode_4.6.3.dmg](http://adcdownload.apple.com/Developer_Tools/xcode_4.6.3/xcode4630916281a.dmg)
+
 4. Now compile LMMS:
     <br>*Warning, "make -j2" -- commonly used on Linux -- won't work here.*
 

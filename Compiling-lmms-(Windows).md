@@ -85,5 +85,6 @@ make package
 
    ```sh
 rm CMakeCache.txt
+rm -rf CMakeFiles
    ```
  1. Repeat [Compile](#compile) and [Package](#package) steps again for `../build_mingw64`

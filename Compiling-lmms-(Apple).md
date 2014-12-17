@@ -70,7 +70,7 @@
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
 
-    > **Note:** To build for older versions (i.e. OS X 10.7), you will need the corresponding XCode SDK installed.
+    > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding XCode SDK installed.
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`
 
 4. Now compile LMMS:

@@ -32,8 +32,6 @@
     libsndfile libvorbis portaudio qt4-mac pkgconfig
     ```
 
-    *Note, VST, OpulenZ are not available at this time.*
-
 3. Fetch and compile STK (required for Mallets)
 
     ```sh

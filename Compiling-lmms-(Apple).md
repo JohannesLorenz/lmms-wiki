@@ -45,16 +45,11 @@
 
 **Instructions on compiling and installing LMMS:**
 
-1. If you're building a version newer than 1.0, you have to fetch the ZynAddSubFx source first:
-
-    ```sh
-    cd lmms
-    git submodule update --init --recursive
-    ```
-
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
     ```sh
+    cd
+    cd lmms
     mkdir build
     ```
 1. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.

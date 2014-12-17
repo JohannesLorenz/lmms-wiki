@@ -71,9 +71,7 @@
     ```
 
     > **Note:** To build for older versions (i.e. OS X 10.7), you will need the corresponding XCode SDK installed.
-    > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.7`
-    > * To get the XCode visit [developer.apple.com](https://developer.apple.com/downloads/index.action?name=Xcode#).
-    > * For XCode 3.6 dmg (Lion) click here [xcode_4.6.3.dmg](http://adcdownload.apple.com/Developer_Tools/xcode_4.6.3/xcode4630916281a.dmg)
+    > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`
 
 4. Now compile LMMS:
     <br>*Warning, "make -j2" -- commonly used on Linux -- won't work here.*

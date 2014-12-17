@@ -11,13 +11,13 @@
 **Fetching requirements using MacPorts**
 *See also [Compiling lmms (Linux)](Compiling-lmms)*
 
-1. If this is your first time running XCode, install the command line tools and accept the license agreement:
+1. If this is your first time running Xcode, install the command line tools and accept the license agreement:
 
    ```sh
    sudo xcode-select --install
    sudo xcodebuild -license
    ```
-   > **Note:** Alternately, you may install the command line tools via **Applications, XCode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
+   > **Note:** Alternately, you may install the command line tools via **Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
 1. Update the list of available port repositories:
 
    ```sh
@@ -72,7 +72,7 @@
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
 
-    > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding XCode SDK installed.
+    > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding Xcode SDK installed.
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`
 
 4. Now compile LMMS:

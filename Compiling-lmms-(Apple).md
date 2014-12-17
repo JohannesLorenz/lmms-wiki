@@ -38,9 +38,9 @@
 
     ```sh
     cd
-    curl https://ccrma.stanford.edu/software/stk/release/stk-4.4.4.tar.gz > ~/stk-4.4.4.tar.gz
-    gunzip -c stk-4.4.4.tar.gz | tar xopf -
-    cd stk-4.4.4
+    curl https://ccrma.stanford.edu/software/stk/release/stk-4.5.0.tar.gz > ~/stk-4.5.0.tar.gz
+    gunzip -c stk-4.5.0.tar.gz | tar xopf -
+    cd stk-4.5.0
     sudo cp include/*.h /opt/local/include
     ./configure
     cd src

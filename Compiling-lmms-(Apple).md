@@ -6,12 +6,12 @@
  * Note, see *Compiling: Step 4* for building against older systems
 * [MacPorts](https://www.macports.org/install.php)
 * [Xcode 5.1](https://itunes.apple.com/app/id497799835) (2.2GB)
-* Xcode Command Line Utilities (Xcode Preferences menu, Downloads tab, Command Line Tools, Install)
+* Xcode Command Line Utilities
 
 **Fetching requirements using MacPorts**
 *See also [Compiling lmms (Linux)](Compiling-lmms)*
 
-1. If this is your first time running XCode, install the command line tools and accept the license agreement
+1. If this is your first time running XCode, install the command line tools and accept the license agreement, or alternately via: Applications, XCode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install.
 
    ```sh
    sudo xcode-select --install

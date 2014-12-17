@@ -11,12 +11,13 @@
 **Fetching requirements using MacPorts**
 *See also [Compiling lmms (Linux)](Compiling-lmms)*
 
-1. If this is your first time running XCode, install the command line tools and accept the license agreement, or alternately via: Applications, XCode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install.
+1. If this is your first time running XCode, install the command line tools and accept the license agreement:
 
    ```sh
    sudo xcode-select --install
    sudo xcodebuild -license
    ```
+   > **Note:** Alternately, you may install the command line tools via **Applications, XCode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
 1. Update the list of available port repositories:
 
    ```sh

@@ -54,6 +54,12 @@ Example:
 	       --m_sample;
 	}
 ```
+**If you can comfortably fit the block on one line, then it's acceptable to format it like this:**
+```c++
+	if(m_sample > 0) { --m_sample; }
+```
+...but note that the braces must always be included!
+
 **Make sure, there're 4 lines of space between functions declarations**  
 Example:
 ```c++
@@ -87,5 +93,13 @@ Example:
 		b = false;
 	}
 ```
+
+**Ternary operators: generally, you should only use them when it makes sense, when it makes the code more streamlined or more readable. If you have to use long ternary expressions that don't fit on one line, they should be formatted like this:**
+```c++
+	a = condition
+		? value
+		: otherValue;
+```
+However, if the expressions are very long or convoluted, consider using if/else blocks instead.
 
 In general, please make a bit of an effort to try to keep things looking the way they already do. Individual creativity is good, but coordinated creativity gets things done faster.

@@ -76,7 +76,7 @@ Example:
 		...
 	}
 ```
-**Return without paranthesis (NEW)**  
+**Return without parenthesis (NEW)**  
 Example:
 ```c++
 	int foo()

@@ -2,10 +2,9 @@
 
 **The following dependencies should be met before compiling LMMS:**
 
-* [Apple OS X Mavericks 10.9](https://itunes.apple.com/app/id675248567) (5.3GB)
- * Note, see *Compiling: Step 4* for building against older systems
+* [Apple OS X Lion, Mountain Lion, Mavericks or Yosemite](https://itunes.apple.com/app/id675248567) (5.3GB)
 * [MacPorts](https://www.macports.org/install.php)
-* [Xcode 5.1](https://itunes.apple.com/app/id497799835) (2.2GB)
+* [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities
 
 **Fetching requirements using MacPorts**
@@ -92,7 +91,7 @@
    ![image](https://cloud.githubusercontent.com/assets/6345473/2587591/79b3ea50-ba25-11e3-8513-a61085528a6d.png)
    <br>*You may copy this to Applications or run directly from the Desktop*
 
-8. Optionally, you may wish to package this into a DMG:
+8. Optionally, you may wish to package this into a DMG (FIXME Lion has issues with DMG artwork, etc):
     
     ```sh
     ~/Desktop/create_apple_dmg.sh

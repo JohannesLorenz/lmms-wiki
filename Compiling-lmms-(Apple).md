@@ -2,7 +2,7 @@
 
 **The following dependencies should be met before compiling LMMS:**
 
-* [Apple OS X Lion, Mountain Lion, Mavericks or Yosemite](https://itunes.apple.com/app/id675248567) (5.3GB)
+* [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
 * [MacPorts](https://www.macports.org/install.php)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities

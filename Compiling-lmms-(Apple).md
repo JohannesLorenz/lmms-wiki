@@ -46,6 +46,8 @@
     sudo cp libstk.a /opt/local/lib
     ```
 
+4. Fetch and compile libgig (FIXME)
+
 ### Compiling
 
 **Instructions on compiling and installing LMMS:**

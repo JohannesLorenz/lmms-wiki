@@ -1,7 +1,7 @@
 Assuming you've already cloned your branch to your computer using:
 
 ```bash
-$ git clone -b master http://github.com/my_personal_branch/lmms
+$ git clone -b master http://github.com/my_personal_repository/lmms
 $ cd lmms
 ```
 

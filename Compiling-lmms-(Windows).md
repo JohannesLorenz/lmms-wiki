@@ -4,7 +4,7 @@
  1. Download the latest source code per [Accessing git repository](Accessing-git-repository) page
 
 ### Installing packages for cross compiling
- 1. Add Toby's cross-compiling repo for your Ubuntu platform
+ 1. Add Toby's cross-compiling repo for your Ubuntu build platform
 
    ```sh
 # For Ubuntu 12.04 "Precise"

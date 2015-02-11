@@ -4,10 +4,14 @@
  1. Download the latest source code per [Accessing git repository](Accessing-git-repository) page
 
 ### Installing packages for cross compiling
- 1. Add Toby's cross-compiling repo
+ 1. Add Toby's cross-compiling repo for your Ubuntu platform
 
    ```sh
-sudo add-apt-repository ppa:tobydox/mingw
+# For Ubuntu 12.04 "Precise"
+sudo add-apt-repository ppa:tobydox/mingw-x-precise
+
+# For Ubuntu 14.04 "Trusty"
+sudo add-apt-repository ppa:tobydox/mingw-x-trusty
    ```
 
  1. Refresh available packages

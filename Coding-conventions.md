@@ -96,7 +96,7 @@ Example:
 
 **Ternary operators: generally, you should only use them when it makes sense, when it makes the code more streamlined or more readable. If you have to use long ternary expressions that don't fit on one line, they should be formatted like this:**
 ```c++
-	a = condition
+	a == condition
 		? value
 		: otherValue;
 ```

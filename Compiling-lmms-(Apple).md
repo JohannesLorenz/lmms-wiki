@@ -106,6 +106,7 @@
    -DCMAKE_BUILD_TYPE=Debug
    ```
  1. Clean the build environment
+
    ```sh
    make clean
    rm -rf CMakeCache.txt

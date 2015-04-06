@@ -100,16 +100,16 @@
     ![image](https://cloud.githubusercontent.com/assets/6345473/2587649/06a5d634-ba27-11e3-941b-0dab79ff3f8f.png)
 
 ### Debugging LMMS OSX
- 1. Re-run cmake configure step with the following additional parameter:
-
-   ```sh
-   -DCMAKE_BUILD_TYPE=Debug
-   ```
  1. Clean the build environment
 
    ```sh
    make clean
    rm -rf CMakeCache.txt
+   ```
+ 1. Re-run cmake configure step with the following additional parameter:
+
+   ```sh
+   -DCMAKE_BUILD_TYPE=Debug
    ```
  1. Re-run the `make install` step
  1. Launch LMMS with the lldb debugger.  You will be prompted for your password.

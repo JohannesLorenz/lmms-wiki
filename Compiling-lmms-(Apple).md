@@ -106,10 +106,10 @@
    make clean
    rm -rf CMakeCache.txt
    ```
- 1. Re-run cmake configure step with the following additional parameter:
+ 1. Re-run cmake configure step with the following additional parameters:
 
    ```sh
-   -DCMAKE_BUILD_TYPE=Debug
+   -DCMAKE_BUILD_TYPE=Debug -DWANT_SWH=OFF
    ```
  1. Re-run the `make install` step
  1. Launch LMMS with the lldb debugger.  You will be prompted for your password.

@@ -105,6 +105,11 @@
    ```sh
    -DCMAKE_BUILD_TYPE=Debug
    ```
+ 1. Clean the build environment
+   ```sh
+   make clean
+   rm -rf CMakeCache.txt
+   ```
  1. Re-run the `make install` step
  1. Launch LMMS with the lldb debugger.  You will be prompted for your password.
 

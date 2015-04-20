@@ -1,1 +1,0 @@
-_From SF Wiki: [New Song Editor](http://sourceforge.net/tracker/?func=detail&aid=2759622&group_id=105168&atid=640437)_

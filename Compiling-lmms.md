@@ -75,7 +75,8 @@ Instructions on compiling and installing LMMS:
     ```
 
    **Note:**  On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`
-   **Note:** For debugging LMMS, you will have to pass the debug flag into cmake per ` -DCMAKE_BUILD_TYPE=DEBUG`
+
+   **Note:** For debugging pass the debug flag into cmake ` -DCMAKE_BUILD_TYPE=DEBUG`
 
 4. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
 

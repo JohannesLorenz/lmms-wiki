@@ -24,7 +24,7 @@ sudo apt-get update
    ```sh
 sudo apt-get install build-essential cmake nsis cloog-isl libmpc3 mingw32
    ```
-   > **Note:** Older may require `libmpc2` in the place of `libmpc3`
+   > **Note:** Older systems may require `libmpc2` in the place of `libmpc3`
  
  1. Fetch the mingw32 dependencies (700MB)
 

@@ -1,7 +1,7 @@
 Everybody has their own favorite "style" for writing code, however, in the interest of making the codebase easier to maintain, we request that the following conventions be observed. Code that is lifted from other projects does not need to be modified to match these rules – no need to fix what isn't broken.
 
 **All indentation is performed using tabs.**  
-Mixing tabs and spaces is evil. Please, please, please make sure your editor is configured to use tabs.
+Mixing tabs and spaces is evil. Please, please, please make sure your editor is configured to use tabs.  Instructions for QtCreator can be [found here](https://github.com/LMMS/lmms/pull/2033#issuecomment-98895801).
 
 **Try to limit line lengths to 80 characters**  
 Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do.

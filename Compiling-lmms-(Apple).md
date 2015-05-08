@@ -17,35 +17,28 @@
    sudo xcodebuild -license
    ```
    > **Note:** Alternately, you may install the command line tools via **Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
-1. Update the list of available port repositories:
+1. Update the collection of available port definitions:
 
    ```sh
    sudo port selfupdate
    ```
 
-2. Fetch all available dependencies:
+1. 
+  1. Install LMMS and all of its dependencies automatically:
 
     ```sh
-    sudo port -v install cmake fftw-3-single fltk \
-    fluidsynth jack libogg libsamplerate libsdl \
-    libsndfile libvorbis portaudio qt4-mac pkgconfig
+    sudo port install lmms
     ```
 
-3. Fetch and compile STK (required for Mallets)
+    The LMMS application bundle will be in your MacPorts applications folder, which is /Applications/MacPorts unless you changed it.
+
+  1. Alternately, if you would like to use MacPorts only to get the dependencies and compile LMMS from source manually:
 
     ```sh
-    cd
-    curl https://ccrma.stanford.edu/software/stk/release/stk-4.5.0.tar.gz > ~/stk-4.5.0.tar.gz
-    gunzip -c stk-4.5.0.tar.gz | tar xopf -
-    cd stk-4.5.0
-    sudo cp include/*.h /opt/local/include
-    ./configure
-    cd src
-    make
-    sudo cp libstk.a /opt/local/lib
+    sudo port install cmake fftw-3-single fltk \
+    fluidsynth jack libgig libogg libsamplerate libsdl \
+    libsndfile libvorbis portaudio qt4-mac stk pkgconfig
     ```
-
-4. Fetch and compile libgig (FIXME)
 
 ### Compiling
 
@@ -58,13 +51,12 @@
     cd lmms
     mkdir build
     ```
-1. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
-    <br>*Warning, If you choose something other than `$HOME/lmms/target` you will later need to modify data/create_apple_installer.sh.*
+1. Optionally, you can also create a "target" directory, or you can install LMMS to any *empty* directory of your choice.
 
     ```sh
     mkdir target
     ```
-1. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
+1. Then configure LMMS with CMake, using the previously created target directory (or any *empty* directory of your choice, in which case just replace "../target" with the directory you want to use).
 
     ```sh
     cd build
@@ -74,24 +66,34 @@
     > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding Xcode SDK installed.
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`
 
-4. Now compile LMMS:
+1. Now compile LMMS:
     > **Note:** `make -j2`, commonly used on Linux, won't work here.
 
     ```sh
     make
     ```
-5. Finally, install LMMS into the previously specified directory (this will bundle it to the desktop as well)
+
+1. Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the LMMS application bundle):
+
+    ```sh
+    cd
+    curl -O https://ccrma.stanford.edu/software/stk/release/stk-4.5.0.tar.gz
+    tar xopzf stk-4.5.0.tar.gz
+    ```
+
+1. Finally, install LMMS into the previously specified directory:
 
     ```sh
     make install
     ```
-6. This will automatically bundle it to the Desktop.
+
+1. This will automatically create an application bundle on the Desktop.
    ![image](https://cloud.githubusercontent.com/assets/6345473/2878829/dfc7c7ca-d461-11e3-991d-163e9b7e91ae.png)
 
    ![image](https://cloud.githubusercontent.com/assets/6345473/2587591/79b3ea50-ba25-11e3-8513-a61085528a6d.png)
-   <br>*You may copy this to Applications or run directly from the Desktop*
+   <br>*You may copy this to Applications or run it directly from the Desktop*
 
-8. Optionally, you may wish to package this into a DMG (FIXME Lion has issues with DMG artwork, etc):
+1. Optionally, you may wish to package this into a DMG (FIXME Lion has issues with DMG artwork, etc):
     
     ```sh
     ~/Desktop/create_apple_dmg.sh

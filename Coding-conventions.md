@@ -60,22 +60,6 @@ Example:
 ```
 ...but note that the braces must always be included!
 
-**Make sure, there're 4 lines of space between functions declarations**  
-Example:
-```c++
-	void foo(int bar)
-	{
-		...
-	}
-	
-	
-	
-	
-	void bar(int foo)
-	{
-		...
-	}
-```
 **Return without parenthesis (NEW)**  
 Example:
 ```c++

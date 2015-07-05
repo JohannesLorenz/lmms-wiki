@@ -68,11 +68,11 @@ make
    ```
 
    > **Note:** Debian users may receive `VST-instrument hoster : not found`.  Please try:
-
-   ```bash
-   rm CMakeCache.txt
-   export PATH=$PATH:/usr/lib/i386-linux-gnu/wine/bin
-   ```
+   >
+   > ```bash
+   > rm CMakeCache.txt
+   > export PATH=$PATH:/usr/lib/i386-linux-gnu/wine/bin
+   > ```
 
 ### Package
 

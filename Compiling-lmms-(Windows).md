@@ -67,6 +67,13 @@ make
 # Note:  If you receive "Error 2" At 42%, try running make again
    ```
 
+   > **Note:** Debian users may receive `VST-instrument hoster : not found`.  Please try:
+
+   ```bash
+   rm CMakeCache.txt
+   export PATH=$PATH:/usr/lib/i386-linux-gnu/wine/bin
+   ```
+
 ### Package
 
  1. Creates the Windows installer package

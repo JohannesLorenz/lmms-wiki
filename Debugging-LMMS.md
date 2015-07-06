@@ -27,7 +27,7 @@ Program received signal SIGSEGV, Segmentation fault.
 (gdb) 
 ```
 
-Generally, the most useful bit of debugging information you can obtain here is a stack trace, which illustrates the exact code path the program took which led to the crash. To do that, type 'backtrace' at the prompt and hit enter.
+Generally, the most useful bit of debugging information you can obtain here is a stack trace, which illustrates the exact code path the program took that led to the crash. To do that, type 'backtrace' at the prompt and hit enter.
 
 ```
 (gdb) backtrace
@@ -43,15 +43,15 @@ Generally, the most useful bit of debugging information you can obtain here is a
 [...]
 ```
 
-From here, you can either follow the stack trace info and look at the code surrounding the area where the crash occurred to see what the issue may be, or you can copy+paste the entire back trace and share it on the issue tracker.
+From here, you can either open a text editor and look at the code surrounding the areas mentioned in the stack trace to see what the issue may be, or you can copy+paste the entire back trace and share it on the issue tracker.
 
-If your error is that lmms hangs without crashing, you can open the debugging console once lmms hangs and press `ctrl+c` to pause execution. Then enter "thread apply all backtrace" into the gdb prompt to get a back trace for *all* of the running threads (as it's usually more than just one thread that's responsible for a hang).
+If your error is that lmms hangs *without* crashing (i.e. it becomes "unresponsive" to mouse presses or key presses), you can open the debugging console once lmms hangs and press `ctrl+c` to pause execution. Then enter "thread apply all backtrace" into the gdb prompt to get a back trace for *all* of the running threads (as it's usually more than just one thread that's responsible for a hang).
 
 ## Debugging with Valgrind
 
 Another useful tool for debugging is a memory error detector called [valgrind](http://valgrind.org/). As with gdb, this can usually be obtained through your system's package manager, if you have one, e.g. `# apt-get install valgrind`.
 
-Whereas gdb is great for showing you exactly where a crash occurs and allows for inspecting the value of each variable at that point, Valgrind is usually helpful in finding the things that might have led up to the error, such as forgetting to initialize a variable or attempting to free a piece of memory that's already been freed.
+Whereas gdb is great for showing you exactly where a crash occurs and allows for inspecting the value of each variable at that point, Valgrind is more helpful in finding the things that might have led up to the error, such as forgetting to initialize a variable or attempting to free a piece of memory that's already been freed.
 
 The basic usage of valgrind is pretty simple. Just `cd ../target/bin` and run `valgrind ./lmms`. lmms will run noticeably slower -- this is not an error but is merely due to all the extra computations Valgrind is doing behind the scenes.
 
@@ -73,4 +73,4 @@ After reproducing your error in lmms, you'll hopefully see at least some output 
 ==5158== 
 ```
 
-This info can also be used in a similar way as the backtrace obtained in gdb and is worth including in bug reports, if possible/relevant.
+This info can be used in a similar way as the backtrace obtained in gdb and is worth including in bug reports, if possible/relevant.

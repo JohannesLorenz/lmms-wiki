@@ -1,6 +1,6 @@
 ## Obtain a Debug Build
 
-If you experience a problem or crash while using LMMS, the first step to debugging this is to obtain a development build that includes debug symbols. This can be done by following the instructions at [Compiling LMMS](https://github.com/LMMS/lmms/wiki/Compiling-lmms#building-on-linux) and making sure to specify the `-DCMAKE_BUILD_TYPE=DEBUG` flag when running cmake.
+If you experience a problem or crash while using LMMS, the first step to debugging this is to obtain a development build that includes debug symbols. This can be done by following the instructions at [Compiling LMMS](https://github.com/LMMS/lmms/wiki/Compiling-lmms#building-on-linux) and making sure to specify either the `-DCMAKE_BUILD_TYPE=Debug` or `-DCMAKE_BUILD_TYPE=RelWithDebInfo` flag when running cmake.
 
 ## Debugging with gdb (GNU Debugger)
 

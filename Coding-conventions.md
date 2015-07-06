@@ -60,7 +60,7 @@ Example:
 ```
 ...but note that the braces must always be included!
 
-**Return without parenthesis (NEW)**  
+**Return without parenthesis**  
 Example:
 ```c++
 	int foo()
@@ -69,7 +69,7 @@ Example:
 	}
 ```
 
-**Standard true/false constants (NEW)**  
+**Standard true/false constants**  
 Example:
 ```c++
 	if(a == true)

@@ -165,4 +165,4 @@
   ./lmms.exe
   ```
 
- 1. (TODO) Fix artwork directory.  Installing the Windows desktop version will help resolve artwork.
+ 1. (TODO) Fix artwork directory.  Installing and running the Windows desktop version will help resolve artwork.

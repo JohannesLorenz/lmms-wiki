@@ -159,3 +159,10 @@
   ```bash
   make --VERBOSE=1
   ```
+
+ 1. Run
+  ```bash
+  ./lmms.exe
+  ```
+
+ 1. (TODO) Fix artwork directory.  Installing the Windows desktop version will help resolve artwork.

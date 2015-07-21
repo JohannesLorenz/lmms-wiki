@@ -19,7 +19,7 @@
    ```bash
    pacman -S mingw-w64-x86_64-gcc
    ```
-   > **Note:**  For The 32-bit toolchain, rerun the above command, replacing `x86_64` with `i686`
+   > **Note:**  For The 32-bit toolchain, rerun the above command, replacing `x86_64` with `i686` -- Required for building with 32-bit VST support
  1. Install dependencies
 
    ```bash

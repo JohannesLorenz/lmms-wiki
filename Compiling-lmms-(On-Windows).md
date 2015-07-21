@@ -134,7 +134,7 @@
    ```cmake
    IF(MINGW_PREFIX)
         SET(FLTK_FLUID_EXECUTABLE "/usr/local/bin/fluid")
-                        HERE -----^
+   #                    HERE -----^
    ENDIF()
    ```
  1. Enable `-fpermissive` in Zyn's make file `plugins/zynaddsubfx/CMakeLists.txt`
@@ -142,7 +142,7 @@
   ```cmake
   # line :20
   SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -Wno-write-strings -Wno-deprecated-declarations -fpermissive")
-                                                                             HERE ------------^
+  #                                                                          HERE ------------^
   ```
 
  1. Run configure

@@ -2,6 +2,7 @@
 ## WARNING:  This is an experimental process.  Proceed at your own risk.
 
  * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(On-Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(On-Windows))
+ * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
 
 ###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
 

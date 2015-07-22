@@ -14,16 +14,16 @@
    pacman -Syu
    ```
 
- 1. Install the 64-bit toolchain
+ 1. Install the 32-bit and 64-bit toolchains
 
    ```bash
    pacman -S mingw-w64-x86_64-gcc
+   pacman -S mingw-w64-i686-gcc
    ```
-   > **Note:**  For The 32-bit toolchain, rerun the above command, replacing `x86_64` with `i686` -- Required for building with 32-bit VST support
- 1. Install dependencies
+ 1. Install dependencies (warning, over 600MB download, 3GB installed)
 
    ```bash
-   pacman -S git pkgconfig make wget p7zip gzip tar binutils mingw-w64-x86_64-qt4
+   pacman -S git pkgconfig make wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4
    ```
 
  1. Download `fetch_ppa.sh` helper script

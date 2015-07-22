@@ -54,6 +54,8 @@
    ```bash
    chmod u+w /mingw64/include/qt4/Qt/qconfig.h
    chmod u+w /mingw64/include/qt4/QtCore/qconfig.h
+   chmod u+w /mingw32/include/qt4/Qt/qconfig.h
+   chmod u+w /mingw32/include/qt4/QtCore/qconfig.h
    ```
  1. Copy the `mingw32` and `mingw64` directories to `/` (to match msys2 environment)
 

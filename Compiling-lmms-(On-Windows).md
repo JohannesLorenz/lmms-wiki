@@ -157,7 +157,7 @@
  1. Build
 
   ```bash
-  make --VERBOSE=1
+  make VERBOSE=1
   ```
 
  1. Run

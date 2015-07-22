@@ -1,7 +1,7 @@
 # Compiling LMMS on Windows
 ## WARNING:  This is an experimental process.  Proceed at your own risk.
 
- * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(On-Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(On-Windows))
+ * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(Windows))
  * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
 
 ###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
@@ -9,12 +9,19 @@
  1. Download and install 64-bit `msys2` from https://msys2.github.io/
 
  1. Launch MSYS2 Shell, update (about 16MB):
-
+   
+   Sync your local database:
    ```bash
-   pacman -Syu
+   pacman -Sy
    ```
-  > **Note:** Msys2 may freeze after this step.  If it does, kill the `bash.exe` process and try again until you get the message `there is nothing to do`
-
+   Update essential packages:
+   ```bash
+   pacman --needed -S bash pacman pacman-mirrors msys2-runtime
+   ```
+   Restart MSYS2 (important), and update the rest of your packages:
+   ```bash
+   pacman -Su
+   ```
   > **Note:** If at any time you receive the message `Errors occurred, no packages were upgraded`, try again.
 
  1. Download and install the 32-bit and 64-bit toolchains (about 85MB)

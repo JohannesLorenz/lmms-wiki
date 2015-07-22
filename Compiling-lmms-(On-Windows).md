@@ -40,7 +40,7 @@
    wget https://gist.githubusercontent.com/Umcaruje/1966a7a747fb393c41e6/raw/46c88c892c3db8d1f7b0491def3d2d6413818be6/extract_debs.sh --no-check-certificate
    ```
 
- 1. Download deb packages (takes about 10 minutes on a good connection)
+ 1. Download deb packages (about 400MB)
 
    ```bash
    ./fetch_ppa.sh

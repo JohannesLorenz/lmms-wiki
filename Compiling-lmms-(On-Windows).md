@@ -87,6 +87,11 @@
   SET(MINGW_PREFIX32 /mingw32)
   ```
 
+ 1. Patch Win32 toolchain file `cmake/modules/Win32Toolchain.cmake`
+  ```cmake
+  SET(MINGW_PREFIX /mingw32)
+  ```
+
  1. Patch MinGW toolchain file `cmake/modules/MinGWCrossCompile.cmake`
  
   ```cmake

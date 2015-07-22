@@ -6,27 +6,29 @@
 
 ###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
 
- 1. Download and install `msys2` from https://msys2.github.io/
+ 1. Download and install 64-bit `msys2` from https://msys2.github.io/
 
- 1. Launch MSYS2 shell, update:
+ 1. Launch MSYS2 Shell, update (about 16MB):
 
    ```bash
    pacman -Syu
    ```
+  > **Note:** Msys2 may freeze after this step.  If it does, kill the `bash.exe` process and try again until you get the message `there is nothing to do`
 
- 1. Install the 32-bit and 64-bit toolchains
+  > **Note:** If at any time you receive the message `Errors occurred, no packages were upgraded`, try again.
+
+ 1. Download and install the 32-bit and 64-bit toolchains (about 85MB)
 
    ```bash
-   pacman -S mingw-w64-x86_64-gcc
-   pacman -S mingw-w64-i686-gcc
+   pacman -S mingw-w64-x86_64-gcc mingw-w64-i686-gcc
    ```
- 1. Install dependencies (warning, over 600MB download, 3GB installed)
+ 1. Download and install dependencies (about 726MB, 3.3GB installed)
 
    ```bash
    pacman -S git pkgconfig make wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4
    ```
 
- 1. Download `fetch_ppa.sh` helper script
+ 1. Close and re-open msys2.  Download `fetch_ppa.sh` helper script
 
    ```bash
    wget https://gist.githubusercontent.com/Umcaruje/1966a7a747fb393c41e6/raw/de80e4010b7d66525604a4da48750ea10af37ee2/fetch_ppa.sh --no-check-certificate

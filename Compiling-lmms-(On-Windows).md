@@ -128,8 +128,9 @@
    * Run the following commands:
 
       ```cmd
-      mklink /d C:\mingw64 c:\msys64\mingw64
-      mklink /d C:\home c:\msys64\home
+      mklink /d %SystemDrive%\mingw64 %SystemDrive%\msys64\mingw64
+      mklink /d %SystemDrive%\mingw32 %SystemDrive%\msys64\mingw32
+      mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
       ```
  1. Build `fluid.exe` from source
 

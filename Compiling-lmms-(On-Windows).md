@@ -32,7 +32,7 @@
  1. Download and install dependencies (about 726MB, 3.3GB installed)
 
    ```bash
-   pacman -S git pkgconfig make wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4
+   pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4
    ```
 
  1. Close and re-open msys2.  Download `fetch_ppa.sh` helper script

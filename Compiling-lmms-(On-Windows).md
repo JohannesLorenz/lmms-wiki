@@ -132,7 +132,7 @@
       mklink /d %SystemDrive%\mingw32 %SystemDrive%\msys64\mingw32
       mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
       ```
- 1. Build `fluid.exe` from source
+ 1. Open `MinGW-w64 Win64 Shell`, Build `fluid.exe` from source
 
    ```bash
    wget http://fltk.org/pub/fltk/1.3.3/fltk-1.3.3-source.tar.gz

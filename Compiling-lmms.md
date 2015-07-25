@@ -5,6 +5,7 @@ The following dependencies should be met before compiling LMMS:
 Required libraries:
 
 * [Qt](http://qt-project.org/) >= 4.3.0 with devel-files (4.4.x recommended)
+  * Qt5 requires special instructions, see [Using Qt5][#using-qt5] below.
 * [libsndfile](http://www.mega-nerd.com/libsndfile/)
 * [FFTW3](http://www.fftw.org/)
 
@@ -99,3 +100,22 @@ Instructions on compiling and installing LMMS:
     * Go to settings and select the folder tab 
     * Clear the "artwork directory" setting so that it's empty 
     * Restart LMMS
+
+##Using Qt5
+
+Requirements:
+  * CMake >= 2.8.11 is required for building with Qt5 support.
+
+Steps:
+  * In order to build LMMS with Qt5, add the following flag when invoking cmake:
+
+   ```bash
+   -DWANT_QT5=ON
+   ```
+
+Notes:
+  * If your Qt5 installation does not reside in standard installation paths, additionally pass e.g.
+
+   ```bash
+   -DCMAKE_PREFIX_PATH=/opt/qt53/
+   ```

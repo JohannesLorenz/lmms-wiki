@@ -5,7 +5,7 @@ The following dependencies should be met before compiling LMMS:
 Required libraries:
 
 * [Qt](http://qt-project.org/) >= 4.3.0 with devel-files (4.4.x recommended)
-  * Qt5 requires special instructions, see [Using Qt5][#using-qt5] below.
+  * Qt5 requires special instructions, see [Using Qt5](#using-qt5) below.
 * [libsndfile](http://www.mega-nerd.com/libsndfile/)
 * [FFTW3](http://www.fftw.org/)
 

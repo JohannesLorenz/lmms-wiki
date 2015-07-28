@@ -63,38 +63,36 @@ Instructions on compiling and installing LMMS:
     ```sh
     mkdir build
     ```
-2. Optionally, you can also create a "target" directory, or you can install LMMS to any directory of your choice.
-
-    ```sh
-    mkdir target
-    ```
-3. Then configure LMMS with CMake, using the previously created target directory (or any directory of your choice, in which case just replace "../target" with the directory you want to use).
+2. Then configure LMMS with CMake.
 
     ```sh
     cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX=../target
+    cmake ..
     ```
 
-   **Note:**  On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`
+   This will search your system for all the dependencies and will notify you if something's missing.
 
-   **Note:** To include debugging symbols usable with tools like gdb and valgrind, pass the debug flag into cmake: ` -DCMAKE_BUILD_TYPE=DEBUG`, or ` -DCMAKE_BUILD_TYPE=RelWithDebInfo` for a good compromise between program optimization and ability to debug.
+   **Notes:**
+   * On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`
+   * To include debugging symbols usable with tools like gdb and valgrind, pass the debug flag into cmake: ` -DCMAKE_BUILD_TYPE=DEBUG`, or ` -DCMAKE_BUILD_TYPE=RelWithDebInfo` for a good compromise between program optimization and ability to debug.
+   * To specify a install directory different from the default one, invoke cmake with the option `-DCMAKE_INSTALL_PREFIX=<install-dir>`.
 
-4. Now compile LMMS: (People with more than one CPU core can use make's -j2 option to compile some files in parallel instead, accelerating the process. Otherwise `make` is just fine. )
+3. Now compile LMMS: (People with more than one CPU core can use make's `-j<n>` option, with <n> being the number of threads you wish to use, accelerating the process. Otherwise `make` is just fine. )
 
     ```sh
     make -j2
     ```
-5. Finally, install LMMS into the previously specified directory:
+4. Run it:
+   
+   ```sh
+   ./lmms
+   ```
+5. Optionally, install LMMS into the previously specified directory:
 
     ```sh
     make install
     ```
-6. and, of course, run it:
-
-    ```sh
-    ../target/bin/lmms
-    ```
-7. Note: If you have an older version of LMMS installed, you may run into some GUI problems and glitches. This is because LMMS 1.0.0 is no longer compatible with old 0.4.x themes. To solve the problem: 
+6. Note: If you have an older version of LMMS installed, you may run into some GUI problems and glitches. This is because LMMS 1.0.0 is no longer compatible with old 0.4.x themes. To solve the problem: 
 
     * Run LMMS
     * Go to settings and select the folder tab 

@@ -96,7 +96,8 @@
     export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
     ```
 
- 1. **ALREADY ADDED IN tresf/lmms, needs sync** Add manual reference to `QtCore4.dll`
+ 1. Add manual reference to `QtCore4.dll`
+    > **Note:** Already added in `tresf/lmms`
 
     * `src/CMakeLists.txt:115`
 

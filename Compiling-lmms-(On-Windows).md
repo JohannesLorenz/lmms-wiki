@@ -96,7 +96,7 @@
     export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
     ```
 
- 1. **FIXME** Add manual reference to `QtCore4.dll`
+ 1. **KEEP** Add manual reference to `QtCore4.dll`
 
     * `src/CMakeLists.txt:115`
 
@@ -119,4 +119,5 @@
 
     ```bash
     gdb lmms.exe
+    run
     ```

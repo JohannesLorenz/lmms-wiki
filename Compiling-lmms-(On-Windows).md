@@ -96,8 +96,6 @@
     export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
     ```
 
-    > **Note:** This is currently [broken](https://gist.githubusercontent.com/tresf/b4dabd673631a944dc97/raw/9ffaee7e338ed77b75095205bfacadda37347e3f/__imp__XXX.out)
-
  1. **FIXME** Add manual reference to `QtCore4.dll`
 
     * `src/CMakeLists.txt:115`

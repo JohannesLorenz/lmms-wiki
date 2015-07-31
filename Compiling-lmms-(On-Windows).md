@@ -1,5 +1,5 @@
 # Compiling LMMS on Windows
-## WARNING:  This is an experimental process.  Proceed at your own risk.
+### WARNING:  This is an experimental process.  Proceed at your own risk.
 
  * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(Windows))
  * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
@@ -95,6 +95,8 @@
     ```bash
     export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
     ```
+
+    > **Note:** This is currently [broken](https://gist.githubusercontent.com/tresf/b4dabd673631a944dc97/raw/9ffaee7e338ed77b75095205bfacadda37347e3f/__imp__XXX.out)
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 

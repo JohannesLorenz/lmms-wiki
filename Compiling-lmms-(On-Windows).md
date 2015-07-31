@@ -97,6 +97,25 @@
     ```
 
     > **Note:** This is currently [broken](https://gist.githubusercontent.com/tresf/b4dabd673631a944dc97/raw/9ffaee7e338ed77b75095205bfacadda37347e3f/__imp__XXX.out)
+
+ 1. **FIXME** Add manual reference to `QtCore4.dll`
+
+    * `src/CMakeLists.txt:115`
+
+      ```cmake
+      TARGET_LINK_LIBRARIES(lmms
+          ${LMMS_REQUIRED_LIBS} QtCore4
+          # Fix debug builds ---^
+      )
+      ```
+
+    * `src/pluginz/ZynAddSubFx/CMakeLists.txt:112`
+
+      ```cmake
+      TARGET_LINK_LIBRARIES(ZynAddSubFxCore zynaddsubfx_nio ${FFTW3F_LIBRARIES} 
+      ${QT_LIBRARIES} -lz -lpthread QtCore4)
+      #         Fix debug builds ---^
+      ```
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 

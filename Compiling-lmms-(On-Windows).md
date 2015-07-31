@@ -97,7 +97,7 @@
     ```
 
  1. Add manual reference to `QtCore4.dll`
-    > **Note:** Already added in `tresf/lmms`
+    > **Note:** FIXME:  Can we add this automatically via `IF(CMAKE_BUILD_TYPE STREQUAL "Debug")`
 
     * `src/CMakeLists.txt:115`
 

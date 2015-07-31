@@ -32,7 +32,7 @@
  1. Download and install dependencies (about 726MB, 3.3GB installed)
 
    ```bash
-   pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4
+   pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4 gdb
    ```
 
  1. Close and re-open msys2.  Download `fetch_ppa.sh` helper script
@@ -162,6 +162,8 @@
   #                                                                          HERE ------------^
   ```
 
+###Compiling
+
  1. Run configure
 
   ```bash
@@ -176,6 +178,7 @@
   ```bash
   make VERBOSE=1
   ```
+###Running
 
  1. Run
   ```bash
@@ -183,3 +186,17 @@
   ```
 
  1. (TODO) Fix artwork directory.  Installing and running the Windows desktop version will help resolve artwork.
+
+###Debugging
+
+ 1. Enable debug symbols to be passed to mingw script
+
+    ```bash
+    export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
+    ```
+ 1. Remove the build directory and run the appropriate build script again
+ 1. To debug the lmms.exe process
+
+    ```bash
+    gdb lmms.exe
+    ```

@@ -122,3 +122,21 @@
     gdb lmms.exe
     run
     ```
+
+###Packaging
+    1. Install NSIS from http://nsis.sourceforge.net/Download
+
+    1. Add NSIS to Windows PATH
+
+       * Navigate to View Advanced System Settings, Environment Variables
+       * Add this to the very end of the System PATH
+
+       ```bash
+       ;c:\Program Files (x86)\nsis\
+       ```
+
+    1. Create the package
+
+    ```bash
+    make package
+    ```

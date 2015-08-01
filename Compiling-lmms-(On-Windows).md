@@ -111,7 +111,7 @@
       )
       ```
 
-    * `src/pluginz/ZynAddSubFx/CMakeLists.txt:112`
+    * `plugins/zynaddsubfx/CMakeLists.txt:112`
 
       ```cmake
       TARGET_LINK_LIBRARIES(ZynAddSubFxCore zynaddsubfx_nio ${FFTW3F_LIBRARIES} 

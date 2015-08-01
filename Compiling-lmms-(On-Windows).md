@@ -51,6 +51,7 @@
    ./msys2_helper.sh
    ```
    > **Note:** You will eventually receive some messages `cp: cannot create regular file`, these are safe to ignore.
+
    > **Note2:** Fluid may show warnings during build, these are generally safe to ignore as well.
 
  1. Create symbolic links for CMD-style paths (workaround msys2's [`moc.exe`](https://gist.github.com/tresf/de0aad39c36e076e61a1) issue)

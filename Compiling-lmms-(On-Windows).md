@@ -119,11 +119,11 @@
       #         Fix debug builds ---^
       ```
  1. Add the Following line to lmms/CMakeLists.txt between ln 144 145
-    ''''
+    ````
 SET(QT_LIBRARIES
                 optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll$
         )
-''''
+````
 Note, this is a Hack that need to be cleaned, but gets win64 debug build working
 
  1. Remove the build directory and run the appropriate build script again

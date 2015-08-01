@@ -115,6 +115,7 @@
       ${QT_LIBRARIES} -lz -lpthread QtCore4)
       #         Fix debug builds ---^
       ```
+
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 
@@ -124,18 +125,18 @@
     ```
 
 ###Packaging
-    1. Install NSIS from http://nsis.sourceforge.net/Download
 
-    1. Add NSIS to Windows PATH
+ 1. Install NSIS from http://nsis.sourceforge.net/Download
 
-       * Navigate to View Advanced System Settings, Environment Variables
-       * Add this to the very end of the System PATH
+ 1. Add NSIS to Windows PATH
+     * Navigate to View Advanced System Settings, Environment Variables
+     * Add this to the very end of the System PATH
 
-       ```bash
-       ;c:\Program Files (x86)\nsis\
-       ```
+    ```bash
+    ;c:\Program Files (x86)\nsis\
+    ```
 
-    1. Create the package
+ 1. Create the package
 
     ```bash
     make package

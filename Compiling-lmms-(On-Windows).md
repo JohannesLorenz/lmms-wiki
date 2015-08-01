@@ -50,6 +50,7 @@
    ```bash
    ./msys2_helper.sh
    ```
+   > **Note:** You will eventually receive some messages `cp: cannot create regular file`, these are safe to ignore.
 
  1. Create symbolic links for CMD-style paths (workaround msys2's [`moc.exe`](https://gist.github.com/tresf/de0aad39c36e076e61a1) issue)
 

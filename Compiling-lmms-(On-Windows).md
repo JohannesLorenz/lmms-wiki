@@ -1,10 +1,11 @@
-# Compiling LMMS on Windows
-### WARNING:  This is an experimental process.  Proceed at your own risk.
+#Compiling LMMS on Windows
+###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
+###WARNING:  This is an experimental process.  Proceed at your own risk.
 
  * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(Windows))
  * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
 
-###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
+###Install Dependencies
 
  1. Download and install 64-bit `msys2` from https://msys2.github.io/
 

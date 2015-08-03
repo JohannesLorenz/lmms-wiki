@@ -83,6 +83,15 @@
   make VERBOSE=1
   ```
 
+  > **Note:** mallets are broken on 32-bit.  Edit `CMakeLists.txt` change `WANT_STK` `OFF`
+
+  > **Note:** win32 builds need fluid to be rebuilt by the 32-bit compiler.  The easiest way to do this is open MinGW-w64 **Win32**-Shell:
+
+  ```bash
+  rm -rf /usr/local/bin/fluid.exe
+  . ~/msys2_helper.sh
+  ```
+
 ###Running
 
  1. Run

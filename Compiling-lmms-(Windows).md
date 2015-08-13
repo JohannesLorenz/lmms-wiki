@@ -60,9 +60,9 @@ cd build
 1. Run the mingw build script
 
    ```sh
-../build_mingw32
+../cmake/build_mingw64.sh
 # Note:  You will receive errors from Cmake (libfluid, sdl not found, etc), try again
-../build_mingw32
+../cmake/build_mingw64.sh
 make
 # Note:  If you receive "Error 2" At 42%, try running make again
    ```
@@ -84,18 +84,18 @@ make package
  2. You will receive a message
 
    ```sh
-   CPack: - package: /home/ubuntu/lmms/build/lmms-x.x.x-win32.exe generated.
+   CPack: - package: /home/ubuntu/lmms/build/lmms-x.x.x-win64.exe generated.
    ```
  3. You may now distribute your Windows Installer package (25MB)
 
    ![image](https://cloud.githubusercontent.com/assets/6345473/3217984/64582130-efe5-11e3-975f-d494215fb85b.png)
 
 
-### 64-bit
+### 32-bit
  1. Remove previous cmake cache
 
    ```sh
 rm CMakeCache.txt
 rm -rf CMakeFiles
    ```
- 1. Repeat [Compile](#compile) and [Package](#package) steps again for `../build_mingw64`
+ 1. Repeat [Compile](#compile) and [Package](#package) steps again for `../cmake/build_mingw32.sh`

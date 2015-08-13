@@ -74,7 +74,7 @@
   cd ~/lmms
   mkdir build target
   cd build
-  ../build_mingw64
+  ../cmake/build_mingw64
   ```
 
  1. Build

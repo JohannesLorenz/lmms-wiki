@@ -3,20 +3,52 @@
 **The following dependencies should be met before compiling LMMS:**
 
 * [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
-* [MacPorts](https://www.macports.org/install.php)
+* [MacPorts](https://www.macports.org/install.php) or [Homebrew](http://brew.sh)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities
-
-**Fetching requirements using MacPorts**
-*See also [Compiling lmms (Linux)](Compiling-lmms)*
-
-1. If this is your first time running Xcode, install the command line tools and accept the license agreement:
 
    ```sh
    sudo xcode-select --install
    sudo xcodebuild -license
    ```
    > **Note:** Alternately, you may install the command line tools via **Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
+
+### Homebrew
+1. Install Homebrew per http://brew.sh
+1. Update brew
+
+   ```bash
+   brew update
+   ```
+1. Install git
+
+   ```bash
+   brew install git
+   ```
+
+1. Clone source code
+
+   ```bash
+   git clone https://github.com/lmms/lmms
+   ```
+
+1. Install brew dependencies using travis install file
+
+   ```bash
+   sh lmms/.travis/osx..install.sh
+   ```
+
+1.  Note if you receive the following curl SSL error, this is most likely due to a missing SSL certificate.  To fetch the latest certificates, run apple software updates, reboot and try again.
+
+   ```
+   curl: (35) error:14077458:SSL routines:SSL23_GET_SERVER_HELLO:reason(1112)
+   Failed to download resource ".."
+   Download failed ... 
+   ```
+
+### MacPorts
+*See also [Compiling lmms (Linux)](Compiling-lmms)*
+
 1. Update the collection of available port definitions:
 
    ```sh
@@ -62,6 +94,8 @@
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
+
+    > **Note:** If you receive the error `/usr/bin/xcode-select` returned unexpected error, install the XCode Command line tools and retry.
 
     > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding Xcode SDK installed.
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`

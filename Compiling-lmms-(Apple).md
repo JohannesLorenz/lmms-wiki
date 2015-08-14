@@ -95,7 +95,7 @@
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
 
-    > **Note:** If you receive the error `/usr/bin/xcode-select` returned unexpected error, install the XCode Command line tools and retry.
+    > **Note:** If you receive the error `/usr/bin/xcode-select` returned unexpected error, make sure to install XCode as well as the XCode Command line tools for your platform and retry.
 
     > **Note:** To build for older versions (i.e. OS X 10.8), you will need the corresponding Xcode SDK installed.
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`

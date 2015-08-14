@@ -5,7 +5,7 @@
 * [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities
-* [MacPorts](#macports) or [Homebrew](#homebrew)
+* [Homebrew](#homebrew) or [MacPorts](#macports)
 
    ```sh
    sudo xcode-select --install

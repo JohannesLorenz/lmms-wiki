@@ -47,7 +47,6 @@
    ```
 
 ### MacPorts
-*See also [Compiling lmms (Linux)](Compiling-lmms)*
 
 1. Install MacPorts per https://www.macports.org/install.php
 1. Update the collection of available port definitions:
@@ -74,6 +73,7 @@
     ```
 
 ### Compiling
+*See also [Compiling lmms (Linux)](Compiling-lmms)*
 
 **Instructions on compiling and installing LMMS:**
 

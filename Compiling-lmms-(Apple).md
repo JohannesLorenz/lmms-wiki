@@ -11,7 +11,7 @@
    ```
    > **Note:** Alternately, you may install the command line tools via **Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install**
 
-* [Homebrew](#homebrew) or [MacPorts](#macports)
+* [Homebrew](#homebrew) or [MacPorts](#macports) required for fetching build dependencies
 
 
 ### Homebrew

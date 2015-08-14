@@ -3,9 +3,9 @@
 **The following dependencies should be met before compiling LMMS:**
 
 * [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
-* [MacPorts](https://www.macports.org/install.php) or [Homebrew](http://brew.sh)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities
+* [MacPorts](#macports) or [Homebrew](#homebrew)
 
    ```sh
    sudo xcode-select --install
@@ -49,6 +49,7 @@
 ### MacPorts
 *See also [Compiling lmms (Linux)](Compiling-lmms)*
 
+1. Install MacPorts per https://www.macports.org/install.php
 1. Update the collection of available port definitions:
 
    ```sh

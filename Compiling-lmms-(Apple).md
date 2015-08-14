@@ -15,6 +15,8 @@
 
 
 ### Homebrew
+*Skip this section if using MacPorts for fetching dependencies*
+
 1. Install Homebrew per http://brew.sh
 1. Update brew
 
@@ -48,6 +50,7 @@
    ```
 
 ### MacPorts
+*Skip this section if using Homebrew for fetching dependencies*
 
 1. Install MacPorts per https://www.macports.org/install.php
 1. Update the collection of available port definitions:

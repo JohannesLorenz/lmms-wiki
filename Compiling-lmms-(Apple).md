@@ -5,7 +5,7 @@
 * [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
 * Xcode Command Line Utilities
-   ```sh
+   ```bash
    sudo xcode-select --install
    sudo xcodebuild -license
    ```
@@ -41,6 +41,13 @@
    sh lmms/.travis/osx..install.sh
    ```
 
+1. Install appdmg
+
+   ```bash
+   brew install node
+   npm install -g appdmg
+   ```
+
 1.  Note if you receive the following curl SSL error, this is most likely due to a missing SSL certificate.  To fetch the latest certificates, run apple software updates, reboot and try again.
 
    ```
@@ -55,14 +62,14 @@
 1. Install MacPorts per https://www.macports.org/install.php
 1. Update the collection of available port definitions:
 
-   ```sh
+   ```bash
    sudo port selfupdate
    ```
 
 1. 
   1. Install LMMS and all of its dependencies automatically:
 
-    ```sh
+    ```bash
     sudo port install lmms
     ```
 
@@ -70,10 +77,17 @@
 
   1. Alternately, if you would like to use MacPorts only to get the dependencies and compile LMMS from source manually:
 
-    ```sh
+    ```bash
     sudo port install cmake fftw-3-single fltk \
     fluidsynth jack libgig libogg libsamplerate libsdl \
-    libsndfile libvorbis portaudio qt4-mac stk pkgconfig
+    libsndfile libvorbis portaudio qt4-mac stk pkgconfig \
+    node npm
+    ```
+
+  1. Install appdmg
+
+    ```bash
+    sudo npm install -g appdmg
     ```
 
 ### Compiling
@@ -81,19 +95,19 @@
 
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
-    ```sh
+    ```bash
     cd
     cd lmms
     mkdir build
     ```
 1. Optionally, you can also create a "target" directory, or you can install LMMS to any *empty* directory of your choice.
 
-    ```sh
+    ```bash
     mkdir target
     ```
 1. Then configure LMMS with CMake, using the previously created target directory (or any *empty* directory of your choice, in which case just replace "../target" with the directory you want to use).
 
-    ```sh
+    ```bash
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=../target
     ```
@@ -109,13 +123,13 @@
 1. Now compile LMMS:
     > **Note:** `make -j2`, commonly used on Linux, won't work here.
 
-    ```sh
+    ```bash
     make
     ```
 
 1. Run LMMS:
 
-    ```sh
+    ```bash
     ./lmms
     ```
 
@@ -123,7 +137,7 @@
 
 1. You only need to do this step once.  Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the `LMMS.app` application bundle):
 
-    ```sh
+    ```bash
     cd
     curl -O https://ccrma.stanford.edu/software/stk/release/stk-4.5.0.tar.gz
     tar xopzf stk-4.5.0.tar.gz
@@ -131,7 +145,7 @@
 
 1. Finally, install LMMS into the previously specified directory:
 
-    ```sh
+    ```bash
     make install
     ```
 
@@ -145,7 +159,7 @@
 
 1. Optionally, you may wish to package this into a DMG:
     
-    ```sh
+    ```bash
     make dmg
     ```
 
@@ -154,24 +168,24 @@
 ### Debugging LMMS OSX
  1. Clean the build environment
 
-   ```sh
+   ```bash
    make clean
    rm -rf CMakeCache.txt
    ```
  1. Re-run cmake configure step with the following additional parameters:
 
-   ```sh
+   ```bash
    -DCMAKE_BUILD_TYPE=Debug -DWANT_SWH=OFF
    ```
  1. Re-run the `make install` step
  1. Launch LMMS with the lldb debugger.  You will be prompted for your password.
 
-    ```sh
+    ```bash
     lldb ~/Desktop/LMMS.app/Contents/MacOS/lmms
     ```
  1. Reproduce the crash.  Hit CTRL+C.  Type this command from lldb for a backtrace:
 
-    ```sh
+    ```bash
     thread backtrace all
     ```
  1. Post the back-trace to https://gist.github.com/ and paste the link to a new bug report.

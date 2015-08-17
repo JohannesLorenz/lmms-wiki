@@ -79,8 +79,6 @@
 ### Compiling
 *See also [Compiling lmms (Linux)](Compiling-lmms)*
 
-**Instructions on compiling and installing LMMS:**
-
 1. Assuming you have already fetched the sources (see [[Accessing git repository]] if not), switch to the source root directory, and create a new directory which is needed for you build.
 
     ```sh
@@ -115,7 +113,15 @@
     make
     ```
 
-1. Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the `LMMS.app` application bundle):
+1. Run LMMS:
+
+    ```sh
+    ./lmms
+    ```
+
+### Installing
+
+1. You only need to do this step once.  Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the `LMMS.app` application bundle):
 
     ```sh
     cd
@@ -134,6 +140,8 @@
 
    ![image](https://cloud.githubusercontent.com/assets/6345473/9310604/c6097a74-44de-11e5-9d93-43f950622241.png)
    <br>*You may copy this to `Applications` or run it directly from the `build` directory*
+
+### Packaging
 
 1. Optionally, you may wish to package this into a DMG:
     

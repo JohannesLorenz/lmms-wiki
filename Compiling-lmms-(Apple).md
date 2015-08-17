@@ -132,8 +132,8 @@
 1. This will automatically create an `LMMS.app` application bundle in the `build` directory.
    ![image](https://cloud.githubusercontent.com/assets/6345473/9310513/1abf0576-44de-11e5-8589-d33d6c1c5b73.png)
 
-   ![image](https://cloud.githubusercontent.com/assets/6345473/2587591/79b3ea50-ba25-11e3-8513-a61085528a6d.png)
-   <br>*You may copy this to Applications or run it directly from the Desktop*
+   ![image](https://cloud.githubusercontent.com/assets/6345473/9310604/c6097a74-44de-11e5-9d93-43f950622241.png)
+   <br>*You may copy this to `Applications` or run it directly from the `build` directory*
 
 1. Optionally, you may wish to package this into a DMG:
     

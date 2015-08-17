@@ -115,7 +115,7 @@
     make
     ```
 
-1. Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the LMMS application bundle):
+1. Extract a copy of the stk source code in your home directory (`make install` will copy the rawwaves directory from the stk source directory into the `LMMS.app` application bundle):
 
     ```sh
     cd
@@ -129,19 +129,19 @@
     make install
     ```
 
-1. This will automatically create an application bundle on the Desktop.
-   ![image](https://cloud.githubusercontent.com/assets/6345473/2878829/dfc7c7ca-d461-11e3-991d-163e9b7e91ae.png)
+1. This will automatically create an `LMMS.app` application bundle in the `build` directory.
+   ![image](https://cloud.githubusercontent.com/assets/6345473/9310513/1abf0576-44de-11e5-8589-d33d6c1c5b73.png)
 
    ![image](https://cloud.githubusercontent.com/assets/6345473/2587591/79b3ea50-ba25-11e3-8513-a61085528a6d.png)
    <br>*You may copy this to Applications or run it directly from the Desktop*
 
-1. Optionally, you may wish to package this into a DMG (FIXME Lion has issues with DMG artwork, etc):
+1. Optionally, you may wish to package this into a DMG:
     
     ```sh
-    ~/Desktop/create_apple_dmg.sh
+    make dmg
     ```
 
-    ![image](https://cloud.githubusercontent.com/assets/6345473/2587649/06a5d634-ba27-11e3-941b-0dab79ff3f8f.png)
+    ![image](https://cloud.githubusercontent.com/assets/6345473/9310558/6e5e11d6-44de-11e5-8f56-233387f3f3e5.png)
 
 ### Debugging LMMS OSX
  1. Clean the build environment

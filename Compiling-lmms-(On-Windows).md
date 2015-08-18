@@ -40,7 +40,7 @@
 
    ```bash
    #FIXME: Change this URL to https://github.com/lmms/[...]
-   wget https://raw.githubusercontent.com/tresf/lmms/master/data/scripts/msys2_helper.sh --no-check-certificate
+   wget https://raw.githubusercontent.com/tresf/lmms/master/cmake/msys/msys_helper.sh --no-check-certificate
    ```
 
  1. Run the helper script.  This will automatically:

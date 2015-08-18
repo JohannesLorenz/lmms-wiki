@@ -5,7 +5,8 @@
  * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(Windows))
  * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
 
-![image](https://cloud.githubusercontent.com/assets/6345473/9337189/dec3d0be-45ab-11e5-87d9-2c9e89a709b2.png)
+
+![image](https://cloud.githubusercontent.com/assets/6345473/9337465/82d76fe8-45ad-11e5-9b8b-5fdabb87d32b.png)
 
 
 ###Install Dependencies

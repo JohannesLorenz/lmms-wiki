@@ -87,6 +87,9 @@ Instructions on compiling and installing LMMS:
    ```sh
    ./lmms
    ```
+
+   > **Note:** This will automatically create a file `~/.lmmsrc.xml` which will map artwork and plugin paths relative to your build directory.  At any time, if artwork or plugins stop loading properly, you will need to edit, move or delete `~/.lmmsrc.xml` to correct these paths.
+
 5. Optionally, install LMMS into the previously specified directory:
 
     ```sh

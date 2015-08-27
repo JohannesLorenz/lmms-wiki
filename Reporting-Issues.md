@@ -1,10 +1,10 @@
-We use github's issue tracker for development. First off click on the [issues link](https://github.com/LMMS/lmms/issues) on the right-hand side of this page (shaped like an exclamation point inscribed in a circle). Try searching to see if your issue has already been reported. If not, then continue on:
+We use github's issue tracker for development. First off, click on the [issues link](https://github.com/LMMS/lmms/issues) on the right-hand side of this page (shaped like an exclamation point inscribed in a circle). Try searching to see if your issue has already been reported. If it hasn't, then continue on:
 
 Filing a new bug
 ------
 
 1. **Click "New Issue" and select a title**  
-A title should be very brief, but provide some context to easily identify one issue from another. If you were trying to search for this issue on the tracker, what phrase would easily identify it?
+A title should be very brief, but should provide some context to easily identify one issue from another. Think: if you were trying to search for this issue on the tracker, what phrase would easily identify it?
 
 2. **Fill in the report**  
 Remember to be **concise**, but clear. Filing a proper bug report can save hours of developer time. A good report usually contains the following elements:

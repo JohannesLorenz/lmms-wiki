@@ -24,4 +24,4 @@ If you were able to capture any useful output from the program (for example, a s
 Otherwise, upload the stack trace / core dump somewhere else and link to it *directly* (it should be viewable in a browser, one should not have to create an account to view it, etc). If you have a github account, the easiest thing to do is upload it as a [gist](https://gist.github.com/).
 
 **Example bug report**
-An example of a decent bug report is [#1875](https://gist.github.com/)
+An example of a decent bug report is [#1875](https://github.com/LMMS/lmms/issues/1875)

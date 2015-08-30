@@ -20,7 +20,7 @@ How to review
 
 Step 1 can be done online by navigating to the pull request's page and looking under either the "commits" or the "files changed" tab.
 
-Steps 2 and 3 require fetching and building the new code. The usual way to do this is to first [clone the official LMMS repository](https://github.com/LMMS/lmms/wiki/Accessing-git-repository) (only needs to be done once). The following steps differ based on the details of the pull request - I will use #2252 as an example.
+Steps 2 and 3 require fetching and building the new code. The usual way to do this is to first [clone the official LMMS repository](https://github.com/LMMS/lmms/wiki/Accessing-git-repository) (only needs to be done once). The following steps differ based on the details of the pull request - I will use [#2252](https://github.com/LMMS/lmms/pull/2252) as an example.
 
 ### Fetching the code
 

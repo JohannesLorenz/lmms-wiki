@@ -9,6 +9,21 @@ Not an absolute requirement – sometimes longer lines can't be avoided. But it 
 **Do not prefix header guard macros with an underscore**  
 Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.
 
+**Include file lists should be grouped by type (system include or local include) and then sorted by name**  
+The exception is that in a source file, the first included file should always be its header.  
+Example:
+```c++
+MySourceFile.cpp:
+#include "MySourceFile.h"
+
+#include <QMap>
+#include <QString>
+
+#include "DataFile.h"
+#include "Engine.h"
+#include "GuiApplication.h"
+```
+
 **All kind of types (class names, enums, structs) begin with an upper case letter**  
 Example:
 

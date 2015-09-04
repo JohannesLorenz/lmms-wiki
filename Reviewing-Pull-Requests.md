@@ -29,7 +29,7 @@ At the top of the pull request will be a line worded something like "[User] want
 git remote add [User] https://github.com/[User]/lmms.git
 git fetch
 ```
-e.g. `git remote add Wallacoloo https://github.com/Wallacoloo/lmms.git; git fetch`.
+e.g. `git remote add Wallacoloo https://github.com/Wallacoloo/lmms.git && git fetch`.
 
 Then checkout the specific branch that they placed their code in:
 ```sh

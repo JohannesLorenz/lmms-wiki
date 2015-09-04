@@ -27,8 +27,9 @@ Steps 2 and 3 require fetching and building the new code. The usual way to do th
 At the top of the pull request will be a line worded something like "[User] wants to merge 15 commits into LMMS:master from [User]:[Branch]", e.g. "Wallacoloo wants to merge 15 commits into LMMS:master from Wallacoloo:osc-qmessagebox". The part to note is "[User]:[Branch]", which specifies the owner of the pull request, and the branch in which they put their changes. In the same folder in which you cloned the LMMS repository, execute the following command:
 ```sh
 git remote add [User] https://github.com/[User]/lmms.git
+git fetch
 ```
-e.g. `git remote add Wallacoloo https://github.com/Wallacoloo/lmms.git`.
+e.g. `git remote add Wallacoloo https://github.com/Wallacoloo/lmms.git; git fetch`.
 
 Then checkout the specific branch that they placed their code in:
 ```sh

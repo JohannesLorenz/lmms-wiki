@@ -144,10 +144,6 @@ Note, this is a Hack that need to be cleaned, but gets win64 debug build working
            optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll;optimized;/mingw64/bin/QtXml4.dll;debug;/mingw64/bin/QtXml4.dll;optimized;/mingw64/bin/QtCore4.dll;debug;/mingw64/bin/QtCore4.dll
         )
 ```` 
-
-
-
-
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 

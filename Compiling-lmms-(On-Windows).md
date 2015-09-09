@@ -139,11 +139,11 @@ SET(QT_LIBRARIES
 ````
 Note, this is a Hack that need to be cleaned, but gets win64 debug build working
 
- 1. Add the Following line to cmake/modules/BuildPlugin.cmake ln 34
-```` SET(QT_LIBRARIES
-           optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll;optimized;/mingw64/bin/QtXml4.dll;debug;/mingw64/bin/QtXml4.dll;optimized;/mingw64/bin/QtCore4.dll;debug;/mingw64/bin/QtCore4.dll
+ 1. Add the Following line to cmake/modules/BuildPlugin.cmake ln 34plt.plot(abs(x1))
+```` SET(QT_LIBRARIES        optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll;optimized;/mingw64/bin/QtXml4.dll;debug;/mingw64/bin/QtXml4.dll;optimized;/mingw64/bin/QtCore4.dll;debug;/mingw64/bin/QtCore4.dll
         )
 ```` 
+1.   Edit `CMakeLists.txt` change `WANT_STK`, `WANT_SWH`, and `WANT_GIG` `OFF`
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 

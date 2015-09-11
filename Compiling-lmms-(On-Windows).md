@@ -8,9 +8,13 @@
  * **Note:** This tutorial was created in an effort to enable code debugging on Windows.  This tutorial is not yet supported.  Please find our official Windows build tutorial here: [Compiling-lmms-(Windows)](https://github.com/LMMS/lmms/wiki/Compiling-lmms-(Windows))
  * **Note:** The pacman mirrors that come default with msys2 rely heavily on sourceforge.net mirrors.  If you are having problems with pacman, first make sure sourceforge isn't experiencing downtime.
 
+ * **Note:** It's generally a good idea to avoid spaces in your directories, including your windows username!
+
 ###Install Dependencies
 
  1. Download and install 64-bit `msys2` from https://msys2.github.io/
+
+> **Note:** It's best to install `msys2` as a direct sub folder of your main drive.
 
  1. Launch MSYS2 Shell, update (about 16MB):
    

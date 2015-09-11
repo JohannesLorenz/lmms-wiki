@@ -73,6 +73,8 @@
       mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
       ```
 
+   * **Note**:  If you installed msys2 to a non-standard location, these commands will need to be adjusted to reflect your install location.  `%SystemDrive%` generally is `C:\`, so you can adjust to `D:\`, `E:\` as needed.
+
 ###Compiling
 
  1. Run configure

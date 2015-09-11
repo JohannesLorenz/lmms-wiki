@@ -39,7 +39,11 @@
    pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4 gdb
    ```
 
- 1. Close and re-open msys2.  Download `msys_helper.sh` helper script
+ 1. Close msys2.
+
+ 1. Open Mingw-w64
+
+ 1. Download `msys_helper.sh` helper script
 
    ```bash
    #FIXME: Change this URL to https://github.com/lmms/[...]

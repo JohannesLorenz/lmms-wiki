@@ -21,6 +21,7 @@ Optional, but strongly recommended (with devel-files each):
 * [SDL](http://www.libsdl.org/)
 * [libalsa](http://www.alsa-project.org/)
 * [libportaudio](http://www.portaudio.com/)
+* [libsoundio](http://libsound.io/)
 
 The last four dependencies on the list are necessary for audio playback. You may provide one or more of those, depending on what sound server(s) you'd like to use with LMMS.
 

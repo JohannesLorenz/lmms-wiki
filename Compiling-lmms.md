@@ -14,7 +14,7 @@ Optional, but strongly recommended (with devel-files each):
 * [libogg](http://xiph.org/ogg/)
 * [libsamplerate](http://www.mega-nerd.com/SRC/) (>= 0.1.7)
 * [wine](http://www.winehq.org/)
-* [libstk](http://www.libstk.net/)
+* [libstk](http://ccrma.stanford.edu/software/stk/)
 * [libfluidsynth](http://fluidsynth.sourceforge.net/)
 * [FLTK](http://www.fltk.org/) (Needed by ZynAddSubFx)
 * [JACK](http://jackaudio.org/)

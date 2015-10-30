@@ -95,8 +95,6 @@
   make VERBOSE=1
   ```
 
-  > **Note:** mallets are broken on 32-bit.  Edit `CMakeLists.txt` change `WANT_STK` `OFF`
-
   > **Note:** win32 builds need fluid to be rebuilt by the 32-bit compiler.  The easiest way to do this is open MinGW-w64 **Win32**-Shell:
 
   ```bash
@@ -120,38 +118,6 @@
     ```bash
     export CMAKE_OPTS=-DCMAKE_BUILD_TYPE=Debug
     ```
-
- 1. Add manual reference to `QtCore4.dll`
-    > **Note:** FIXME:  Can we add this automatically via `IF(CMAKE_BUILD_TYPE STREQUAL "Debug")`
-
-    * `src/CMakeLists.txt:115`
-
-      ```cmake
-      TARGET_LINK_LIBRARIES(lmms
-          ${LMMS_REQUIRED_LIBS} QtCore4
-          # Fix debug builds ---^
-      )
-      ```
-
-    * `plugins/zynaddsubfx/CMakeLists.txt:112`
-
-      ```cmake
-      TARGET_LINK_LIBRARIES(ZynAddSubFxCore zynaddsubfx_nio ${FFTW3F_LIBRARIES} 
-      ${QT_LIBRARIES} -lz -lpthread QtCore4)
-      #         Fix debug builds ---^
-      ```
- 1. Add the Following line to lmms/CMakeLists.txt between ln 144 145
-    ````
-SET(QT_LIBRARIES
-                optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll$
-        )
-````
-Note, this is a Hack that need to be cleaned, but gets win64 debug build working
-
- 1. Add the Following line to cmake/modules/BuildPlugin.cmake ln 34  
-```` SET(QT_LIBRARIES        optimized;/mingw64/bin/QtGui4.dll;debug;/mingw64/bin/QtGui4.dll;optimized;/mingw64/bin/QtXml4.dll;debug;/mingw64/bin/QtXml4.dll;optimized;/mingw64/bin/QtCore4.dll;debug;/mingw64/bin/QtCore4.dll
-        )````
- 1.   Edit `CMakeLists.txt` change `WANT_STK`, `WANT_SWH`, and `WANT_GIG` `OFF`
  1. Remove the build directory and run the appropriate build script again
  1. To debug the lmms.exe process
 

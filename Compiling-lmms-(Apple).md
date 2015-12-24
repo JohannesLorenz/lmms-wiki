@@ -35,6 +35,8 @@
    git clone https://github.com/lmms/lmms
    ```
 
+   > **Note:** Optional, to clone [a specific branch](https://github.com/lmms/lmms/branches) use the -b switch e.g. `git clone -b master https://github.com/lmms/lmms`
+
 1. Install brew dependencies using travis install file
 
    ```bash

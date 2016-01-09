@@ -94,7 +94,7 @@ Instructions on compiling and installing LMMS:
 5. Optionally, install LMMS into the previously specified directory:
 
     ```sh
-    make install
+    sudo make install
     ```
 6. Note: If you have an older version of LMMS installed, you may run into some GUI problems and glitches. This is because LMMS 1.0.0 is no longer compatible with old 0.4.x themes. To solve the problem: 
 

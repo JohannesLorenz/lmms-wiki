@@ -43,7 +43,7 @@
    sh lmms/.travis/osx..install.sh
    ```
 
-1. Install appdmg
+1. Install appdmg (Needed only for for packaging the DMG file)
 
    ```bash
    brew install node
@@ -57,6 +57,8 @@
    Failed to download resource ".."
    Download failed ... 
    ```
+
+1. Continue on to the [compiling](Compiling) section
 
 ### MacPorts
 *Skip this section if using Homebrew for fetching dependencies*
@@ -86,11 +88,13 @@
     node npm
     ```
 
-  1. Install appdmg
+  1. Install appdmg (Needed only for for packaging the DMG file)
 
     ```bash
     sudo npm install -g appdmg
     ```
+
+1. Continue on to the [compiling](Compiling) section
 
 ### Compiling
 *See also [Compiling lmms (Linux)](Compiling-lmms)*

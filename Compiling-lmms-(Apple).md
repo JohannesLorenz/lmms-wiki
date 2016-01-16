@@ -58,7 +58,7 @@
    Download failed ... 
    ```
 
-1. Continue on to the [compiling](Compiling) section
+1. Continue on to the [#compiling](Compiling) section
 
 ### MacPorts
 *Skip this section if using Homebrew for fetching dependencies*
@@ -94,7 +94,7 @@
     sudo npm install -g appdmg
     ```
 
-1. Continue on to the [compiling](Compiling) section
+1. Continue on to the [#compiling](Compiling) section
 
 ### Compiling
 *See also [Compiling lmms (Linux)](Compiling-lmms)*

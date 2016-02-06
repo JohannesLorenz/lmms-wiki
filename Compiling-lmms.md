@@ -107,6 +107,7 @@ Instructions on compiling and installing LMMS:
 
 Requirements:
   * CMake >= 2.8.11 is required for building with Qt5 support.
+  * Additional build dependencies: `qtbase5-dev qttools5-dev-tools qttools5-dev`
 
 Steps:
   * In order to build LMMS with Qt5, add the following flag when invoking cmake:

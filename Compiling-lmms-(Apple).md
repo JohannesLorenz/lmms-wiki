@@ -85,7 +85,7 @@
     sudo port install cmake fftw-3-single fltk \
     fluidsynth jack libgig libogg libsamplerate libsdl \
     libsndfile libvorbis portaudio qt4-mac stk pkgconfig \
-    node npm
+    nodejs npm
     ```
 
   1. Install appdmg (Needed only for for packaging the DMG file)

@@ -95,7 +95,7 @@
     Call Stack (most recent call first):
     CMakeLists.txt:160 (FIND_PACKAGE)
     ```
-    then you should check that you can run qmake from the console, if you can't you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
+    then you should check that you can run qmake from the console, if you can't, you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
 >   ```bash
    sudo ln -s /opt/local/libexec/qt4/bin/qmake /opt/local/bin/qmake   
    sudo ln -s /opt/local/libexec/qt4/bin/lrelease /opt/local/bin/lrelease

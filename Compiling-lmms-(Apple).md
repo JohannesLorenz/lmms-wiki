@@ -4,6 +4,7 @@
 
 * [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)
+   * :bulb:  **Note:** If you've recently upgraded your OS X version (e.g. from Yosemite to El Capitan), first make sure you're XCode isn't outdated by running `open -a XCode`, or by [locating it in Applications](https://cloud.githubusercontent.com/assets/6345473/13099744/670d5dfa-d503-11e5-85c3-ad2c99e55c2d.png).
 * Xcode Command Line Utilities
    ```bash
    sudo xcode-select --install

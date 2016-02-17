@@ -88,7 +88,7 @@
     libsndfile libvorbis portaudio qt4-mac stk pkgconfig \
     nodejs npm
     ```
-    > NOTE: if the build fails because it can find the QT version as in the following snippet
+    > NOTE: if the build fails because it can not find the QT version as in the following snippet
     ```
     CMake Error at /opt/local/share/cmake-3.4/Modules/FindQt4.cmake:1324 (message):
     Found unsuitable Qt version "" from NOTFOUND, this code requires Qt 4.x

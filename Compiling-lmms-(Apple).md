@@ -50,7 +50,7 @@
 
    ```bash
    brew install node
-   npm install -g appdmg
+   sudo npm install -g appdmg
    ```
 
 1.  Note if you receive the following curl SSL error, this is most likely due to a missing SSL certificate.  To fetch the latest certificates, run apple software updates, reboot and try again.

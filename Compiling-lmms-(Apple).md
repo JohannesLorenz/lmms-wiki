@@ -44,6 +44,8 @@
    sh lmms/.travis/osx..install.sh
    ```
 
+   :warning:  **Note:** OS X 10.11 "El Capitan" requires a special FLTK install via [ros-install-osx/issues/12 (Comment)](https://github.com/mikepurvis/ros-install-osx/issues/12#issuecomment-147717159) (upstream bug report [Homebrew/homebrew#44806](https://github.com/Homebrew/homebrew/pull/44806))
+
 1. Install appdmg (Needed only for for packaging the DMG file)
 
    ```bash

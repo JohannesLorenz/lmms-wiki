@@ -24,10 +24,10 @@
    ```bash
    brew update
    ```
-1. Install git
+1. Install git, cmake
 
    ```bash
-   brew install git
+   brew install git cmake
    ```
 
 1. Clone source code

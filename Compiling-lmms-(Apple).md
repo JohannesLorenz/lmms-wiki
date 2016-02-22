@@ -59,8 +59,7 @@
    sudo port selfupdate
    ```
 
-1. 
-  1. Install LMMS and all of its dependencies automatically:
+1. Install LMMS and all of its dependencies automatically:
 
     ```bash
     sudo port install lmms
@@ -68,7 +67,7 @@
 
     The LMMS application bundle will be in your MacPorts applications folder, which is /Applications/MacPorts unless you changed it.
 
-  1. Alternately, if you would like to use MacPorts only to get the dependencies and compile LMMS from source manually:
+1. Alternately, if you would like to use MacPorts only to get the dependencies and compile LMMS from source manually:
 
     ```bash
     sudo port install cmake fftw-3-single fltk \
@@ -76,26 +75,28 @@
     libsndfile libvorbis portaudio qt4-mac stk pkgconfig \
     nodejs npm
     ```
-    > NOTE: if the build fails because it can not find the QT version as in the following snippet
+
+    > NOTE: if the build fails because it can not find the QT version as in the following snippet then you should check that you can run qmake from the console, if you can't, you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
+
     ```
     CMake Error at /opt/local/share/cmake-3.4/Modules/FindQt4.cmake:1324 (message):
     Found unsuitable Qt version "" from NOTFOUND, this code requires Qt 4.x
     Call Stack (most recent call first):
     CMakeLists.txt:160 (FIND_PACKAGE)
     ```
-    then you should check that you can run qmake from the console, if you can't, you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
->   ```bash
-   sudo ln -s /opt/local/libexec/qt4/bin/qmake /opt/local/bin/qmake   
-   sudo ln -s /opt/local/libexec/qt4/bin/lrelease /opt/local/bin/lrelease
-   ```
+    
+    ```bash
+    sudo ln -s /opt/local/libexec/qt4/bin/qmake /opt/local/bin/qmake   
+    sudo ln -s /opt/local/libexec/qt4/bin/lrelease /opt/local/bin/lrelease
+    ```
 
-  1. Install appdmg (Needed only for for packaging the DMG file)
+1. Install appdmg (Needed only for for packaging the DMG file)
 
     ```bash
     sudo npm install -g appdmg
     ```
 
-1. Continue on to the [#compiling](Compiling) section
+1. Continue on to the [Compiling](#compiling) section
 
 ### Compiling
 *See also [Compiling lmms (Linux)](Compiling-lmms)*

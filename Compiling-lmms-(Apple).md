@@ -47,7 +47,7 @@
    Download failed ... 
    ```
 
-1. Continue on to the [#compiling](Compiling) section
+1. Continue on to the [Compiling](#compiling) section
 
 ### MacPorts
 *Skip this section if using Homebrew for fetching dependencies*

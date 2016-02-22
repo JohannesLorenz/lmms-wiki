@@ -24,11 +24,6 @@
    ```bash
    brew update
    ```
-1. Install git, cmake, pkgconfig
-
-   ```bash
-   brew install git cmake pkgconfig
-   ```
 
 1. Clone source code
 
@@ -45,13 +40,6 @@
    ```
 
    :warning:  **Note:** OS X 10.11 "El Capitan" requires a special FLTK install via [ros-install-osx/issues/12 (Comment)](https://github.com/mikepurvis/ros-install-osx/issues/12#issuecomment-147717159) (upstream bug report [Homebrew/homebrew#44806](https://github.com/Homebrew/homebrew/pull/44806))
-
-1. Install appdmg (Needed only for for packaging the DMG file)
-
-   ```bash
-   brew install node
-   sudo npm install -g appdmg
-   ```
 
 1.  Note if you receive the following curl SSL error, this is most likely due to a missing SSL certificate.  To fetch the latest certificates, run apple software updates, reboot and try again.
 

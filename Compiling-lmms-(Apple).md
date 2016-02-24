@@ -33,7 +33,12 @@
 
    > **Note:** Optional, to clone [a specific branch](https://github.com/lmms/lmms/branches) use the -b switch e.g. `git clone -b master https://github.com/lmms/lmms`
 
-1. Install brew dependencies using travis install file
+1. Install brew dependencies using travis install file.
+
+    > **Note:** Optional, if Qt5 is desired
+    ```bash
+    export QT5=True
+    ```
 
    ```bash
    sh lmms/.travis/osx..install.sh
@@ -76,7 +81,7 @@
     nodejs npm
     ```
 
-    > NOTE: if the build fails because it can not find the QT version as in the following snippet then you should check that you can run qmake from the console, if you can't, you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
+    > **Note:** If the build fails because it can not find the QT version as in the following snippet then you should check that you can run qmake from the console, if you can't, you probably need to manually create 2 links (or find a better solution for the ticket [macports qt4-mac](https://trac.macports.org/ticket/49629))
 
     ```
     CMake Error at /opt/local/share/cmake-3.4/Modules/FindQt4.cmake:1324 (message):
@@ -114,6 +119,11 @@
     mkdir target
     ```
 1. Then configure LMMS with CMake, using the previously created target directory (or any *empty* directory of your choice, in which case just replace "../target" with the directory you want to use).
+
+    > **Note:** Optional, if Qt5 is desired
+    ```bash
+    export CMAKE_PREFIX_PATH="$(brew --prefix qt5)"
+    ```
 
     ```bash
     cd build

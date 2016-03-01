@@ -17,7 +17,8 @@ If you have found something you'd like to do, please refer to the following arti
 
 [[Guidelines on coding style|Coding Conventions]]  
 [[Plugin development]]  
-[[Submitting a patch]]
+[[Submitting a patch]]  
+[[LMMS Architecture]]
 
 ### Contact us ###
 There are several possibilities to communicate with LMMS developers and users.

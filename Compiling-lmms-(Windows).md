@@ -22,9 +22,10 @@ sudo apt-get update
  1. Install build requirements
 
    ```sh
-sudo apt-get install build-essential cmake nsis cloog-isl libmpc3 mingw32
+sudo apt-get install build-essential cmake nsis cloog-isl libmpc3 mingw32 qt4-linguist-tools
    ```
    > **Note:** Older systems may require `libmpc2` in the place of `libmpc3`
+   > **Note:** Qt4 Linguist Tools is required to generate `*.qm` locale files since mingw doesn't provide it.
  
  1. Fetch the mingw32 dependencies (700MB)
 
@@ -33,7 +34,7 @@ sudo apt-get install mingw32-x-qt mingw32-x-sdl mingw32-x-libvorbis \
 mingw32-x-fluidsynth mingw32-x-stk mingw32-x-glib2 mingw32-x-portaudio \
 mingw32-x-libsndfile mingw32-x-fftw mingw32-x-flac mingw32-x-fltk \
 mingw32-x-libgig mingw32-x-libsamplerate mingw32-x-pkgconfig \
-mingw32-x-binutils mingw32-x-gcc mingw32-x-runtime mingw32-x-libsoundio
+mingw32-x-binutils mingw32-x-gcc mingw32-x-runtime mingw32-x-libsoundio \
    ```
 
  1. Optionally, again for mingw64 (500MB)

@@ -25,6 +25,7 @@ sudo apt-get update
 sudo apt-get install build-essential cmake nsis cloog-isl libmpc3 mingw32 qt4-linguist-tools
    ```
    > **Note:** Older systems may require `libmpc2` in the place of `libmpc3`
+   
    > **Note:** Qt4 Linguist Tools is required to generate `*.qm` locale files since mingw doesn't provide it.
  
  1. Fetch the mingw32 dependencies (700MB)

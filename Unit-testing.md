@@ -1,4 +1,4 @@
-LMMS as a unit test framework.
+LMMS as a unit test framework based on [QTestLib](https://doc.qt.io/qt-4.8/qtestlib-manual.html).
 
 It's currently almost empty, but it's just waiting for you to add more tests.
 

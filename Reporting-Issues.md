@@ -25,7 +25,7 @@ If relevant, attach any screen shots that help illustrate the issue. These can b
 
 If your issue revolves around a specific project file or audio file, upload that somewhere and link to it. Be sure that the file is *easily* and *safely* downloadable (Downloading should not require one to create an account and the website hosting the download should not be a risk for viruses).  
 
-If you were able to capture any useful output from the program (for example, a stack trace or a core dump after the program crashed), then attach that as well. If the stack trace is brief (less than 30-40 lines), embed it directly in the post and enclose it between two sets of triple-backticks as below (this will make it render in an easily-readable format):
+If you were able to capture any useful output from the program (for example, a stack trace or a core dump after the program crashed), then attach that as well. For how to collect stack trace, [you can find it here.](https://github.com/LMMS/lmms/wiki/Debugging-LMMS) If the stack trace is brief (less than 30-40 lines), embed it directly in the post and enclose it between two sets of triple-backticks as below (this will make it render in an easily-readable format):
 
 \`\`\`  
 [insert stack trace here]  

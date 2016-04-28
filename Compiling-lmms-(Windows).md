@@ -48,6 +48,12 @@ mingw64-x-libgig mingw64-x-libsamplerate mingw64-x-pkgconfig \
 mingw64-x-binutils mingw64-x-gcc mingw64-x-runtime mingw64-x-libsoundio
    ```
 
+ > **Note:** Optional, if Qt5 is desired
+    ```bash
+    export QT5=True
+    sudo apt-get install mingw32-qt5-base mingw64-qt5-base
+    ```
+
  1. Prepare the mingw build environment (assumes you've already cloned the repo per [Accessing git repository](Accessing-git-repository) page)
 
    ```sh

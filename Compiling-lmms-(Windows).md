@@ -71,6 +71,7 @@ cd build
 ../cmake/build_mingw64.sh
 # Note:  You will receive errors from Cmake (libfluid, sdl not found, etc), try again
 ../cmake/build_mingw64.sh
+
 make
 # Note:  If you receive "Error 2" At 42%, try running make again
    ```

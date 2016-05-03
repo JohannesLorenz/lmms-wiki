@@ -48,9 +48,8 @@ mingw64-x-libgig mingw64-x-libsamplerate mingw64-x-pkgconfig \
 mingw64-x-binutils mingw64-x-gcc mingw64-x-runtime mingw64-x-libsoundio
    ```
 
- > **Note:** Optional, if Qt5 is desired
+ 1. Optionally, if Qt5 is desired
     ```bash
-    export QT5=True
     sudo apt-get install mingw32-x-qt5base mingw64-x-qt5base
     ```
 
@@ -72,9 +71,14 @@ cd build
 # Note:  You will receive errors from Cmake (libfluid, sdl not found, etc), try again
 ../cmake/build_mingw64.sh
 
+
 make
 # Note:  If you receive "Error 2" At 42%, try running make again
    ```
+   > **Note:** If you want to build using qt5, pass the -qt5 argument to the script:
+   >```bash
+   >../cmake/build_mingw64.sh -qt5
+   >```
 
    > **Note:** Debian users may receive `VST-instrument hoster : not found`.  Please try:
    >

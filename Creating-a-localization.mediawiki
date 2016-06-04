@@ -2,7 +2,9 @@
 Of course everybody prefers to use a program using their own language. Therefore localizations for each language are required. As LMMS isn't available in all common languages yet, there's still a need for people creating or just improving translations of LMMS. If you're sure, there's no translation for your language yet, you can start up by creating a new one. The following short article will guide you through the process of creating a translation.
 
 === How to create a translation ===
-First [[Accessing Git repository|checkout a recent (stable) version of LMMS from Git repository]]. Afterwards you need to create a new empty file called "XX.ts" where XX are two characters identifying your localization, e.g. ''de'' for Germany, ''fr'' for France, ''it'' for Italy and so on. Example:
+The easiest way to submit translations is to join our [[https://www.transifex.com/lmms/lmms/|Transifex  LMMS team]]. You'll need a Transifex account, just register one if you don't have ;-). And then you can send a request to join the language team. Please wait patiently while we reviewing your request, this could take several seconds to several days. After joining the language team, you can contribute your linguistic talent to LMMS now! If you are unfamilar with Transifex, you can refer to [[http://docs.transifex.com/getting-started/translators/|their comprehensive guide]] And when translating,  '''Do not translate sentences if you're not sure how to translate them!''' Often it's more clear to people reading the English string. It isn't bad at all if your translation is not complete yet. One day someone else may add the missing translations.
+
+If you want to download the translation to work offline or don't want to use Transifex editor, you can work in our tranditional way: First [[Accessing Git repository|checkout a recent (stable) version of LMMS from Git repository]]. Afterwards you need to create a new empty file called "XX.ts" where XX are two characters identifying your localization, e.g. ''de'' for Germany, ''fr'' for France, ''it'' for Italy and so on. Example:
 
  touch data/locale/de.ts
 
@@ -14,21 +16,25 @@ In the next step we actually create the localization file:
  make XX.ts
  cd ..
 
-Now look into directory "data/locale" where you should find the according ts-file. You can open this file using Qt4 Linguist, which is usually part of Qt4-development-packages. The usage of Qt4 Linguist doesn't require any explanations as you just have to translate the current string and hit <enter> to process next one. '''Do not translate sentences if you're not sure how to translate them!''' Often it's more clear to people reading the English string. It isn't bad at all if your translation is not complete yet. One day someone else will add the missing translations.
+Now look into directory "data/locale" where you should find the according ts-file. You can open this file using Qt Linguist, which is usually part of Qt-development-packages. The usage of Qt Linguist doesn't require any explanations as you just have to translate the current string and hit <enter> to process next one.
 
-After you're done with Qt Linguist, it's time to integrate your translation into LMMS. Either directly [[Contact#Contacting the Maintainer|send the maintainer an email]] and attach your ts-file or do the following: open the "file"-menu in Qt Linguist and select "release". Qt Linguist automatically fills in the correct output filename, so just click on "OK" and that's all. All you have to do now is running
+After you're done with Qt Linguist, it's time to integrate your translation into LMMS. Either directly send the translation maintainer or language coordinator an email and attach your ts-file or do the following: open the "file"-menu in Qt Linguist and select "release". Qt Linguist automatically fills in the correct output filename, so just click on "OK" and that's all. All you have to do now is running
 
  make install
 
-for installing LMMS to an appropriate location. Then run it and it should speak your language ;-) If not either your locale environment variable is incorrect or you did something wrong at another place. So if you can't figure it out, [[Contact#Contacting the Maintainer|send the maintainer]] your ts-file and very soon you'll be able to checkout a version of LMMS containing also your translation ;-)
+for installing LMMS to an appropriate location. Then run it and it should speak your language ;-) If not either your locale environment variable is incorrect or you did something wrong at another place. So if you can't figure it out, send the maintainer your ts-file, but if you have a Transifex account, you can upload the ts-file to corresponding language instead. Click your language, then click "lmms.ts", and it will popup a menu, you need to click "upload file" and select your ts-file. and very soon you'll be able to checkout a version of LMMS containing also your translation ;-)
 
 ==Currently supported languages==
+#{{flag|ca}} [Poor Support] Arabic
 #{{flag|ca}} Catalan
+#{{flag|zh_CN}} Chinese (Simplified)
+#{{flag|zh_TW}} Chinese (Tranditional)
 #{{flag|cs}} Czech
 #{{flag|nl}} Dutch
 #{{flag|en}} English
-#{{flag|fa}} Farsi
+#{{flag|fa}} [Poor Support] Farsi
 #{{flag|fr}} French
+#{{flag|gl}} Galician
 #{{flag|de}} German
 #{{flag|it}} Italian
 #{{flag|ja}} Japanese

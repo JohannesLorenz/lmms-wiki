@@ -4,7 +4,7 @@ Everybody has their own favorite "style" for writing code, however, in the inter
 Mixing tabs and spaces is evil. Please, please, please make sure your editor is configured to use tabs.  Instructions for QtCreator can be [found here](https://github.com/LMMS/lmms/pull/2033#issuecomment-98895801).
 
 **Try to limit line lengths to 80 characters**  
-Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do.
+Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do. One tab is equivalent to 8 characters.
 
 **Do not prefix header guard macros with an underscore**  
 Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.

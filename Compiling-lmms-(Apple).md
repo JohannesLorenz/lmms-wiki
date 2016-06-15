@@ -142,7 +142,7 @@
     > * Specify the target using: `-DCMAKE_OSX_DEPLOYMENT_TARGET=10.8`
 
 1. Now compile LMMS:
-    > **Note:** `make -j2`, commonly used on Linux, won't work here.
+    > **Note:** `make -j4`, commonly used on Linux, has issues with MacPorts
 
     ```bash
     make

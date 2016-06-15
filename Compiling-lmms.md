@@ -41,16 +41,25 @@ libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev wine-dev \
 libxinerama-dev libxft-dev libgig-dev git
 ```
 
-On some Debian based system if you receive `No rule to make target /usr/bin/fluid`, install fluid manually:
-```sh
-sudo apt-get install fluid
-```
-
 On 64 bits systems you may also have to:
 ```sh
 sudo apt-get install libc6-dev-i386 gcc-multilib g++-multilib
 ```
  (Fixes *"compilation terminated.  winegcc: g++ failed"*)
+
+On other Debian-based systems, run instead:
+```sh
+sudo apt-get install cmake ladspa-sdk libsamplerate0-dev libsdl1.2-dev \
+	libsndfile1-dev libvorbis-dev libjack-dev libstk0-dev libfltk1.3-dev \
+	fluid libasound2-dev libqt4-dev libpulse-dev libfluidsynth-dev \
+	libfftw3-dev portaudio19-dev qt4-qmake libgig-dev
+```
+
+On Debian i386 systems, also run:
+```sh
+sudo apt-get install wine32-tools
+```
+Other architectures are not able to compile support for VST plug-ins.
 
 ### Building on Linux
 
@@ -74,7 +83,7 @@ Instructions on compiling and installing LMMS:
    This will search your system for all the dependencies and will notify you if something's missing.
 
    **Notes:**
-   * On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`
+   * On some Debian based systems if VST fails to locate wine-dev, append ` -DWINE_LIBRARY=/usr/lib/i386-linux-gnu/libwine.so`. To enable VST support on non-i386 systems, append ` -DWANT_VST_NOWINE=1`; an i386 `RemoteVstPlugin` is needed.
    * To include debugging symbols usable with tools like gdb and valgrind, pass the debug flag into cmake: ` -DCMAKE_BUILD_TYPE=DEBUG`, or ` -DCMAKE_BUILD_TYPE=RelWithDebInfo` for a good compromise between program optimization and ability to debug.
    * To specify a install directory different from the default one, invoke cmake with the option `-DCMAKE_INSTALL_PREFIX=<install-dir>`.
 

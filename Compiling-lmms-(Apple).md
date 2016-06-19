@@ -54,6 +54,12 @@
    Download failed ... 
    ```
 
+1.  If using Qt5, add it's path to cmake's prefix path.  This step is not needed if using Qt4.
+
+   ```bash
+   export CMAKE_PREFIX_PATH="$(brew --prefix qt5)"
+   ```
+
 1. Continue on to the [Compiling](#compiling) section
 
 ### MacPorts

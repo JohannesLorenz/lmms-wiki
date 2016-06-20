@@ -55,3 +55,9 @@ hardware directly. The job of ALSA is to abstract away the hardware so
 that other applications can use it. PA and Jack both have different
 purposes and fulfill different functions. None of them are meant as any
 kind of attempt at replacing each other.
+
+# Synchronization with the mixer
+
+The mixer is the element that renders the song into audio frames. One goal is that the mixer runs normally without using locks. The mixer will lock at an appropriate moment when changes to the song are requested, such as removing tracks and changing sample files, avoiding the use of freed data.
+
+When a non-automated change to the song is needed, instead of calling `lock()` and `unlock()` on a mutex, the mixer functions `requestChangeInModel()` and `doneChangeInModel()` are used. These functions synchronize GUI threads to do changes when the mixer deems appropriate. The functions do nothing if they are called from the mixer main thread. If they were called from a mixer worker thread, that would be a design error.

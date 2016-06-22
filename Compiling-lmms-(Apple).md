@@ -124,7 +124,7 @@
 
     > **Note:** Optional, if Qt5 is desired
     ```bash
-    export CMAKE_PREFIX_PATH="$(brew --prefix qt5)"
+    export CMAKE_PREFIX_PATH="$(brew --prefix qt5)"  # Or qt55, see #2861
     cmake .. -DCMAKE_INSTALL_PREFIX=../target -DWANT_QT5=True
     ```
 

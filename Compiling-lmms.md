@@ -52,7 +52,7 @@ On other Debian-based systems, run instead:
 sudo apt-get install cmake ladspa-sdk libsamplerate0-dev libsdl1.2-dev \
 	libsndfile1-dev libvorbis-dev libjack-dev libstk0-dev libfltk1.3-dev \
 	fluid libasound2-dev libqt4-dev libpulse-dev libfluidsynth-dev \
-	libfftw3-dev portaudio19-dev qt4-qmake libgig-dev
+	libfftw3-dev portaudio19-dev qt4-qmake libgig-dev libwine-dev
 ```
 
 On Debian i386 systems, also run:

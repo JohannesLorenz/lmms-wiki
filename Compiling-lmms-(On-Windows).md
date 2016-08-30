@@ -1,7 +1,7 @@
-#Compiling LMMS on Windows
-###Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
+# Compiling LMMS on Windows
+### Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
 
- * LMMS complied and running on Windows 7 64-bit
+ * LMMS compiled and running on Windows 7 64-bit
 
    ![image](https://cloud.githubusercontent.com/assets/6345473/9337465/82d76fe8-45ad-11e5-9b8b-5fdabb87d32b.png)
 

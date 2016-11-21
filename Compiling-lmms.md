@@ -65,6 +65,8 @@ Other architectures are not able to compile support for VST plug-ins.
 
 **Note for Ubuntu users:** You may run into problems compiling LMMS on Ubuntu 12.04 or above, as the `ia32-libs` package has been removed from the repositories. See this page for more information: <http://askubuntu.com/questions/107230/what-happened-to-the-ia32-libs-package>
 
+**Note for Fedora users:** For 32-bit VST support `wine.i686` and `wine-devel.i686` are required.
+
 Instructions on compiling and installing LMMS:
 
 

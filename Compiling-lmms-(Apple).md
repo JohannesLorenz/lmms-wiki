@@ -2,7 +2,7 @@
 
 **The following dependencies should be met before compiling LMMS:**
 
-* [Apple OS X (10.7 "Lion" or higher)](https://itunes.apple.com/app/id675248567) (5.3GB)
+* Apple OS X (10.7 "Lion" or higher) (5.3GB)
  * :bulb:  **Note:** Qt5 on homebrew requires OS X 10.8 or higher per [`homebrew/#45284`](https://github.com/Homebrew/homebrew/issues/45284)
 * Xcode Command Line Utilities
 * [Xcode 4.6.3 or higher](https://itunes.apple.com/app/id497799835) (2.2GB)

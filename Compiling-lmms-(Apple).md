@@ -48,7 +48,7 @@
    ```
    > **Note:** If compiling on 10.8, the `stk.rb` brew formula needs a patch
    > ```
-   > brew install https://raw.githubusercontent.com/tresf/homebrew-core/470be59d5c8c3b246fb2659b513f8595c4498f16/Formula/stk.rb
+   > brew reinstall https://raw.githubusercontent.com/tresf/homebrew-core/470be59d5c8c3b246fb2659b513f8595c4498f16/Formula/stk.rb
    > ```
 
 1.  Note if you receive the following curl SSL error, this is most likely due to a missing SSL certificate.  To fetch the latest certificates, run apple software updates, reboot and try again.

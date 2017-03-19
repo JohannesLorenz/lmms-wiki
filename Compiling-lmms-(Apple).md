@@ -207,7 +207,7 @@
  1. Launch LMMS with the lldb debugger.  You will be prompted for your password.
 
     ```bash
-    lldb ~/Desktop/LMMS.app/Contents/MacOS/lmms
+    lldb LMMS.app/Contents/MacOS/lmms
     ```
  1. Reproduce the crash.  Hit CTRL+C.  Type this command from lldb for a backtrace:
 

@@ -114,7 +114,7 @@ Instructions on compiling and installing LMMS:
     * Clear the "artwork directory" setting so that it's empty 
     * Restart LMMS
 
-##Using Qt5
+## Using Qt5
 
 Requirements:
   * CMake >= 2.8.11 is required for building with Qt5 support.

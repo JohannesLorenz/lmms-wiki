@@ -1,0 +1,253 @@
+## Contents
+* [Dependencies](#dependencies)
+   * [Dependencies Quickstart](#dependencies-quickstart)
+   * [Advanced - The Build Toolchain](#build-toolchain)
+   * [Advanced - The Compiler](#compiler)
+   * [Advanced - The Libraries](#libraries)
+* [Clone Source Code](#clone-source-code)
+* [Build Environment](#build-environment)
+   * [CMake Quickstart](#cmake-quickstart)
+   * [Advanced - Build Options](#build-options)
+* [Compiling](#compiling)
+* [Debugging](#debugging)
+* [Packaging](#packaging)
+   * [Windows Installer - nsis](#packaging-windows)
+   * [MacOS Installer - appdmg](#packaging-macos)
+   * [Linux Installer - makeself](#packaging-linux)
+
+<br><!-- End Section --><br>
+
+## Dependencies
+
+The following packages are required for building.  Since most desktops offer these libraries through package repositories, we recommend using the [Dependency Quickstart](#dependencies-quickstart) for most purposes.
+
+If a package is not available for your platform, you may need to [manually install](#dependencies-detailed).
+
+### Dependencies Quickstart
+Recommended.  Each platform requires a [compiler](#compiler) and several [libraries](#libraries).  We've selected the most common settings for you.
+
+| Ubuntu | Debian | Fedora | openSUSE | Arch | macOS | Windows |
+|--------|--------|--------|----------|------|-------|---------|
+| [Qt5](dependencies-ubuntu#qt5), [Qt4](dependencies-ubuntu#qt4) | [Qt4](dependencies-debian#qt4) | [Missing](dependencies-fedora) | [Qt5](dependencies-opensuse#qt5), [Qt4](dependencies-opensuse#qt4) | [Qt5](dependencies-arch) | [Qt5](dependencies-macos#qt5), [Qt4](dependencies#qt4-macos) | [crosscompile](dependencies-windows#ubuntu-cross-compile), [Qt4](dependencies-windows#windows-os) |
+
+&nbsp;&nbsp;&nbsp; ... platform missing?  Add it [here](Dependencies-FooBar).
+
+### Dependencies Detailed
+Alternately, you may download and compile each dependency manually.  This is recommended for advanced users only.
+
+#### Build Toolchain
+| Supported | Toolchain | Version | Notes | 
+|-----------|-----------|---------|-------| 
+| ✔️ | [`cmake`](https://cmake.org/) | `2.8.11` | Required for [Qt5](compile#qt5)|
+| ✔️ | [`cmake`](https://cmake.org/) | [`2.8.9`](../blob/master/CMakeLists.txt#L1) |  [`lmms>=master`](../tree/master) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`2.8.7`](../blob/stable-1.2/CMakeLists.txt#L1) | [`lmms<=stable-1.2`](../tree/stable-1.2) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`2.4.5`](../blob/stable-1.1/CMakeLists.txt#L1) | [`lmms<=stable-1.1`](../tree/stable-1.1) |
+
+#### Compiler
+| Supported | Compiler | Version |
+|-----------|----------|---------|
+| ✔️ | [`gcc/g++`](http://gcc.gnu.org/) | `c++11` |
+| ✔️ | [`clang`](http://gcc.gnu.org/) |  |
+| ✔️ | [`mingw-w64`](https://sourceforge.net/projects/mingw-w64/) |  | 
+| ❌  | [`msvc++`](https://visualstudio.com/vs/cplusplus/) | Not yet supported |
+
+#### Libraries
+
+| Required | Library | Version | Description | 
+|----------|---------|---------|-------------|
+| ✔️ | [`Qt5`](http://qt.io) | `>=5.0.0` | Recommended over Qt4, see [Using Qt5](#using-qt5) below. |
+| ✔️ | [`Qt4`](http://qt.io) | `>=4.3.0` | Optional instead of Qt5, `>=4.4.x` recommended | 
+| ✔️ | [`libsndfile`](http://www.mega-nerd.com/libsndfile/) |  | Reading and writing sound files |
+| ✔️ | [`fftw3`](http://www.fftw.org/) | | Fast fourier transform computing library |
+|   | [`libvorbis`](http://xiph.org/vorbis/) | | Audio encoding library |
+|   | [`libsamplerate`](http://www.mega-nerd.com/SRC/) | `>=0.1.7` | Audio sample rate converter |
+|   | [`libogg`](http://xiph.org/ogg/) | | Multimedia container format |
+|   | [`wine`](http://www.winehq.org/) | | Windows-on-Unix (needed for VST support) |
+|   | [`libstk`](http://ccrma.stanford.edu/software/stk/) | | Signal processing and algorithmic synthesis library |
+|   | [`libfluidsynth`](http://fluidsynth.sourceforge.net/) | | SoundFont synthesis library |
+|   | [`fltk`](http://www.fltk.org/) |  | Lightweight GUI library (needed by ZynAddSubFX) |
+|   | [`jack`](http://jackaudio.org/)|  | Software and hardware audio routing |
+|   | [`sdl`](http://www.libsdl.org/)|  | Audio interface library* |
+|   | [`alsa`](http://www.alsa-project.org/) |  | Audio interface library* |
+|   | [`libportaudio`](http://www.portaudio.com/)|  | Audio interface library* | 
+|   | [`libsoundio`](http://libsound.io/)|  | Audio interface library* |
+
+   > \*One one or more required for audio playback
+
+<br><!-- End Section --><br>
+
+
+
+## Clone Source Code
+Before preparing the build environment, you must have a [`branch`](../branches) copy of the source code*.
+```bash
+# clone the "master" branch (e.g. "stable-1.2", etc)
+git clone -b master https://github.com/lmms/lmms
+```
+   > \* Advanced users may prefer to download a tarball instead: [zip](https://github.com/LMMS/lmms/archive/master.tar.gz) | [tarball](https://github.com/LMMS/lmms/archive/master.tar.gz)
+
+For most users, this will create a folder `~/lmms` which can be used for building.  If you're already using `~/lmms` for samples you'll see `path 'lmms' already exists`, use an alternate location e.g. `~/Desktop` and try again.
+
+&nbsp;&nbsp;&nbsp; ... want to switch branches or fast-forward?  See [[Accessing git repository]].
+
+<br><!-- End Section --><br>
+
+
+
+## Build Environment
+The [`cmake` toolchain](#build-toolchain) offers several [built-in configuration options](https://cmake.org/cmake/help/v3.0/manual/cmake-variables.7.html).  In addition, LMMS adds several options useful for building.  Below are a list of the most standard options.  We recommend using the [CMake Quickstart](#cmake-quickstart) for most purposes.
+
+### CMake Quickstart
+Assumes you've already [installed dependencies](#dependencies-quickstart) and [cloned the source code](#clone-source-code)
+1. Prepare `build` and, optionally, the `target` directories
+   ```bash
+   cd lmms
+   mkdir build target
+   cd build
+   ```
+
+2. And then choose one of the following...
+
+   #### Running CMake
+   ```bash
+   # from "lmms/build" directory
+   cmake .. -DCMAKE_INSTALL_PREFIX=../target/
+   ```
+
+   -- OR --
+
+   #### Running CMake for [Windows](dependencies-windows)*
+   ```bash
+   # from "lmms/build" directory
+   ../cmake/build_mingw64.sh
+   ```
+   > \* For 32-bit,  use `build_mingw32.sh` instead
+
+### Build Options
+| Option* | Description | Common Values |
+|--------|-------------|-------|
+| [`CMAKE_INSTALL_PREFIX`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_INSTALL_PREFIX.html) | Install to non-standard (non-root) location.  This is generally preferred, especially for coding, testing and packaging. | `../install` |
+| [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html) | Force build to include debugging or optimization symbols | `Release`, `Debug`, `RelWithDebInfo` |
+| [`FORCE_VERSION`](../blob/master/cmake/modules/VersionInfo.cmake) | Force version within software, useful for distributing one-off packages | `internal`, `1.2.3-myfix` |
+| [`PLUGIN_LIST`](../blob/master/plugins/CMakeLists.txt) | Limit build only to the specified [`/plugins/`](../blob/master/plugins/), used to reduce compile time, such as when [bisecting](https://git-scm.com/docs/git-bisect) | `"audio_file_processor kicker triple_oscillator"` |
+| [`WANT_SDL`, `WANT_SWH`, `WANT_VST`...](../blob/master/CMakeLists.txt) | Toggle on/off a library, dependency or feature | `ON`, `OFF` |
+
+> \* When provided on command line, all [options](#build-options) must be prefixed with `-D`, e.g<br>
+> `cmake -DCMAKE_BUILD_TYPE=Debug`
+
+&nbsp;&nbsp;&nbsp; ... still need help?  Ask on our [Discord chat server](https://discord.gg/5kSc32Z)
+
+
+<br><!-- End Section --><br>
+
+
+
+## Compiling
+Assumes you've already [installed dependencies](#dependencies-quickstart) and [cloned the source code](#clone-source-code) and [configured the build environment](#running-cmake).
+
+   ```bash
+   # from "lmms/build" directory
+   make -j4
+   ```
+
+Compilation errors are usually attributed to missing packages, misconfigured system or specific compatibility problems.  Please jump to the appropriate troubleshooting guide:
+
+**Troubleshooting:** [Ubuntu](dependencies-ubuntu#troubleshooting), [Debian](dependencies-debian#troubleshooting), [Fedora](dependencies-fedora#troubleshooting), [openSUSE](dependencies-openSUSE#troubleshooting), [Arch](dependencies-arch#troubleshooting), [macOS](dependencies-macOS#troubleshooting), [Windows](dependencies-windows#troubleshooting)
+
+
+<br><!-- End Section --><br>
+
+
+
+## Debugging
+Debugging LMMS requires a re-run of the `cmake` command, but with the debug symbols turned on.
+For a comprehensive tutorial, see also [[Debugging LMMS]]
+
+### Adding Debug Symbols
+   ```bash
+   # from "lmms/build" directory
+   cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../target/
+   # -- OR for better performance --
+   cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=../target/
+   # re-run the build
+   make -j4
+   ``` 
+### Debugging with `gdb`
+Assuming you have `gcc` (most common), you'll need `gdb` installed via `apt-get`, `dnf`, `pacman`, etc.
+   ```bash
+   gdb lmms
+   # or alternately gdb ../target/bin/lmms
+   (gdb) run
+   # once you hit the crash, CTRL + C
+   backtrace full
+   ```
+
+### Debugging with `lldb`
+Assuming you have `clang` (macOS, FreeBSD), you'll need `lldb` installed via `brew`, `pkg_add`, etc.
+   ```bash
+   lldb lmms
+   # or alternately lldb ../target/bin/lmms
+   # macOS, use `make -j4 install` then `lldb LMMS.app/Contents/MacOS/lmms`
+   (lldb) run
+   # once you hit the crash, CTRL + C
+   thread backtrace full
+   ```
+
+<br><!-- End Section --><br>
+
+
+
+## Packaging
+
+| Supported | Format | Platform | Notes |
+|-----------|--------|----------|-------|
+| ✔️       | `.exe` | [Windows](#windows-packaging) | `lmms>=0.4.0` |
+| ✔️       | `.dmg` | [macOS](#macos-packaging) | `lmms>=1.0.0` |
+| ✖️       | `.run` | [Linux Universal](#linux-packaging) | Work in progress, see [#2932](../issues/2932)
+| ❌       | `.deb` | Debian, Ubuntu | See [#1620](../issues/1620). Please contact package maintainers. |
+| ❌       | `.rpm` | Fedora, openSUSE | Related to [#1620](../issues/1620). Please contact package maintainers. |
+
+#### Windows Packaging
+
+This is the most common type for getting features and fixes out to a large number of testers. Assumes you've already [installed dependencies](#dependencies-windows) and [cloned the source code](#clone-source-code) and [configured the build environment](#running-cmake).  Once completed, the release should be [published](#publishing-a-release) for others to download.
+```bash
+# from "lmms/build" directory
+make package     # package using nsis
+```
+> Try `explorer .` to see it in Explorer. Produces `lmms-1.2.0.123-win64.exe`, where `123` is the number of commits since stable release.
+
+#### MacOS Packaging
+
+Assumes you've already [installed dependencies](#dependencies-macos) and [cloned the source code](#clone-source-code) and [configured the build environment](#running-cmake).  Once completed, the release should be [published](#publishing-a-release) for others to download.
+```bash
+# from "lmms/build" directory
+make install     # builds the app bundle
+make dmg         # creates the disk image using appdmg
+open .           # optional: view in Finder
+
+```
+
+> Produces `lmms-1.2.0.123-mac10.11.dmg`, where `123` is the number of commits since stable release and `mac10.11` is the macOS version which the package was built on.
+
+#### Linux Packaging
+
+Experimental.  Assumes you've already [installed dependencies](#dependencies-quickstart) and [cloned `jasp00:linux-inst`](../issues/2932) and [configured the build environment](#running-cmake).  Once completed, the release should be [published](#publishing-a-release) for others to download.
+```bash
+# from "lmms/build" directory
+make install     # installs to target
+make makeself    # create self-extracting package
+```
+> Produces `lmms-1.2.0.123-x86_64-linux-gnu.run`, where `123` is the number of commits since stable release.
+
+#### Publishing a Release
+
+Using [GitHub releases](https://help.github.com/articles/creating-releases/), Project administrators may wish to package a release to their personal github account or to the entire project.
+
+* **Personal Release**: Used for distributing early feature or test packages.
+   * URL: `https://github.com/tresf/lmms/releases` (replace `tresf` with your `@github` id)
+* **Project Release**: Used for distributing official stable and release candidate packages.
+   * URL: `https://github.com/lmms/lmms/releases`
+
+> Download statistics are available [here](https://api.github.com/repos/lmms/lmms/releases)
+
+&nbsp;&nbsp;&nbsp; ... example release notes available [here](../releases/tag/v1.1.0).

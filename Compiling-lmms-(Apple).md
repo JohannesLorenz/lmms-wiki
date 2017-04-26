@@ -1,3 +1,11 @@
+
+# This tutorial has moved here: [[Compiling]]
+# Please update your bookmarks
+
+
+### Below is kept temporarily for reference purposes only and will soon be removed
+
+
 ### Dependencies
 
 **The following dependencies should be met before compiling LMMS:**

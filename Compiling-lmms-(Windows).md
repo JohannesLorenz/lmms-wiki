@@ -1,3 +1,12 @@
+
+# This tutorial has moved here: [[Compiling]]
+# Please update your bookmarks
+
+
+### Below is kept temporarily for reference purposes only and will soon be removed
+
+
+
 > **Note:**  This tutorial is written for Ubuntu 14.04 x64.  The steps may work on other Debian-based distros with slight adjustments.
 
 ### Prerequisites

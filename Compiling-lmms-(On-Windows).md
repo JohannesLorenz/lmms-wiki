@@ -1,3 +1,11 @@
+
+# This tutorial has moved here: [[Compiling]]
+# Please update your bookmarks
+
+
+### Below is kept temporarily for reference purposes only and will soon be removed
+
+
 # Compiling LMMS on Windows
 ### Building LMMS Using MSYS2 and mingw-w64 on Windows 64-bit
 

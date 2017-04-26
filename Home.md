@@ -1,7 +1,7 @@
 ## Getting Started
 
  * [[Cloning the source code|Accessing git repository]]
- * [[Compiling|Compiling LMMS]]  
+ * [[Compiling]]  
  * [[FAQ]]
 
 ## Getting Involved

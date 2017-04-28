@@ -12,7 +12,7 @@ If you wish to switch to the current stable branch (for the purpose of compiling
 	cd lmms
 	git checkout stable-1.1
 
-For instructions on how to compile LMMS, visit [[Compiling LMMS]].
+For instructions on how to compile LMMS, visit [[Compiling]].
 
 If you want to update your copy simply type
 

@@ -100,7 +100,7 @@ pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64
 ```
 
 ### Setup Remaining Dependencies
-Using `Mingw-w64` from Start Menu
+Using `Mingw-w64` from Start Menu (or manually via `mingw64.exe`)
 
 ```bash
 # Download msys_helper.sh helper script

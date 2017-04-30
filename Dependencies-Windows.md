@@ -69,7 +69,7 @@ Setup a unix-like shell environment using [`msys2`](https://msys2.github.io/)
 
 First, [download](https://msys2.github.io/), install and launch msys2 from Start Menu (or manually from `msys2_shell.cmd`).
 
-**Important** The msys2 mirrors have reliability problems and this caused packages to fail during download.  At any time setting up dependencies if an error occurs, try the command again.  For longer tasks, [scroll up and look for them](https://cloud.githubusercontent.com/assets/6345473/25561734/60bd3132-2d40-11e7-975b-5723a218b0f7.png).
+**Important** The msys2 mirrors have reliability problems and this causes packages to fail during download.  At any time setting up dependencies if an error occurs, try the command again.  For longer tasks, [scroll up and look for them](https://cloud.githubusercontent.com/assets/6345473/25561734/60bd3132-2d40-11e7-975b-5723a218b0f7.png).
 
 ```bash
 # From msys2 desktop application, fetch all available packages

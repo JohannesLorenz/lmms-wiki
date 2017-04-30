@@ -8,6 +8,7 @@
 * [Build Environment](#build-environment)
    * [CMake Quickstart](#cmake-quickstart)
    * [Advanced - Build Options](#build-options)
+    <!--  * [Using Qt5](#using-qt5) --> 
 * [Compiling](#compiling)
 * [Debugging](#debugging)
 * [Packaging](#packaging)
@@ -38,7 +39,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 #### Build Toolchain
 | Supported | Toolchain | Version | Notes | 
 |-----------|-----------|---------|-------| 
-| ✔️ | [`cmake`](https://cmake.org/) | `2.8.11` | Required for [Qt5](compile#qt5)|
+| ✔️ | [`cmake`](https://cmake.org/) | `2.8.11` | Required for [Qt5](#using-qt5)|
 | ✔️ | [`cmake`](https://cmake.org/) | [`2.8.9`](../blob/master/CMakeLists.txt#L1) |  [`lmms>=master`](../tree/master) |
 | ✔️ | [`cmake`](https://cmake.org/) | [`2.8.7`](../blob/stable-1.2/CMakeLists.txt#L1) | [`lmms<=stable-1.2`](../tree/stable-1.2) |
 | ✔️ | [`cmake`](https://cmake.org/) | [`2.4.5`](../blob/stable-1.1/CMakeLists.txt#L1) | [`lmms<=stable-1.1`](../tree/stable-1.1) |
@@ -123,17 +124,35 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
    ```
    > \* For 32-bit,  use `build_mingw32.sh` instead
 
+
+   **Note:**
+   In case you want to build lmms with Qt, see [Using Qt5](#using-qt5).
+
 ### Build Options
 | Option* | Description | Common Values |
 |--------|-------------|-------|
 | [`CMAKE_INSTALL_PREFIX`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_INSTALL_PREFIX.html) | Install to non-standard (non-root) location.  This is generally preferred, especially for coding, testing and packaging. | `../install` |
+| [`CMAKE_PREFIX_PATH`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_PREFIX_PATH.html?highlight=cmake_prefix_path) | Set your Qt5 (probably other library too) installation path if it does not reside in standard installation paths | `/path/to/qt5` |
 | [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html) | Force build to include debugging or optimization symbols | `Release`, `Debug`, `RelWithDebInfo` |
 | [`FORCE_VERSION`](../blob/master/cmake/modules/VersionInfo.cmake) | Force version within software, useful for distributing one-off packages | `internal`, `1.2.3-myfix` |
 | [`PLUGIN_LIST`](../blob/master/plugins/CMakeLists.txt) | Limit build only to the specified [`/plugins/`](../blob/master/plugins/), used to reduce compile time, such as when [bisecting](https://git-scm.com/docs/git-bisect) | `"audio_file_processor kicker triple_oscillator"` |
-| [`WANT_SDL`, `WANT_SWH`, `WANT_VST`...](../blob/master/CMakeLists.txt) | Toggle on/off a library, dependency or feature | `ON`, `OFF` |
+| [`WANT_QT5`, `WANT_SDL`, `WANT_SWH`, `WANT_VST`...](../blob/master/CMakeLists.txt) | Toggle on/off a library, dependency or feature | `ON`, `OFF` |
+
 
 > \* When provided on command line, all [options](#build-options) must be prefixed with `-D`, e.g<br>
 > `cmake -DCMAKE_BUILD_TYPE=Debug`
+
+#### Using Qt5
+In order to build LMMS with Qt5, add the following flag when invoking cmake:
+
+   ```bash
+   -DWANT_QT5=ON
+   ```
+If your Qt5 installation does not reside in standard installation paths, additionally pass e.g.
+
+   ```bash
+   -DCMAKE_PREFIX_PATH=/path/to/qt5
+   ```
 
 &nbsp;&nbsp;&nbsp; ... still need help?  Ask on our [Discord chat server](https://discord.gg/5kSc32Z)
 

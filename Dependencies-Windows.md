@@ -81,7 +81,8 @@ pacman --needed -S bash pacman pacman-mirrors msys2-runtime
 Using `msys2` from Start Menu
 
 ```bash
-# Fetch list of outdated packages
+# Fetch list of outdated packages.
+# If this errors out, follow instructions carefully and try again.
 pacman -Su
 
 # "Errors occurred, no packages were upgraded" is normal, just try again

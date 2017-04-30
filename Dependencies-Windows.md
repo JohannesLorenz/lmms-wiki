@@ -67,6 +67,8 @@ Configure a `mingw-w64` environment in Windows using [`msys2`](https://msys2.git
 
 Setup a unix-like shell environment using [`msys2`](https://msys2.github.io/)
 
+First, [download](https://msys2.github.io/), install and launch msys2 from Start Menu (or manually from `msys2_shell.cmd`).
+
 ```bash
 # From msys2 desktop application, fetch all available packages
 pacman -Sy

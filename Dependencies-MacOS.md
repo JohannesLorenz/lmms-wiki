@@ -19,13 +19,13 @@
 
 ## Qt5
    ```bash
-   brew install cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
+   brew install git cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
    sdl stk portaudio node fltk qt@5.5
    ```
 
 ## Qt4
    ```bash
-   brew install cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
+   brew install git cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
    sdl stk portaudio node fltk cartr/qt4/qt
    ```
 

@@ -21,6 +21,15 @@ libxinerama-dev libxft-dev libgig-dev git libqt4-dev
 <br><!-- End Section--><br>
 
 ## Troubleshooting
+
+### The following packages have unmet dependencies
+Sometimes `apt-get` will not allow all packages to be installed simultaneously. (e.g. `foo : Depends: bar (=1.0.0) but it is not going to be installed`).  Install them or resolve dependencies individually.
+
+```bash
+sudo apt-get install libfluidsynth-dev
+sudo apt-get install libjack-dev
+```
+
 ### winegcc: g++ failed
 ### fatal error: bits/c++config.h: No such file or directory
 On some 64-bit systems, you may also need to run

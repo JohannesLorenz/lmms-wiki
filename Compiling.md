@@ -152,8 +152,8 @@ If your Qt5 installation does not reside in standard installation paths, additio
 
    ```bash
    -DCMAKE_PREFIX_PATH=/path/to/qt5
+   # e.g. on Mac, -DCMAKE_PREFIX_PATH="$(brew --prefix qt@5.5)"
    ```
-
 &nbsp;&nbsp;&nbsp; ... still need help?  Ask on our [Discord chat server](https://discord.gg/5kSc32Z)
 
 

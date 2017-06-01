@@ -35,7 +35,7 @@ sudo apt-get install libjack-dev
 On some 64-bit systems, you may also need to run
 ```bash
 # fixes compilation terminated. winegcc: g++ failed
-sudo apt-get install libwine-dev:i386 wine32-tools:i386 libc6-dev-i386 gcc-multilib g++-multilib
+sudo apt-get install libwine-dev:amd64 libwine-dev:i386 wine32-tools:i386 libc6-dev-i386 gcc-multilib g++-multilib
 ```
 
 ### ia32-libs

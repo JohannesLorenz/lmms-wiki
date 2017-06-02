@@ -25,6 +25,12 @@
    brew install --build-from-source https://github.com/LMMS/lmms/raw/master/cmake/apple/fluid-synth.rb
    ```
 
+   > **Note:** If compiling on 10.8, the `stk.rb` and `libgig.rb` brew formula needs a patch
+   > ```
+   > brew reinstall https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
+   > brew reinstall https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
+   > `
+
 ## Qt4
    ```bash
    brew install git cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \

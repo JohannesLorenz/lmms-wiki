@@ -37,6 +37,10 @@ On some 64-bit systems, you may also need to run
 # fixes compilation terminated. winegcc: g++ failed
 sudo apt-get install libwine-dev libwine-dev:i386 gcc-multilib g++-multilib
 ```
+### If [Tested and working Vsts](https://lmms.io/documentation/Tested_VSTs)(32-bit) do not load and lmms complains about wine packages (in terminal output) try running
+```bash
+sudo apt-get install wine32
+```
 ### For situations where the package manager has trouble finding `libwine-dev:i386` ensure i386 architecture is enabled in dpkg by:
 ```
 sudo dpkg --add-architecture i386

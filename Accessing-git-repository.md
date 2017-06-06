@@ -10,7 +10,7 @@ This will clone the master branch, which can be unstable and have bugs.
 If you wish to switch to the current stable branch (for the purpose of compiling LMMS by yourself):
 
 	cd lmms
-	git checkout stable-1.1
+	git checkout stable-1.2
 
 For instructions on how to compile LMMS, visit [[Compiling]].
 

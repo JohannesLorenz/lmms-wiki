@@ -19,7 +19,7 @@
 
 ## Qt5
    ```bash
-   brew install git cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
+   brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
    sdl libgig libsoundio stk portaudio node fltk qt@5.5
 
    brew install --build-from-source https://github.com/LMMS/lmms/raw/master/cmake/apple/fluid-synth.rb
@@ -33,7 +33,7 @@
 
 ## Qt4
    ```bash
-   brew install git cmake pkgconfig fftw libogg libvorbis libsndfile libsamplerate jack \
+   brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
    sdl libgig libsoundio stk portaudio node fltk cartr/qt4/qt
 
    brew install --build-from-source https://github.com/LMMS/lmms/raw/master/cmake/apple/fluid-synth.rb

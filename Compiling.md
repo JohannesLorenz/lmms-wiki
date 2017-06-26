@@ -126,7 +126,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 
 
    **Note:**
-   In case you want to build LMMS with Qt, see [Using Qt5](#using-qt5).
+   In case you want to build LMMS with Qt5, see [Using Qt5](#using-qt5).
 
 ### Build Options
 | Option* | Description | Common Values |

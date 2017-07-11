@@ -131,7 +131,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 ### Build Options
 | Option* | Description | Common Values |
 |--------|-------------|-------|
-| [`CMAKE_INSTALL_PREFIX`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_INSTALL_PREFIX.html) | Install to non-standard (non-root) location.  This is generally preferred, especially for coding, testing and packaging. | `../install` |
+| [`CMAKE_INSTALL_PREFIX`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_INSTALL_PREFIX.html) | Install to non-standard (non-root) location.  This is generally preferred, especially for coding, testing and packaging. | `../target` |
 | [`CMAKE_PREFIX_PATH`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_PREFIX_PATH.html?highlight=cmake_prefix_path) | Set your Qt5 (probably other library too) installation path if it does not reside in standard installation paths | `/path/to/qt5` |
 | [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html) | Force build to include debugging or optimization symbols | `Release`, `Debug`, `RelWithDebInfo` |
 | [`FORCE_VERSION`](../blob/master/cmake/modules/VersionInfo.cmake) | Force version within software, useful for distributing one-off packages | `internal`, `1.2.3-myfix` |
@@ -250,13 +250,13 @@ open .           # optional: view in Finder
 
 #### Linux Packaging
 
-Experimental.  Assumes you've already [installed dependencies](#dependencies-quickstart) and [cloned `jasp00:linux-inst`](../issues/2932) and [configured the build environment](#running-cmake).  Once completed, the release should be [published](#publishing-a-release) for others to download.
+Assumes you've already [installed dependencies](#dependencies-quickstart) and [configured the build environment](#running-cmake).  Once completed, the release should be [published](#publishing-a-release) for others to download.  This command will fail if `CMAKE_INSTALL_PREFIX` was not provided.
 ```bash
 # from "lmms/build" directory
 make install     # installs to target
-make makeself    # create self-extracting package
+make appimage    # creates a Linux AppImage
 ```
-> Produces `lmms-1.2.0.123-x86_64-linux-gnu.run`, where `123` is the number of commits since stable release.
+> Produces `lmms-1.2.0-123-linux-x86_64.AppImage`, where `123` is the number of commits since stable release.
 
 #### Publishing a Release
 

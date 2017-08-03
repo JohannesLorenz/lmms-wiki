@@ -58,7 +58,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 |----------|---------|---------|-------------|
 | ✔️ | [`Qt5`](http://qt.io) | `>=5.0.0` | Recommended over Qt4, see [Using Qt5](#using-qt5) below. |
 | ✔️ | [`Qt4`](http://qt.io) | `>=4.3.0` | Optional instead of Qt5, `>=4.4.x` recommended | 
-| ✔️ | [`libsndfile`](http://www.mega-nerd.com/libsndfile/) | `>=1.0.11` | Reading and writing sound files |
+| ✔️ | [`libsndfile`](http://www.mega-nerd.com/libsndfile/) | `>=1.0.11` | Reading and writing sound files, `>=1.0.18` for [`lmms>=master`](../tree/master)(`>=1.0.26` for FLAC compression level setting for `lmms>=master`) |
 | ✔️ | [`fftw3`](http://www.fftw.org/) | | Fast fourier transform computing library |
 |   | [`libvorbis`](http://xiph.org/vorbis/) | | Audio encoding library |
 |   | [`libsamplerate`](http://www.mega-nerd.com/SRC/) | `>=0.1.7` | Audio sample rate converter |

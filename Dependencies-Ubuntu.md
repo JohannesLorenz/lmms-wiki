@@ -4,17 +4,17 @@
 ```bash
 sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
 libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-dev libsdl-dev \
-libsamplerate0-dev libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev \
-wine-dev libxinerama-dev libxft-dev libgig-dev git qtbase5-dev qttools5-dev-tools \
-qttools5-dev
+libsamplerate0-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
+libfltk1.3-dev wine-dev libxinerama-dev libxft-dev libgig-dev git qtbase5-dev \
+qttools5-dev-tools qttools5-dev
 ```
 
 ## Qt4
 ```bash
 sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
 libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-dev libsdl-dev \
-libsamplerate0-dev libstk0-dev libfluidsynth-dev portaudio19-dev libfltk1.3-dev \
-wine-dev libxinerama-dev libxft-dev libgig-dev git libqt4-dev 
+libsamplerate0-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
+libfltk1.3-dev wine-dev libxinerama-dev libxft-dev libgig-dev git libqt4-dev 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

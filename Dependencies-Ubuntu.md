@@ -3,8 +3,8 @@
 ## Qt5
 ```bash
 sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
-libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-dev libsdl-dev \
-libsamplerate0-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
+libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-jackd2-dev \
+libsamplerate0-dev libsdl-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
 libfltk1.3-dev wine-dev libxinerama-dev libxft-dev libgig-dev git qtbase5-dev \
 qttools5-dev-tools qttools5-dev
 ```
@@ -12,8 +12,8 @@ qttools5-dev-tools qttools5-dev
 ## Qt4
 ```bash
 sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
-libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-dev libsdl-dev \
-libsamplerate0-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
+libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-jackd2-dev \
+libsamplerate0-dev libsdl-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
 libfltk1.3-dev wine-dev libxinerama-dev libxft-dev libgig-dev git libqt4-dev 
 ```
 
@@ -24,11 +24,17 @@ libfltk1.3-dev wine-dev libxinerama-dev libxft-dev libgig-dev git libqt4-dev
 
 ### The following packages have unmet dependencies
 Sometimes `apt-get` will not allow all packages to be installed simultaneously. (e.g. `foo : Depends: bar (=1.0.0) but it is not going to be installed`).  Install them or resolve dependencies individually.
-
 ```bash
 sudo apt-get install libfluidsynth-dev
+sudo apt-get install libjack-jackd2-dev
+```
+
+This can also happen if you already have Jack1 installed on your system, and you're trying to install Jack2 development files. You should try installing Jack1 dev files instead:
+```bash
 sudo apt-get install libjack-dev
 ```
+
+Both Jack1 and Jack2 work fine with LMMS, for differences between the two [please consult the Jackaudio wiki.](https://github.com/jackaudio/jackaudio.github.com/wiki/Q_difference_jack1_jack2)
 
 ### winegcc: g++ failed
 ### fatal error: bits/c++config.h: No such file or directory

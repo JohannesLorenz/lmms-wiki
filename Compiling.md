@@ -222,7 +222,8 @@ Assuming you have `clang` (macOS, FreeBSD), you'll need `lldb` installed via `br
 |-----------|--------|----------|-------|
 | ✔️       | `.exe` | [Windows](#windows-packaging) | `lmms>=0.4.0` |
 | ✔️       | `.dmg` | [macOS](#macos-packaging) | `lmms>=1.0.0` |
-| ✖️       | `.run` | [Linux Universal](#linux-packaging) | Work in progress, see [#2932](../issues/2932)
+| ✔️       | `.AppImage` | [Linux Universal](#linux-packaging) | Work in progress, see [#3688](../issues/3688) |
+| ✖️       | `.run` | [Linux Universal](#linux-packaging) | Work in progress, see [#2932](../issues/2932) |
 | ❌       | `.deb` | Debian, Ubuntu | See [#1620](../issues/1620). Please contact package maintainers. |
 | ❌       | `.rpm` | Fedora, openSUSE | Related to [#1620](../issues/1620). Please contact package maintainers. |
 

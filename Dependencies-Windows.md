@@ -22,9 +22,6 @@ Configure a `mingw-w64` cross-compilation environment for building Windows binar
 
 ### Setup PPA
 ```bash
-# For Ubuntu 12.04 "Precise"
-sudo add-apt-repository ppa:tobydox/mingw-x-precise
-
 # For Ubuntu 14.04 "Trusty"
 sudo add-apt-repository ppa:tobydox/mingw-x-trusty
 ```

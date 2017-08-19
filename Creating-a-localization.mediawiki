@@ -46,4 +46,4 @@ for installing LMMS to an appropriate location. Then run it and it should speak 
 #{{flag|sv}} Swedish
 #{{flag|uk}} Ukrainian
 
-[http://lmms.git.sourceforge.net/git/gitweb.cgi?p=lmms/lmms;a=tree;f=data/locale;hb=HEAD source]
+[https://github.com/LMMS/lmms/tree/stable-1.2/data/locale source]

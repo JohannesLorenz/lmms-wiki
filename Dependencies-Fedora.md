@@ -1,7 +1,8 @@
 # Qt4
 On Fedora 25:
 ```
-dnf install qt4-devel libsndfile-devel fftw3-devel libvorbis-devel libsamplerate-devel libogg-devel stk-devel fltk-devel
+dnf install qt4-devel libsndfile-devel fftw3-devel libvorbis-devel \
+    libsamplerate-devel libogg-devel stk-devel fltk-devel doxygen \
 ```
 
 # Qt5

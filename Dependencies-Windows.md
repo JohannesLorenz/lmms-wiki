@@ -95,7 +95,7 @@ pacman -S mingw-w64-x86_64-gcc mingw-w64-i686-gcc
 pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4 gdb
 
 ```
-For Qt5, install `mingw-w64-x86_64-qt5 mingw-w64-i686-qt5` instead of qt4 packages.
+Qt5 hasn't been tested and will likely cause problems but can be provided by installing `mingw-w64-x86_64-qt5 mingw-w64-i686-qt5` instead of qt4 packages.
 
 ### Setup Remaining Dependencies
 Using `Mingw-w64` from Start Menu (or manually via `mingw64.exe`).  

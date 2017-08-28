@@ -3,6 +3,7 @@ On Fedora 25:
 ```
 dnf install qt4-devel libsndfile-devel fftw3-devel libvorbis-devel \
     libsamplerate-devel libogg-devel stk-devel fltk-devel doxygen \
+    lib-alsa-devel pulseaudio-libs-devel zynaddsubfx
 ```
 
 # Qt5

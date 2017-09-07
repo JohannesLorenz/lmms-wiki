@@ -103,7 +103,10 @@ Using `Mingw-w64` from Start Menu (or manually via `mingw64.exe`).
 **Important** The following commands **won't work** from msys2 console.  It needs to be mingw!
 
 ```bash
-# Download msys_helper.sh helper script
+# Delete any old helper scripts
+rm -f msys_helper.sh
+
+# Download latest msys_helper.sh helper script from master
 wget https://raw.githubusercontent.com/lmms/lmms/master/cmake/msys/msys_helper.sh --no-check-certificate
 
 # Run the helper script. This will automatically:

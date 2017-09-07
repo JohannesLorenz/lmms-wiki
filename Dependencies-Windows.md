@@ -92,7 +92,7 @@ pacman -Su
 pacman -S mingw-w64-x86_64-gcc mingw-w64-i686-gcc
 
 # Download and install dependencies (about 726MB, 3.3GB installed)
-pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4 gdb
+pacman -S git pkgconfig make cmake wget p7zip gzip tar binutils mingw-w64-x86_64-qt4 mingw-w64-i686-qt4 gdb diffutils
 
 ```
 Qt5 hasn't been tested and will likely cause problems but can be provided by installing `mingw-w64-x86_64-qt5 mingw-w64-i686-qt5` instead of qt4 packages.

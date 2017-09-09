@@ -6,9 +6,11 @@ Mixing tabs and spaces is evil. Please, please, please make sure your editor is 
 **• Try to limit line lengths to 80 characters.**  
 Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do.  
 
-**• Do not add a space after opening brackets or a space before closing brackets.**  
+**• Add a space after `if`, `else if`, `else`, `for`, `do`, `while` and `switch`.**
 
-**• Do not add a space before semicolons.**  
+**• Do not add a space after opening brackets or a space before closing brackets.**
+
+**• Do not add a space before semicolons.**
 
 **• Do not prefix header guard macros with an underscore.**  
 Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.  
@@ -42,7 +44,7 @@ Example:
 	typedef QList<AutomatableModel *> AutoModelList;
 ```
 
-**• Variable and method names begin with a lower case letter**  
+**• Variable and method names begin with a lower case letter.**  
 Example:
 ```c++
 	void doThis(int a);
@@ -67,18 +69,18 @@ Example:
 	sub_note_key_base = base_note_key + octave_cnt * NOTES_PER_OCTAVE;
 ```
 
-**• `if`, `else`, `for`, and `while` should use explicit blocking.**  
+**• `if`, `else if`,`else`, `for`, `do`,`while` and `switch` should use explicit blocking.**  
 Example:
 ```c++
-	if(m_sample > 0)
+	if (m_sample > 0)
 	{
 		--m_sample;
 	}
 ```
 
-**If you can comfortably fit the block on one line, then it's acceptable to format it like this:**
+**If you can comfortably fit the block on one line, then it's acceptable to format it like this:**  
 ```c++
-	if(m_sample > 0) {--m_sample;}
+	if (m_sample > 0) {--m_sample;}
 ```
 but note that the braces must always be included.
 
@@ -94,7 +96,7 @@ Example:
 **• Standard true/false constants.**  
 Example:
 ```c++
-	if(a == true)
+	if (a == true)
 	{
 		b = false;
 	}

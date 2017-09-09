@@ -1,15 +1,19 @@
-Everybody has their own favorite "style" for writing code, however, in the interest of making the codebase easier to maintain, we request that the following conventions be observed. Code that is lifted from other projects does not need to be modified to match these rules – no need to fix what isn't broken.
+Everybody has their own favorite style for writing code, however, in the interest of making the codebase easier to maintain, we request that the following conventions be observed. Code that is lifted from other projects does not need to be modified to match these rules – no need to fix what isn't broken.
 
-**All indentation is performed using tabs.**  
+**• All indentation is performed using tabs.**  
 Mixing tabs and spaces is evil. Please, please, please make sure your editor is configured to use tabs.  Instructions for QtCreator can be [found here](https://github.com/LMMS/lmms/pull/2033#issuecomment-98895801).
 
-**Try to limit line lengths to 80 characters**  
-Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do. One tab is equivalent to 8 characters.
+**• Try to limit line lengths to 80 characters.**  
+Not an absolute requirement – sometimes longer lines can't be avoided. But it is a friendly thing to do.  
 
-**Do not prefix header guard macros with an underscore**  
-Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.
+**• Do not add a space after opening brackets or a space before closing brackets.**  
 
-**Include file lists should be grouped by type (system include or local include) and then sorted by name**  
+**• Do not add a space before semicolons.**  
+
+**• Do not prefix header guard macros with an underscore.**  
+Header guards should not begin with an underscore. Identifiers that begin with an underscore + capital letter are reserved identifiers in C++ and their usage should be avoided. If you edit an older file which contains an improper header guard, please fix it to comply with guidelines.  
+
+**• Include file lists should be grouped by type (system include or local include) and then sorted by name.**  
 The exception is that in a source file, the first included file should always be its header.  
 Example:
 ```c++
@@ -24,7 +28,7 @@ MySourceFile.cpp:
 #include "GuiApplication.h"
 ```
 
-**All kind of types (class names, enums, structs) begin with an upper case letter**  
+**• All kind of types (class names, enums, structs) begin with an upper case letter.**  
 Example:
 
 ```c++
@@ -38,44 +42,47 @@ Example:
 	typedef QList<AutomatableModel *> AutoModelList;
 ```
 
-**Variable and method names begin with a lower case letter**  
+**• Variable and method names begin with a lower case letter**  
 Example:
 ```c++
 	void doThis(int a);
 	int myLocalVariable;
 ```
 
-**Member variables are prefixed with "m_"**  
+**• Member variables are prefixed with "m_".**  
 Example:
 ```c++
 	Knob * m_chordRangeKnob;
 ```
-**Function parameters are _not_ prefixed with "_" anymore**  
+
+**• Function parameters are _not_ prefixed with '_' anymore.**  
 Example:
 ```c++
 	void clearS16Buffer(outputSampleType* outbuf, Uint32 frames)
 ```
-**Infix operators (=, +, -, *, /, etc.) should have a space before and after**  
+
+**• Infix operators ('=', '+', '-', '*', '/', etc.) should have a space before and after them.**  
 Example:
 ```c++
 	sub_note_key_base = base_note_key + octave_cnt * NOTES_PER_OCTAVE;
 ```
 
-**`if`, `else`, `for`, and `while` should use explicit blocking**  
+**• `if`, `else`, `for`, and `while` should use explicit blocking.**  
 Example:
 ```c++
 	if(m_sample > 0)
 	{
-	       --m_sample;
+		--m_sample;
 	}
 ```
+
 **If you can comfortably fit the block on one line, then it's acceptable to format it like this:**
 ```c++
-	if(m_sample > 0) { --m_sample; }
+	if(m_sample > 0) {--m_sample;}
 ```
-...but note that the braces must always be included!
+but note that the braces must always be included.
 
-**Return without parenthesis**  
+**• Return without parenthesis.**  
 Example:
 ```c++
 	int foo()
@@ -84,7 +91,7 @@ Example:
 	}
 ```
 
-**Standard true/false constants**  
+**• Standard true/false constants.**  
 Example:
 ```c++
 	if(a == true)
@@ -93,7 +100,7 @@ Example:
 	}
 ```
 
-**Ternary operators: generally, you should only use them when it makes sense, when it makes the code more streamlined or more readable. If you have to use long ternary expressions that don't fit on one line, they should be formatted like this:**
+**• Ternary operators: generally, you should only use them when it makes sense, when it makes the code more streamlined or more readable. If you have to use long ternary expressions that don't fit on one line, they should be formatted like this:**
 ```c++
 	a == condition
 		? value

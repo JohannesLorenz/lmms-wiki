@@ -22,7 +22,7 @@
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
    sdl libgig libsoundio stk portaudio node fltk qt@5.5
 
-   brew install --build-from-source https://github.com/LMMS/lmms/raw/master/cmake/apple/fluid-synth.rb
+   brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
    > **Note:** If compiling on 10.8, the `stk.rb` and `libgig.rb` brew formula needs a patch
@@ -36,7 +36,7 @@
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
    sdl libgig libsoundio stk portaudio node fltk cartr/qt4/qt
 
-   brew install --build-from-source https://github.com/LMMS/lmms/raw/master/cmake/apple/fluid-synth.rb
+   brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

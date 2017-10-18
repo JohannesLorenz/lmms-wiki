@@ -3,7 +3,7 @@
 Assuming you have git installed, you first have to get a copy of the Git
 repository:
 
-	git clone https://github.com/LMMS/lmms.git
+	git clone --recursive https://github.com/LMMS/lmms.git
 
 This will clone the master branch, which can be unstable and have bugs.
 
@@ -18,6 +18,7 @@ If you want to update your copy simply type
 
 	git remote update
 	git pull
+	git submodule update --init --recursive
 
 inside lmms-directory. The first step usually can be omitted.
 

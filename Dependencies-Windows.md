@@ -48,7 +48,7 @@ mingw64-x-qt5base
 ```
 
 ### Qt4
-If Qt4 is required (`lmms<=1.1.0`)
+If Qt4 is required (`lmms<=1.2.0`)
 ```
 sudo apt-get install mingw32-x-qt mingw64-x-qt
 ```

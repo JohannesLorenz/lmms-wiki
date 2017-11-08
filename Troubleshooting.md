@@ -37,7 +37,7 @@ If LMMS launches, great.  If it doesn't, search for Qt conflicts:
    9.  Try LMMS again. 
 * If this doesn't help, try replacing the [`libportaudio-2.dll`  in your installation directory with a recompiled one](https://github.com/LMMS/lmms/issues/451#issuecomment-37773385).
 
-If that doesn't work, you may be able to [shim a 3rd-party DLL into the software](https://github.com/LMMS/lmms/issues/1865#issuecomment-79510559).  If not, you're out of luck.
+If that doesn't work you can ask in our `#support` channel on [Discord](https://lmms.io/chat).
 
 ## Linux
 Sorry, there's nothing here yet!  Please help by [contributing](https://lmms.io/get-involved/) or ask in our `#support` channel on [Discord](https://lmms.io/chat).

@@ -19,7 +19,11 @@
  * [[Unit testing]]
 
 ## Contact Us
+ * [Discord chat server](https://lmms.io/chat)
+ * You can also use the [mailing list](http://lists.sourceforge.net/lists/listinfo/lmms-devel) or find us on [`#lmms`](irc://chat.freenode.net/#lmms)
+
+
+## Support
  * [Troubleshooting guide](Troubleshooting)
- * [Discord chat server](https://discord.gg/5kSc32Z)
- * [`#lmms` IRC Channel](irc://chat.freenode.net/#lmms)
- * [Mailing list](http://lists.sourceforge.net/lists/listinfo/lmms-devel)
+ * [Issue tracker](https://github.com/LMMS/lmms/issues)
+

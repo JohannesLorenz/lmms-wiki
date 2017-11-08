@@ -22,6 +22,8 @@
 
 The following packages are required for building.  Since most desktops offer these libraries through package repositories, we recommend using the [Dependency Quickstart](#dependencies-quickstart) for most purposes.
 
+If you get stuck, please ask in the `#support` channel on [Discord](https://lmms.io/chat).
+
 If a package is not available for your platform, you may need to [manually install](#dependencies-detailed).
 
 ### Dependencies Quickstart

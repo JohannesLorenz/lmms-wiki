@@ -19,7 +19,7 @@
  * [[Unit testing]]
 
 ## Contact Us
-
+ * [Troubleshooting guide](Troubleshooting)
  * [Discord chat server](https://discord.gg/5kSc32Z)
  * [`#lmms` IRC Channel](irc://chat.freenode.net/#lmms)
  * [Mailing list](http://lists.sourceforge.net/lists/listinfo/lmms-devel)

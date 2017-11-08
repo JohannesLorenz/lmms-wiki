@@ -37,6 +37,11 @@ If LMMS launches, great.  If it doesn't, search for Qt conflicts:
    9.  Try LMMS again. 
 * If this doesn't help, try replacing the [`libportaudio-2.dll`  in your installation directory with a recompiled one](https://github.com/LMMS/lmms/issues/451#issuecomment-37773385).
 
+### SSD Worn Bits
+* Some solid-state hard drives suffer a condition known as ["worn bits"](https://github.com/LMMS/lmms/issues/3488#issuecomment-292051362). 
+ The vendor disk utility or running `chkdsk /f` as administration should help. 
+
+
 If that doesn't work you can ask in our `#support` channel on [Discord](https://lmms.io/chat).
 
 ## Linux

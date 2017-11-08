@@ -22,8 +22,8 @@ If LMMS launches, great.  If it doesn't, search for Qt conflicts:
    * Ignore those found in `%APPDATA%` or `Program Files`, they're generally safe.  Watch out for those installed in `C:\Windows` or `C:\Windows\System32`
 
 ### Sound Driver Conflicts
- * This is the most common cause of crashes on startup.
- * First, look for sound capture devices such as Elgato Sound Capture and try to disable them in Device Manager.
+ * Drivers are the most common cause of crashes on startup.
+ * First attempt to disable the sound devices through Device Manager and enable them one-by-one.
  * Second, download the latest sound driver from your sound card (from PC manufacturer website, or directly from the sound card manufacturer.)
    * **Note:** Some HDMI sound devices use video drivers from NVIDIA/AMD(ATI)/Intel.
  * If this doesn't help, force removal of the 3rd party driver and use the one provided by Microsoft.  This is how:

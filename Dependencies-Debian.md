@@ -7,6 +7,19 @@ fluid libasound2-dev git libpulse-dev libfluidsynth-dev libfftw3-dev \
 portaudio19-dev libgig-dev libwine-dev qt4-qmake libqt4-dev 
 ```
 
+### VST
+Install libraries for VST support
+```bash
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install wine-development wine32-development wine64-development \
+libwine-development libwine-development:i386 fonts-wine gcc-multilib g++-multilib
+
+# keywords: winegcc: g++ failed
+# keywords: fatal error: bits/c++config.h: No such file or directory
+# keywords: winegcc: File does not exist: /usr/lib/i386/wine/libwinecrt0.a
+```
+
 On Debian i386 systems, also run:
 ```bash
 sudo apt-get install wine32-tools

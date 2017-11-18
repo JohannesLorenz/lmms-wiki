@@ -6,8 +6,10 @@
 
 ## Getting Involved
 
- * [Issue tracker](../issues)  
- * [[Creating a localization]]  
+ * [Issue tracker](../issues)
+ * [[Reporting Issues]]
+ * [[Creating a localization]]
+ * [[Reviewing Pull Requests]]
  * ... more resources available [here](https://lmms.io/get-involved/)
 
 ## Start Coding

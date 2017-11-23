@@ -1,6 +1,7 @@
 ```bash
 sudo pacman -S git cmake gcc-multilib qt5-base libsndfile fftw libvorbis lame \
-libsamplerate libogg wine stk fluidsynth fltk jack2 sdl alsa-lib portaudio
+libsamplerate libogg wine stk fluidsynth fltk jack2 sdl alsa-lib portaudio \
+perl-list-moreutils perl-exporter-tiny
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>

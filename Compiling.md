@@ -75,7 +75,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 |   | [`libportaudio`](http://www.portaudio.com/)|  | Audio interface library* | 
 |   | [`libsoundio`](http://libsound.io/)|  | Audio interface library* |
 
-   > \*One one or more required for audio playback
+   > \*One or more required for audio playback
 
 <br><!-- End Section --><br>
 

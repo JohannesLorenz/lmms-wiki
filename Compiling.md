@@ -39,12 +39,11 @@ Recommended.  Each platform requires a [compiler](#compiler) and several [librar
 Alternately, you may download and compile each dependency manually.  This is recommended for advanced users only.
 
 #### Build Toolchain
-| Supported | Toolchain | Version | Notes | 
+| Supported | Toolchain | Version | Branch | 
 |-----------|-----------|---------|-------| 
-| ✔️ | [`cmake`](https://cmake.org/) | `2.8.11` | Required for [Qt5](#using-qt5)|
-| ✔️ | [`cmake`](https://cmake.org/) | [`2.8.9`](../blob/master/CMakeLists.txt#L1) |  [`lmms>=master`](../tree/master) |
-| ✔️ | [`cmake`](https://cmake.org/) | [`2.8.7`](../blob/stable-1.2/CMakeLists.txt#L1) | [`lmms<=stable-1.2`](../tree/stable-1.2) |
-| ✔️ | [`cmake`](https://cmake.org/) | [`2.4.5`](../blob/stable-1.1/CMakeLists.txt#L1) | [`lmms<=stable-1.1`](../tree/stable-1.1) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`3.1.0`](../blob/master/CMakeLists.txt#L1) |  [`master`](../tree/master) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`2.8.7`](../blob/stable-1.2/CMakeLists.txt#L1) | [`stable-1.2`](../tree/stable-1.2) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`2.4.5`](../blob/stable-1.1/CMakeLists.txt#L1) | [`stable-1.1`](../tree/stable-1.1) |
 
 #### Compiler
 | Supported | Compiler | Version |

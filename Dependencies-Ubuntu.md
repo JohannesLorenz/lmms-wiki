@@ -54,6 +54,15 @@ sudo apt-get install libjack-dev
 
 Both Jack1 and Jack2 work fine with LMMS, for differences between the two [please consult the Jackaudio wiki.](https://github.com/jackaudio/jackaudio.github.com/wiki/Q_difference_jack1_jack2)
 
+### qmake
+If `qmake --version` shows an error:
+```bash
+sudo apt-get install qt5-default
+
+# keywords: qmake: could not find a Qt installation of ''
+```
+
+
 ### ia32-libs
 Older environments may complain that `ia32-libs` package has been removed.  See [this page](http://askubuntu.com/a/107249/412004) for more information.
 ```bash

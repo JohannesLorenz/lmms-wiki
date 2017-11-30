@@ -21,6 +21,16 @@ sudo apt-get install wine-dev libwine-dev libwine-dev:i386 gcc-multilib g++-mult
 # keywords: winegcc: File does not exist: /usr/lib/i386/wine/libwinecrt0.a
 ```
 
+### Carla
+
+Install libraries for [Carla](http://kxstudio.linuxaudio.org/Applications:Carla) support
+```bash
+sudo apt-get install apt-transport-https software-properties-common wget
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.6~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos_9.4.6~kxstudio1_all.deb
+sudo apt-get install carla-git
+```
+
 ## Qt4
 ```bash
 sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
@@ -29,7 +39,7 @@ libsamplerate0-dev libsdl-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev 
 libfltk1.3-dev libxinerama-dev libxft-dev libgig-dev git libqt4-dev 
 ```
 
- * Don't forget to install libraries for VST support [here](#vst)
+ * Don't forget to install libraries for VST support [here](#vst) and Carla support [here](#carla)
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>

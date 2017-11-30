@@ -23,12 +23,12 @@ sudo apt-get install wine-dev libwine-dev libwine-dev:i386 gcc-multilib g++-mult
 
 ### Carla
 
-Install libraries for [Carla](http://kxstudio.linuxaudio.org/Applications:Carla) support
+Install libraries for [Carla](http://kxstudio.linuxaudio.org/Applications:Carla) support (Ubuntu 14.04 provided as example)
 ```bash
-sudo apt-get install apt-transport-https software-properties-common wget
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.6~kxstudio1_all.deb
-sudo dpkg -i kxstudio-repos_9.4.6~kxstudio1_all.deb
-sudo apt-get install carla-git
+sudo add-apt-repository -y ppa:kxstudio-debian/libs
+sudo add-apt-repository -y ppa:kxstudio-debian/apps
+sudo apt-get update
+sudo apt-get install -y carla-git
 ```
 
 ## Qt4

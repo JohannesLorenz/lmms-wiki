@@ -84,7 +84,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 Before preparing the build environment, you must have a [`branch`](../branches) copy of the source code*.
 ```bash
 # clone the "master" branch (e.g. "stable-1.2", etc)
-git clone -b master https://github.com/lmms/lmms
+git clone --recurse-submodules -b master https://github.com/lmms/lmms
 ```
    > \* Advanced users may prefer to download a tarball instead: [zip](https://github.com/LMMS/lmms/archive/master.tar.gz) | [tarball](https://github.com/LMMS/lmms/archive/master.tar.gz)
 

@@ -52,6 +52,8 @@ If Qt4 is required (`lmms<=1.2.0`)
 ```
 sudo apt-get install mingw32-x-qt mingw64-x-qt
 ```
+### Cross-compile on later version of Ubuntu
+If you want to cross-compile LMMS on Ubuntu later than Trusty(ex. Xenial, Artful), you need to install [libisl10](https://packages.ubuntu.com/trusty/libisl10) to resolve dependencies.
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>

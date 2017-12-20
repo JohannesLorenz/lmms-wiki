@@ -20,18 +20,19 @@
 ## Qt5
    ```bash
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
-   sdl libgig libsoundio stk portaudio node fltk qt5
+   sdl libgig libsoundio stk portaudio node fltk qt5 glib
 
    brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
-   > **Note:** If compiling on 10.8, the `stk.rb` and `libgig.rb` brew formula needs a patch and the older `cmake` and `node` are required
+   > **Note:** If compiling on 10.8, a bunch of patches and old version are required:
    > ```bash
    > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
    > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
-   > brew reinstall --build-from-source https://github.com/tresf/homebrew-core/raw/8aeeb4b5929aa91307f904fae3d42b4fc54387d0/Formula/cmake.rb
+   > brew reinstall --build-from-source https://raw.githubusercontent.com/Homebrew/homebrew-core/9e2b257db3d24c9e5bd7ce2248746688f7e3f6e9/Formula/cmake.rb
    > brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
-   > brew install qt@5.5
+   > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/650aa94f29e698b76991ed4db94cd9f0188cb7ef/fluid-synth.rb --ignore-dependencies --env=std
+   > brew reinstall --build-from-source qt@5.5
    > ```
 
 ## Qt4

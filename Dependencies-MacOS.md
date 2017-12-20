@@ -39,7 +39,8 @@
    ```
 
  * Manually patch `rpmalloc.c` to work with Xcode 5.1.1 using [`rpmalloc.c.diff`](https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff)
- * Manually patch `MemoryManager.cpp` to work with Xcode 5.1.1 using [`MemoryManager.cpp.diff`](https://gist.githubusercontent.com/tresf/36aec89c18f4c7f5d4ebe7805db70d53/raw/707b2776c595e54572234c57ef3368502a637ec0/MemoryManager.cpp.diff)
+ * Download [`ThreadLocal.h`](https://github.com/wang-bin/ThreadLocal/blob/master/ThreadLocal.h), copy into `lmms/include`.
+ * Manually patch `MemoryManager.cpp` to work with Xcode 5.1.1 using [`MemoryManager.cpp.diff`](https://gist.githubusercontent.com/tresf/36aec89c18f4c7f5d4ebe7805db70d53/raw/ad5949c6f22ad6757c2f73fe708e60676ef5d630/MemoryManager.cpp.diff)
 
 ## Qt4
    ```bash

@@ -35,7 +35,7 @@
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/650aa94f29e698b76991ed4db94cd9f0188cb7ef/fluid-synth.rb --ignore-dependencies --env=std
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/43549a998aafef79433d82659abc1922/raw/281b0e295ad29e743bcf3fe2139193976759b809/libgig.rb
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/9b87883886f691d0e6711f8c71d362a4/raw/7ac73754fdeab0ab7243b540c2ca66f272043871/stk.rb
-   brew reinstall --build-from-source qt@5.5
+   brew reinstall --build-from-source qt@5.5 # this will take a long, long time
    ```
 
  * Manually patch `rpmalloc.c` to work with Xcode 5.1.1 using [`rpmalloc.c.diff`](https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff)

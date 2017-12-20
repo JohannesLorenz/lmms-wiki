@@ -38,9 +38,21 @@
    brew reinstall --build-from-source qt@5.5 # this will take a long, long time
    ```
 
- * Manually patch `rpmalloc.c` to work with Xcode 5.1.1 using [`rpmalloc.c.diff`](https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff)
- * Download [`ThreadLocal.h`](https://github.com/wang-bin/ThreadLocal/blob/master/ThreadLocal.h), copy into `lmms/include`.
- * Manually patch `MemoryManager.cpp` to work with Xcode 5.1.1 using [`MemoryManager.cpp.diff`](https://gist.githubusercontent.com/tresf/36aec89c18f4c7f5d4ebe7805db70d53/raw/ad5949c6f22ad6757c2f73fe708e60676ef5d630/MemoryManager.cpp.diff)
+Then apply some manual patches
+
+   ```bash
+   # Install ThreadLocal.h
+   curl -O https://raw.githubusercontent.com/wang-bin/ThreadLocal/master/ThreadLocal.h
+   mv ThreadLocal.h ~/lmms/include
+
+   # Patch MemoryManager.cpp
+   curl -O https://gist.githubusercontent.com/tresf/36aec89c18f4c7f5d4ebe7805db70d53/raw/51520dee2134b55692d499e753297a29923f1873/MemoryManager.cpp.diff
+   patch ~/lmms/src/core/MemoryManager.cpp MemoryManager.cpp.diff
+
+   # Patch rpmalloc.c
+   curl -O https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff
+   patch ~/lmms/src/3rdparty/rpmalloc/rpmalloc/rpmalloc/rpmalloc.c rpmalloc.c.diff
+   ```
 
 ## Qt4
    ```bash

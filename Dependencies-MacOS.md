@@ -20,7 +20,7 @@
 ## Qt5
    ```bash
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
-   sdl libgig libsoundio stk portaudio node fltk qt@5.5
+   sdl libgig libsoundio stk portaudio node fltk qt5
 
    brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```

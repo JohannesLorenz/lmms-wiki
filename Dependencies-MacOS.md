@@ -8,7 +8,7 @@
    sudo xcode-select --install
    sudo xcodebuild -license
    ```
-   > \*Alternately via Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install
+   > \*Alternately via Applications, Xcode, Xcode Preferences menu, Downloads tab, Command Line Tools, Install.  Or if that's missing, hunt down the installer [from Apple Downloads](https://developer.apple.com/download/more/?=Command%20Line%20Tools%20%28OS%20X%20Mountain%20Lion%29).
 
 ## Homebrew
 * [Homebrew](https://brew.sh/)* or an equivelent package manager is required for fetching [libraries](Compiling#libraries)
@@ -25,10 +25,13 @@
    brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
-   > **Note:** If compiling on 10.8, the `stk.rb` and `libgig.rb` brew formula needs a patch
+   > **Note:** If compiling on 10.8, the `stk.rb` and `libgig.rb` brew formula needs a patch and the older `cmake` and `node` are required
    > ```bash
    > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
    > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
+   > brew reinstall --build-from-source https://github.com/tresf/homebrew-core/raw/8aeeb4b5929aa91307f904fae3d42b4fc54387d0/Formula/cmake.rb
+   > brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
+   > brew intstall qt@5.5
    > ```
 
 ## Qt4

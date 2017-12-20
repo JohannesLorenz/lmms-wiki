@@ -31,7 +31,7 @@
    > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
    > brew reinstall --build-from-source https://github.com/tresf/homebrew-core/raw/8aeeb4b5929aa91307f904fae3d42b4fc54387d0/Formula/cmake.rb
    > brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
-   > brew intstall qt@5.5
+   > brew install qt@5.5
    > ```
 
 ## Qt4

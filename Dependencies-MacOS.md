@@ -25,15 +25,20 @@
    brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
-   > **Note:** If compiling on 10.8, a bunch of patches and old version are required:
-   > ```bash
-   > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
-   > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
-   > brew reinstall --build-from-source https://raw.githubusercontent.com/Homebrew/homebrew-core/9e2b257db3d24c9e5bd7ce2248746688f7e3f6e9/Formula/cmake.rb
-   > brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
-   > brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/650aa94f29e698b76991ed4db94cd9f0188cb7ef/fluid-synth.rb --ignore-dependencies --env=std
-   > brew reinstall --build-from-source qt@5.5
-   > ```
+## 10.8
+
+**Note:** This section is for macOS 10.8 only. 
+   ```bash
+   brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
+   brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efb74f1ec9b600c8aa4e823cc855bef2/raw/libgig.rb
+   brew reinstall --build-from-source https://raw.githubusercontent.com/Homebrew/homebrew-core/9e2b257db3d24c9e5bd7ce2248746688f7e3f6e9/Formula/cmake.rb
+   brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
+   brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/650aa94f29e698b76991ed4db94cd9f0188cb7ef/fluid-synth.rb --ignore-dependencies --env=std
+   brew reinstall --build-from-source qt@5.5
+   ```
+
+ * Manually patch `rpmalloc.c` to work with Xcode 5.1.1 using [`rpmalloc.c.diff`](https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff)
+ * Manually patch `MemoryManager.cpp` to work with Xcode 5.1.1 using [`MemoryManager.cpp.diff`](https://gist.githubusercontent.com/tresf/36aec89c18f4c7f5d4ebe7805db70d53/raw/707b2776c595e54572234c57ef3368502a637ec0/MemoryManager.cpp.diff)
 
 ## Qt4
    ```bash

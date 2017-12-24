@@ -73,5 +73,5 @@ Then apply some manual patches
    /Applications/LMMS.app/Contents/MacOS/lmms  # or build/LMMS.app/Contents/MacOS/lmms
    ```
 
-&nbsp;&nbsp;&nbsp;...want to [add something](dependencies-opensuse/_edit)?
+&nbsp;&nbsp;&nbsp;...want to [add something](_edit)?
 

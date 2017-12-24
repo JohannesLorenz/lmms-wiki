@@ -4,7 +4,8 @@
 sudo apt-get install cmake ladspa-sdk libsamplerate0-dev libsdl1.2-dev \
 libsndfile1-dev libvorbis-dev libmp3lame-dev libjack-dev libstk0-dev libfltk1.3-dev \
 fluid libasound2-dev git libpulse-dev libfluidsynth-dev libfftw3-dev \
-portaudio19-dev libgig-dev libwine-dev qt4-qmake libqt4-dev 
+portaudio19-dev libgig-dev libwine-dev qt4-qmake libqt4-dev libxcb-keysyms1-dev \
+libxcb-util0-dev
 ```
 
 ### VST

@@ -24,6 +24,7 @@ Configure a `mingw-w64` cross-compilation environment for building Windows binar
 ```bash
 # For Ubuntu 14.04 "Trusty"
 sudo add-apt-repository ppa:tobydox/mingw-x-trusty
+sudo apt-get update
 ```
 
 ### 32-bit

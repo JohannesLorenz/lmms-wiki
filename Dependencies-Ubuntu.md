@@ -2,11 +2,13 @@
 
 ## Qt5
 ```bash
-sudo apt-get install build-essential cmake3 libsndfile1-dev libfftw3-dev \
+sudo apt-get install build-essential cmake libsndfile1-dev libfftw3-dev \
 libvorbis-dev libogg-dev libmp3lame-dev libasound2-dev libjack-jackd2-dev \
 libsamplerate0-dev libsdl-dev libstk0-dev stk libfluidsynth-dev portaudio19-dev \
 libfltk1.3-dev libxinerama-dev libxft-dev libgig-dev git perl libxml2-utils \
 libxml-perl liblist-moreutils-perl qtbase5-dev qttools5-dev-tools qttools5-dev
+
+# note: replace cmake with cmake3 for Ubuntu 14.04
 ```
 
 ### VST

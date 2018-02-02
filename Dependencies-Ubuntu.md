@@ -16,7 +16,9 @@ Install libraries for VST support
 ```bash
 sudo dpkg --add-architecture i386
 sudo apt-get update
-sudo apt-get install wine-dev libwine-dev libwine-dev:i386 gcc-multilib g++-multilib libqt5x11extras5-dev qtbase5-private-dev libxcb-util0-dev libxcb-keysyms1-dev
+sudo apt-get install wine-stable wine-dev libwine-dev libwine-dev:i386 libwine:i386 \
+libmpg123-0:i386 gcc-multilib g++-multilib libqt5x11extras5-dev qtbase5-private-dev \
+libxcb-util0-dev libxcb-keysyms1-dev
 
 # keywords: winegcc: g++ failed
 # keywords: fatal error: bits/c++config.h: No such file or directory

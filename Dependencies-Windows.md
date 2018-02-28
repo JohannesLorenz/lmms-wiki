@@ -134,6 +134,47 @@ mklink /d %SystemDrive%\mingw32 %SystemDrive%\msys64\mingw32
 mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
 ```
 
+## MSVC
+Warning, MSVC building is still experimental.  Use with caution.
+
+### Prerequisites
+
+1. Install Visual Studio
+2. Enable MSVC++ compiler in Visual Studio
+3. Install QtCreator with Qt5 for matching MSVC++ platform
+
+### Clone Source Code
+
+* Until merged, please use `appveyor` branch on `tresf/lmms`:
+
+```ps1
+git clone -b appveyor https://github.com/tresf/lmms
+```
+
+### From PowerShell
+
+```ps1
+
+
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+
+# Setup right architecture for scoop
+$env:PLATFORM=x64 # or x86
+
+scoop bucket add extras
+scoop install sdl2 pkg-config gzip --arch $env:PLATFORM
+scoop install https://gist.github.com/tresf/d95ee9c6649a5dfa010e5196ec56cb19/raw/2f9859638a60411b08988af88cd6aae24a7ebbaa/libsndfile.json --arch $env:PLATFORM
+scoop install https://gist.github.com/tresf/537ed72730a8b18341a35eaa3759e36f/raw/5ab74152d2c2b30fb762a22118ef511b004abea9/fftw.json --arch $env:PLATFORM 
+scoop install https://gist.github.com/tresf/a5dc944dc9c5d437261b1e38171b1ac1/raw/541f05dd9c01cb1696cae9dd100a96c97cc475db/libsamplerate.json --arch $env:PLATFORM
+
+# Setup right architecture for cmake
+$env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"
+
+cd %APPVEYOR_BUILD_FOLDER%
+cmake . -DCMAKE_GENERATOR_PLATFORM=%CMAKE_PLATFORM%
+cmake --build .
+```
+
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>
 

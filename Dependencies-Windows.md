@@ -142,13 +142,14 @@ Warning, MSVC building is still experimental.  Use with caution.
 1. Install Visual Studio
 2. Enable MSVC++ compiler in Visual Studio
 3. Install QtCreator with Qt5 for matching MSVC++ platform
+4. Install Git
 
 ### Clone Source Code
 
 * Until merged, please use `appveyor` branch on `tresf/lmms`:
 
 ```ps1
-git clone -b appveyor https://github.com/tresf/lmms
+git clone -b appveyor https://github.com/tresf/lmms --recursive
 ```
 
 ### From PowerShell

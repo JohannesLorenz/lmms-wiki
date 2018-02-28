@@ -29,6 +29,7 @@
 
 **Note:** This section is for macOS 10.8 only. 
    ```bash
+   alias git=/usr/local/bin/git # TLS1.0 was highest the OS provided, use brew version instead
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
    brew reinstall --build-from-source https://raw.githubusercontent.com/Homebrew/homebrew-core/9e2b257db3d24c9e5bd7ce2248746688f7e3f6e9/Formula/cmake.rb
    brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb

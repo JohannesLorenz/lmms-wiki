@@ -171,9 +171,10 @@ scoop install https://gist.github.com/tresf/a5dc944dc9c5d437261b1e38171b1ac1/raw
 # Setup right architecture for cmake
 $env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"
 
-cd %APPVEYOR_BUILD_FOLDER%
-cmake . -DCMAKE_GENERATOR_PLATFORM=%CMAKE_PLATFORM%
-cmake --build .
+mkdir build
+cd build
+cmake .. -DCMAKE_GENERATOR_PLATFORM=%CMAKE_PLATFORM%
+cmake --build ..
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

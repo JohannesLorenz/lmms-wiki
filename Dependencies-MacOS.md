@@ -25,6 +25,10 @@
    brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
    ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
+<br><!-- End Section--><br>
+
+
 ## 10.8
 
 **Note:** This section is for macOS 10.8 only. 

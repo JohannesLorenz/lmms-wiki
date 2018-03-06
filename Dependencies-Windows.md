@@ -162,7 +162,7 @@ set-executionpolicy remotesigned -scope currentuser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 # Setup right architecture for scoop
-$env:PLATFORM=x64 # or x86
+$env:PLATFORM='x64' # or x86
 
 scoop bucket add extras
 scoop install sdl2 pkg-config gzip --arch $env:PLATFORM

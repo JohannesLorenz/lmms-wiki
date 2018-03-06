@@ -141,6 +141,7 @@ Warning, MSVC building is still experimental.  Use with caution.
 
 1. Install Visual Studio
 2. Enable MSVC++ compiler in Visual Studio
+3. Install CMake, be sure to add to PATH on install
 3. Install QtCreator with Qt5 for matching MSVC++ platform
 4. Install Git
 

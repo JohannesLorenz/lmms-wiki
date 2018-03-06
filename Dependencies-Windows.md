@@ -156,6 +156,8 @@ git clone -b appveyor https://github.com/tresf/lmms --recursive
 
 ```ps1
 
+# Make sure you have allowed PowerShell to execute local scripts
+set-executionpolicy remotesigned -scope currentuser
 
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 

@@ -180,7 +180,7 @@ $env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"
 cd lmms
 mkdir build
 cd build
-cmake .. -DCMAKE_GENERATOR_PLATFORM=%CMAKE_PLATFORM%
+cmake .. -DCMAKE_GENERATOR_PLATFORM=$CMAKE_PLATFORM$
 cmake --build .
 ```
 

@@ -181,7 +181,7 @@ cd lmms
 mkdir build
 cd build
 cmake .. -DCMAKE_GENERATOR_PLATFORM=%CMAKE_PLATFORM%
-cmake --build ..
+cmake --build .
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

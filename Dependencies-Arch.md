@@ -1,5 +1,5 @@
 ```bash
-sudo pacman -S git cmake gcc-multilib qt5-base libsndfile fftw libvorbis lame \
+sudo pacman -S git cmake gcc-multilib qt5-base qt5-tools libsndfile fftw libvorbis lame \
 libsamplerate libogg wine stk fluidsynth fltk jack2 sdl alsa-lib portaudio \
 perl-list-moreutils perl-exporter-tiny
 ```

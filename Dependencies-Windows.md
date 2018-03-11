@@ -183,7 +183,6 @@ cd lmms
 mkdir build
 cd build
 cmake .. -DCMAKE_GENERATOR_PLATFORM=$env:CMAKE_PLATFORM 
-cmake --build . --config Release
 ```
 
 ### Add libraries to path
@@ -197,6 +196,16 @@ C:\Users\[user]\scoop\apps\libsndfile\current\bin
 ```
 
 See [here](http://www.itprotoday.com/management-mobility/how-can-i-add-new-folder-my-system-path) for instructions on changing path.
+
+You can now either use
+
+```
+cmake --build . --config Release
+```
+
+to build in the command line, or open `lmms.sln` in Visual Studio.
+
+If you're using Visual Studio, change the startup project to `lmms` by right clicking on `lmms` project in the solution explorer and clicking on `Set as StartUp Project`.
 
 ## Troubleshooting
 

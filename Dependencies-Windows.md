@@ -175,14 +175,6 @@ scoop install https://gist.github.com/tresf/a5dc944dc9c5d437261b1e38171b1ac1/raw
 $env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"
 ```
 
-Add the following folders to the user or system path:
-
-C:\Qt\[QT version]\[MSVC version]\bin
-C:\Users\[user]\scoop\apps\sdl2\current\lib
-C:\Users\[user]\scoop\apps\libsndfile\current\bin
-
-See [here](http://www.itprotoday.com/management-mobility/how-can-i-add-new-folder-my-system-path) for instructions on changing path.
-
 ```ps1
 cd lmms
 mkdir build
@@ -190,6 +182,18 @@ cd build
 cmake .. -DCMAKE_GENERATOR_PLATFORM=$env:CMAKE_PLATFORM 
 cmake --build . --config Release
 ```
+
+### Add libraries to path
+
+Add the following folders to your user path:
+
+```
+C:\Qt\[QT version]\[MSVC version]\bin
+C:\Users\[user]\scoop\apps\sdl2\current\lib
+C:\Users\[user]\scoop\apps\libsndfile\current\bin
+```
+
+See [here](http://www.itprotoday.com/management-mobility/how-can-i-add-new-folder-my-system-path) for instructions on changing path.
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>

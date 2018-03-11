@@ -134,6 +134,9 @@ mklink /d %SystemDrive%\mingw32 %SystemDrive%\msys64\mingw32
 mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
 ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
+<br><!-- End Section--><br>
+
 ## MSVC
 Warning, MSVC building is still experimental.  Use with caution.
 
@@ -194,9 +197,6 @@ C:\Users\[user]\scoop\apps\libsndfile\current\bin
 ```
 
 See [here](http://www.itprotoday.com/management-mobility/how-can-i-add-new-folder-my-system-path) for instructions on changing path.
-
-&nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
-<br><!-- End Section--><br>
 
 ## Troubleshooting
 

@@ -169,7 +169,7 @@ scoop bucket add extras
 scoop install sdl2 pkg-config gzip --arch $env:PLATFORM
 scoop install https://gist.github.com/tresf/d95ee9c6649a5dfa010e5196ec56cb19/raw/2f9859638a60411b08988af88cd6aae24a7ebbaa/libsndfile.json --arch $env:PLATFORM
 scoop install https://gist.github.com/tresf/537ed72730a8b18341a35eaa3759e36f/raw/5ab74152d2c2b30fb762a22118ef511b004abea9/fftw.json --arch $env:PLATFORM 
-scoop install https://gist.github.com/tresf/a5dc944dc9c5d437261b1e38171b1ac1/raw/541f05dd9c01cb1696cae9dd100a96c97cc475db/libsamplerate.json --arch $env:PLATFORM
+scoop install https://gist.githubusercontent.com/SecondFlight/1b11e858bff5243788bf2e888eab3331/raw/63a40b6d92b24b8bbecc0d7dbc55a025b1c12308/libsamplerate.json --arch $env:PLATFORM
 
 # Setup right architecture for cmake
 $env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"

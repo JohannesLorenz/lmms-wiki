@@ -137,6 +137,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 | [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/v3.0/variable/CMAKE_BUILD_TYPE.html) | Force build to include debugging or optimization symbols | `Release`, `Debug`, `RelWithDebInfo` |
 | [`FORCE_VERSION`](../blob/master/cmake/modules/VersionInfo.cmake) | Force version within software, useful for distributing one-off packages | `internal`, `1.2.3-myfix` |
 | [`PLUGIN_LIST`](../blob/master/plugins/CMakeLists.txt) | Limit build only to the specified [`/plugins/`](../blob/master/plugins/), used to reduce compile time, such as when [bisecting](https://git-scm.com/docs/git-bisect) | `"audio_file_processor kicker triple_oscillator"` |
+| [`LMMS_MINIMAL`](../blob/master/plugins/CMakeLists.txt) | Same effect as `PLUGIN_LIST`, but auto-selects the core plugins required for most basic testing. | `True` |
 | [`WANT_QT5`, `WANT_SDL`, `WANT_SWH`, `WANT_VST`...](../blob/master/CMakeLists.txt) | Toggle on/off a library, dependency or feature | `ON`, `OFF` |
 
 

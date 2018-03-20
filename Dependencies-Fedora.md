@@ -8,7 +8,10 @@ dnf install qt4-devel libsndfile-devel fftw3-devel libvorbis-devel \
 
 # Qt5
 ```bash
-#sorry, this area is under construction
+sudo dnf install qt5-devel libsndfile-devel fftw3-devel libvorbis-devel \
+     libsamplerate-devel libogg-devel stk-devel fltk-devel fltk-fluid \
+     fluidsynth-devel alsa-lib-devel pulseaudio-libs-devel gcc-c++ xcb-util-devel \
+     xcb-util-keysyms-devel \
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

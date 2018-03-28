@@ -18,4 +18,4 @@ sudo dnf install git qt5-devel libsndfile-devel fftw3-devel libvorbis-devel \
 <br><!-- End Section--><br>
 
 ## Troubleshooting
-&nbsp;&nbsp;&nbsp;...nothing here yet, want to [add something](dependencies-opensuse/_edit)?
+&nbsp;&nbsp;&nbsp;...nothing here yet, want to [add something](dependencies-fedora/_edit)?

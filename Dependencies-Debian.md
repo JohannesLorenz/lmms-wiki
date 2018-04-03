@@ -1,3 +1,20 @@
+## Qt5
+
+```bash
+# For VST support
+sudo dpkg --add-architecture i386
+sudo apt-get update
+```
+
+```bash
+sudo apt-get install cmake git libsndfile1-dev libsamplerate0-dev libasound2-dev \
+libstk0-dev libsdl1.2-dev portaudio19-dev libjack-dev ladspa-sdk libvorbis-dev \
+libfltk1.3-dev fluid libpulse-dev libfluidsynth-dev libfftw3-dev \
+libxcb-keysyms1-dev libxcb-util0-dev libgig-dev libmp3lame-dev \
+libwine-dev qt5-default libqt5x11extras5-dev qttools5-dev qtbase5-private-dev \
+gcc-multilib g++-multilib libwine-dev:i386
+```
+
 ## Qt4
 
 ```bash

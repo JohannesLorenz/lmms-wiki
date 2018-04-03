@@ -31,7 +31,7 @@ Recommended.  Each platform requires a [compiler](#compiler) and several [librar
 
 | Ubuntu | Debian | Fedora | openSUSE | Arch | macOS | Windows |
 |--------|--------|--------|----------|------|-------|---------|
-| [Qt5](dependencies-ubuntu#qt5), [Qt4](dependencies-ubuntu#qt4) | [Qt4](dependencies-debian#qt4) | [Qt4](dependencies-fedora#qt4), [Qt5](dependencies-fedora#qt5) | [Qt5](dependencies-opensuse#qt5), [Qt4](dependencies-opensuse#qt4) | [Qt5](dependencies-arch) | [Qt5](dependencies-macos#qt5), [Qt4](dependencies#qt4-macos) | [crosscompile](dependencies-windows#ubuntu-cross-compile), [msys2](dependencies-windows#windows-os), [MSVC](dependencies-windows#msvc) |
+| [Qt5](dependencies-ubuntu#qt5), [Qt4](dependencies-ubuntu#qt4) | [Qt5](dependencies-debian#qt5), [Qt4](dependencies-debian#qt4) | [Qt4](dependencies-fedora#qt4), [Qt5](dependencies-fedora#qt5) | [Qt5](dependencies-opensuse#qt5), [Qt4](dependencies-opensuse#qt4) | [Qt5](dependencies-arch) | [Qt5](dependencies-macos#qt5), [Qt4](dependencies#qt4-macos) | [crosscompile](dependencies-windows#ubuntu-cross-compile), [msys2](dependencies-windows#windows-os), [MSVC](dependencies-windows#msvc) |
 
 &nbsp;&nbsp;&nbsp; ... platform missing?  Add it [here](Dependencies-FooBar).
 

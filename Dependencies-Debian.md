@@ -12,7 +12,7 @@ libstk0-dev libsdl1.2-dev portaudio19-dev libjack-dev ladspa-sdk libvorbis-dev \
 libfltk1.3-dev fluid libpulse-dev libfluidsynth-dev libfftw3-dev \
 libxcb-keysyms1-dev libxcb-util0-dev libgig-dev libmp3lame-dev \
 libwine-dev qt5-default libqt5x11extras5-dev qttools5-dev qtbase5-private-dev \
-gcc-multilib g++-multilib libwine-dev:i386
+gcc-multilib g++-multilib libwine-dev:i386 wine32
 ```
 
 ## Qt4

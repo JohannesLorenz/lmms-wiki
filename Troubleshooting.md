@@ -14,13 +14,6 @@ Troubleshooting guide for running LMMS on various platforms.  You may also ask i
  * Locate `%USERPROFILE%\.lmmsrc.xml`, remove it (again, if paranoid, move it instead)
  * Reinstall LMMS
  
-If LMMS launches, great.  If it doesn't, search for Qt conflicts:
-
-### Qt Conflicts
- * Search your computer for any files named `Qt*.dll` (Windows + F, Qt*.dll, wait for it to finish).
-   * Take special note of any DLLs that may be in your `PATH`, such as `C:\Windows`, `C:\Windows\System32`, etc.  You may need to delete them manually or uninstall the application associated with them.
-   * Ignore those found in `%APPDATA%` or `Program Files`, they're generally safe.  Watch out for those installed in `C:\Windows` or `C:\Windows\System32`
-
 ### Sound Driver Conflicts
  * Drivers are the most common cause of crashes on startup.
  * First attempt to disable the sound devices through Device Manager and enable them one-by-one.
@@ -41,6 +34,13 @@ If LMMS launches, great.  If it doesn't, search for Qt conflicts:
 ### SSD Worn Bits
 * Some solid-state hard drives suffer a condition known as ["worn bits"](https://github.com/LMMS/lmms/issues/3488#issuecomment-292051362). 
  The vendor disk utility or running `chkdsk /f` as administration should help. 
+
+If LMMS is fixed, great.  If it doesn't, search for Qt conflicts:
+
+### Qt Conflicts
+ * Search your computer for any files named `Qt*.dll` (Windows + F, Qt*.dll, wait for it to finish).
+   * Take special note of any DLLs that may be in your `PATH`, such as `C:\Windows`, `C:\Windows\System32`, etc.  You may need to delete them manually or uninstall the application associated with them.
+   * Ignore those found in `%APPDATA%` or `Program Files`, they're generally safe.  Watch out for those installed in `C:\Windows` or `C:\Windows\System32`
 
 
 If that doesn't work you can ask in our `#support` channel on [Discord](https://lmms.io/chat).

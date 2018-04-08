@@ -26,9 +26,10 @@ Reading symbols from ./lmms...done.
 In the event a crash only occurs from a Linux AppImage:
 
 1. Run `./lmms-x.x.x.AppImage --appimage-extract`
-2. Run `gdb squashfs-root/usr/bin/lmms.real` (an optionally second parameter is the path to a core dump)
-3. Type `set sysroot ./squasfs-root` and then `set solib-search-path ./squashfs-root/usr/lib`
-4. Type `thread apply all bt full` to get full backtrace of all threads.
+2. Run `export LD_LIBRARY_PATH="$(pwd -P)/squashfs-root/usr/lib:$LD_LIBRARY_PATH"`
+3. Run `gdb squashfs-root/usr/bin/lmms.real` (an optionally second parameter is the path to a core dump)
+4. Type `set sysroot ./squasfs-root` and then `set solib-search-path ./squashfs-root/usr/lib`
+5. Type `thread apply all bt full` to get full backtrace of all threads.
 
 ### Using gdb
 

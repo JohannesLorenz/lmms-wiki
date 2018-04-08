@@ -22,6 +22,16 @@ Reading symbols from ./lmms...done.
 (gdb) 
 ```
 
+### Debugging an AppImage
+In the event a crash only occurs from an AppImage:
+
+1. Run `./lmms-x.x.x.AppImage --appimage-extract`
+2. Run `gdb squashfs-root/usr/bin/lmms.real` (an optionally second parameter is the path to a core dump)
+3. Type `set sysroot ./squasfs-root` and then `set solib-search-path ./squashfs-root/usr/lib`
+4. Type `thread apply all bt full` to get full backtrace of all threads.
+
+### Using gdb
+
 A concise tutorial/reference for how to use gdb can be found [here](http://www.unknownroad.com/rtfm/gdbtut/), but if you just want to cut straight to getting useful debug info for a problem, the general procedure looks like this:
 ```
 (gdb) run

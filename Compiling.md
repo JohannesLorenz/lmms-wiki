@@ -104,7 +104,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 1. Prepare `build` and, optionally, the `target` directories
    ```bash
    cd lmms
-   mkdir build target
+   mkdir build
    cd build
    ```
 

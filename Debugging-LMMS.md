@@ -23,7 +23,7 @@ Reading symbols from ./lmms...done.
 ```
 
 ### Debugging an AppImage
-In the event a crash only occurs from an AppImage:
+In the event a crash only occurs from a Linux AppImage:
 
 1. Run `./lmms-x.x.x.AppImage --appimage-extract`
 2. Run `gdb squashfs-root/usr/bin/lmms.real` (an optionally second parameter is the path to a core dump)

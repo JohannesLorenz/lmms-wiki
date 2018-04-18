@@ -20,9 +20,7 @@
 ## Qt5
    ```bash
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
-   sdl libgig libsoundio stk portaudio node fltk qt5 glib
-
-   brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
+   fluid-synth sdl libgig libsoundio stk portaudio node fltk qt5 glib
    ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
@@ -62,9 +60,7 @@ Then apply some manual patches
 ## Qt4
    ```bash
    brew install git cmake pkgconfig fftw libogg libvorbis lame libsndfile libsamplerate jack \
-   sdl libgig libsoundio stk portaudio node fltk cartr/qt4/qt
-
-   brew install --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/fluid-synth.rb
+   fluid-synth sdl libgig libsoundio stk portaudio node fltk cartr/qt4/qt
    ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)

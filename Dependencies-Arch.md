@@ -9,4 +9,4 @@ perl-list-moreutils perl-exporter-tiny perl-xml-parser
 
 ## Troubleshooting
 
-&nbsp;&nbsp;&nbsp;...nothing here yet, want to [add something](dependencies-opensuse/_edit)?
+&nbsp;&nbsp;&nbsp;...nothing here yet, want to [add something](Dependencies-Arch/_edit)?

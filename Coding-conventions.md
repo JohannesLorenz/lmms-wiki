@@ -52,9 +52,13 @@ Example:
 ```
 
 **• Member variables are prefixed with "m_".**  
-Example:
+**• Static variables are prefixed with "s_".**  
+Examples:
 ```c++
-	Knob * m_chordRangeKnob;
+	float m_tension;
+```
+```c++
+	static int s_quantization;
 ```
 
 **• Function parameters are _not_ prefixed with '_' anymore.**  

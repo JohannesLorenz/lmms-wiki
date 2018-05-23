@@ -14,16 +14,9 @@ Model emits `Model::dataChanged` signal when its data is changed and `Model::pro
 
 # BB tracks
 
-**Question:**
+Track::BBTrack.
 
-From a song, you can get a list of tracks, and some of those tracks are of
-type track::BBTrack.
-
-I can get a list of TCOs (track->getTCOs) and these are
-trackContentObjects.  I've been confused because I thought TCOs were the
-"tracks within the BB track", meaning for example, a kick, snare and high
-hat.  But they are actually blocks within the song editor.  If I have three
-measures in the BBTTrack, I'll have three trackContentObjects when I debug.
+A list of TCOs(`TrackContentObjects`) by calling `Track::getTCOs` for beat/bassline(BB) tracks(type `Track::BBTrack`) are actually blocks within the song editor, not within the BB editor.
 
 I want to access the tracks (in my example they would be InstrumentTracks)
 that live within the BBTrack, and I want to do it from the BBTrack object
@@ -31,17 +24,9 @@ that live within the BBTrack, and I want to do it from the BBTrack object
 
 Would someone give me a quick overview of the BB track architecture?
 
-**Answer:**
+All tracks in BB editor are located within a separate track container `BBTrackContainer`. You can access the container by `Engine::getBBTrackContainer()`. Playing a certain BB track (i.e. all TCOs of the tracks inside at a certain position) is achieved via `BBTrack::play(...)`.
 
-All actual tracks of BB-tracks are located within BbTrackContainer
-(see bb_track_container.h/bb_track_container.cpp). Get all tracks via
-engine::getBBTrackContainer()->tracks(). Playing a certain BB track
-(i.e. all TCOs of the tracks inside at a certain position) is achieved
-via bbTrack::play(...).
-
-BB track 0 = all TCOs (patterns) of the instrument tracks inside at
-position 0. BB track 1 = all patterns at position 1 and so on.. See
-bbTrackContainer::fixIncorrectPositions() for an illustration.
+Tracks in BB editor has one TCO per each beat/bassline. The index of BB track corresponds to the index of TCO for parent BB track in the track.
 
 # Linux audio architecture
 

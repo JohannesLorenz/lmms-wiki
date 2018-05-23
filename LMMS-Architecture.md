@@ -14,15 +14,7 @@ Model emits `Model::dataChanged` signal when its data is changed and `Model::pro
 
 # BB tracks
 
-Track::BBTrack.
-
 A list of TCOs(`TrackContentObjects`) by calling `Track::getTCOs` for beat/bassline(BB) tracks(type `Track::BBTrack`) are actually blocks within the song editor, not within the BB editor.
-
-I want to access the tracks (in my example they would be InstrumentTracks)
-that live within the BBTrack, and I want to do it from the BBTrack object
- that is returned from the Song.
-
-Would someone give me a quick overview of the BB track architecture?
 
 All tracks in BB editor are located within a separate track container `BBTrackContainer`. You can access the container by `Engine::getBBTrackContainer()`. Playing a certain BB track (i.e. all TCOs of the tracks inside at a certain position) is achieved via `BBTrack::play(...)`.
 

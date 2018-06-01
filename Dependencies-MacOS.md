@@ -53,6 +53,9 @@ Then apply some manual patches
    patch ~/lmms/src/core/MemoryManager.cpp MemoryManager.cpp.diff
 
    # Patch rpmalloc.c
+   cd src/3rdparty/rpmalloc/rpmalloc
+   # Force to the last version compatible with this compiler
+   git reset --hard 1.3.0 # 1.3.1 introduced C++11 atomics which aren't compatible with this version of Clang
    curl -O https://gist.githubusercontent.com/tresf/ad797cb09259bff388d8e9beb939a080/raw/88182a0d174d706c006f6b7417c5e6a1c6882fe9/rpmalloc.c.diff
    patch ~/lmms/src/3rdparty/rpmalloc/rpmalloc/rpmalloc/rpmalloc.c rpmalloc.c.diff
    ```

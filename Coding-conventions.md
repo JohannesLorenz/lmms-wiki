@@ -97,12 +97,13 @@ Example:
 	}
 ```
 
-**• Standard true/false constants.**  
+**• Standard true/false constants instead of C-style one.**  
 Example:
 ```c++
-	if (a == true)
+	if (a == 1)
 	{
-		b = false;
+		b = true; // OK
+		c = FALSE; // use false instead
 	}
 ```
 

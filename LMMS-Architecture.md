@@ -8,7 +8,7 @@ This page is an attempt to aggregate the informations found.
 # Model and ModelView
 
 LMMS uses a design pattern similar to [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). In LMMS, most of views also play a role as controllers.
-Model emits `Model::dataChanged` signal when its data is changed and `Model::propertiesChanged` when its property(range, step size, etc.). These signals are used for updating corresponding views(see `ModelVies::doConnections`) and tracking changes in models.
+Model emits `Model::dataChanged` signal when its data is changed and `Model::propertiesChanged` when its property(range, step size, etc.). These signals are used for updating corresponding views(see `ModelView::doConnections`) and tracking changes in models.
 
 `ModelView` holds reference to its model. It *doesn't own the model* except the model is default-constructed. Existing `ModelView` instance can be reused by setting new model using `ModelView::setModel`. Views handle model change by overriding `modelChanged()`.
 

@@ -149,6 +149,7 @@ In order to build LMMS with Qt5, add the following flag when invoking cmake:
 
    ```bash
    -DWANT_QT5=ON
+   # ... or if cross-compiling, `-qt5` to the build script
    ```
 If your Qt5 installation does not reside in standard installation paths, additionally pass e.g.
 

@@ -145,12 +145,21 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 > `cmake -DCMAKE_BUILD_TYPE=Debug`
 
 #### Using Qt5
+Note:  These flags are only required for `stable-1.2` branch.  Newer branches (e.g. `master`) use Qt5 by default and Qt4 support has been removed.
+
+
 In order to build LMMS with Qt5, add the following flag when invoking cmake:
 
    ```bash
    -DWANT_QT5=ON
-   # ... or if cross-compiling, `-qt5` to the build script
    ```
+
+... or if you're using `mingw` and configuring via script, you will provide [`-qt5`](https://github.com/LMMS/lmms/blob/stable-1.2/cmake/build_mingw64.sh#L13) as a parameter to the shell script.
+
+   ```bash
+   ../cmake/build_mingw64.sh -qt5
+   ```
+
 If your Qt5 installation does not reside in standard installation paths, additionally pass e.g.
 
    ```bash

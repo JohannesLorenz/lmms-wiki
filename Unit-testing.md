@@ -52,7 +52,7 @@ Totals: 9 passed, 0 failed, 0 skipped, 0 blacklisted, 2ms
 ```
 
 # Writing the tests
-LMMS provides a class named `QTestSuite` for writing test cases. A test case should inherit `QTestSuit` and have its test cases declared as `private slots`. You can also add per-suite initialization/cleanup by implementing `initTestCase`/`cleanupTestCase` slots, and per-case equivalent by `init`/`cleanup`.
+LMMS provides a class named `QTestSuite` for writing test cases. A test case should inherit `QTestSuite` and have its test cases declared as `private slots`. You can also add per-suite initialization/cleanup by implementing `initTestCase`/`cleanupTestCase` slots, and per-case equivalent by `init`/`cleanup`.
 
 There are [several macros](https://doc.qt.io/qt-5/qtest.html#macros) for checking functionalities such as `QCOMPARE`, `QVERIFY`. They are needed to record failures.
 

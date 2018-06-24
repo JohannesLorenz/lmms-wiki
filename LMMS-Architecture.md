@@ -20,28 +20,21 @@ All tracks in BB editor are located within a separate track container `BBTrackCo
 
 Tracks in BB editor has one TCO per each beat/bassline. The index of BB track corresponds to the index of TCO for parent BB track in the track.
 
-# Linux audio architecture
+# Mixer and audio rendering
+LMMS has a class for audio rendering, named `Mixer`. `Mixer::renderNextBuffer` contains the main functionality of `Mixer`. Major works that the function does:
+1. Remove all finished `PlayHandle`s, which will be explained
+2. Call `Song::processNextBuffer` to play songs and add `PlayHandle`s
+3. Queue jobs for `MixerWorkerThread` and wait for worker threads (`PlayHandle`, effects in instrument tracks/sample tracks, FX mixing)
+4. Call `runChangesInModel` to process pending non-automated changes
 
-Linux audio architecture today consists of three pieces: ALSA, PA and Jack.
+## Mixer worker threads
+`MixerWorkerThread` processes `ThreadableJob`s queued in `Mixer::renderNextBuffer`. There are three kinds of jobs that `MixerWorkerThread` runs.
+- `AudioPort`: Processes intermediate audio signals(Currently used for audio effects for tracks)
+- `FxChannel`: Processes audio effects per FX channel
+- `PlayHandle`: Plays notes/instruments/audio samples
 
-ALSA is the low-level kernel implementation that provides support for
-all hardware devices. The hardware support there is as good or bad as
-all other hardware support on Linux - it varies. But that's not any kind
-of fundamental problem in Linux audio per se - it's just a problem of
-hardware vendors not caring about Linux, and as with any other hardware,
-it's up to the user to select hardware that is known to work well under
-Linux.
+## Synchronization with the mixer
 
-Both PA and Jack are higher-level architectures which use ALSA primarily
-as a backend. Their job is not to "replace" ALSA - they couldn't,
-because they can't work without a low-level backend that deals with the
-hardware directly. The job of ALSA is to abstract away the hardware so
-that other applications can use it. PA and Jack both have different
-purposes and fulfill different functions. None of them are meant as any
-kind of attempt at replacing each other.
-
-# Synchronization with the mixer
-
-The mixer is the element that renders the song into audio frames. One goal is that the mixer runs normally without using locks. The mixer will lock at an appropriate moment when changes to the song are requested, such as removing tracks and changing sample files, avoiding the use of freed data.
+One goal is that the mixer runs normally without using locks. The mixer will lock at an appropriate moment when changes to the song are requested, such as removing tracks and changing sample files, avoiding the use of freed data.
 
 When a non-automated change to the song is needed, instead of calling `lock()` and `unlock()` on a mutex, the mixer functions `requestChangeInModel()` and `doneChangeInModel()` are used. These functions synchronize GUI threads to do changes when the mixer deems appropriate. The functions do nothing if they are called from the mixer main thread. If they were called from a mixer worker thread, that would be a design error.

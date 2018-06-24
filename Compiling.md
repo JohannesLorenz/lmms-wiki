@@ -51,7 +51,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 | ✔️ | [`gcc/g++`](http://gcc.gnu.org/) | `c++11` |
 | ✔️ | [`clang`](https://clang.llvm.org/) |  |
 | ✔️ | [`mingw-w64`](https://sourceforge.net/projects/mingw-w64/) |  | 
-| ❌  | [`msvc++`](https://visualstudio.com/vs/cplusplus/) | Not yet supported |
+| ⚠️ | [`msvc++`](https://visualstudio.com/vs/cplusplus/) | Experimental, some plugins not supported yet |
 
 #### Libraries
 

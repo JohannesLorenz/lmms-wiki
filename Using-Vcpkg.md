@@ -23,10 +23,10 @@ Compiling LMMS with MSVC is most easily done using [Vcpkg](https://github.com/Mi
 
 # Clone source code
 
-Until merged, use the `msvc/vst` branch.
+Use the `master` branch, MSVC is not supported on `stable-1.2`.
 
 ```bat
-git clone -b msvc/vst https://github.com/LMMS/lmms.git
+git clone -b master https://github.com/LMMS/lmms.git
 ```
 
 # Compile using Qt Creator

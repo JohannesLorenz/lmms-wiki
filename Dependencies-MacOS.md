@@ -23,6 +23,11 @@
    fluid-synth sdl libgig libsoundio stk portaudio node fltk qt5 glib
    ```
 
+   And the dmg packaging utility
+   ```bash
+   npm install -g appdmg
+   ```
+
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>
 

@@ -29,7 +29,7 @@ sudo apt-get update
 
 ### 32-bit
 Using Qt5 (`lmms>=1.2.0`)
-```
+```bash
 sudo apt-get install cmake3 mingw32-x-sdl mingw32-x-libvorbis mingw32-x-lame \
 mingw32-x-fluidsynth mingw32-x-stk mingw32-x-glib2 mingw32-x-portaudio \
 mingw32-x-libsndfile mingw32-x-fftw mingw32-x-flac mingw32-x-fltk \
@@ -41,7 +41,7 @@ nsis
 
 ### 64-bit
 Using Qt5 (`lmms>=1.2.0`)
-```
+```bash
 sudo apt-get install cmake3 mingw64-x-sdl mingw64-x-libvorbis mingw64-x-lame \
 mingw64-x-fluidsynth mingw64-x-stk mingw64-x-glib2 mingw64-x-portaudio \
 mingw64-x-libsndfile mingw64-x-fftw mingw64-x-flac mingw64-x-fltk \

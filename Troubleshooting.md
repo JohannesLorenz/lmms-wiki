@@ -31,6 +31,21 @@ Troubleshooting guide for running LMMS on various platforms.  You may also ask i
    9.  Try LMMS again. 
 * If this doesn't help, try replacing the [`libportaudio-2.dll`  in your installation directory with a recompiled one](https://github.com/LMMS/lmms/issues/451#issuecomment-37773385).
 
+### SDL Interface Override
+(courtesy of [darkill, 2011](https://lmms.io/forum/viewtopic.php?f=3&t=283))
+1. From Windows, run `dxdiag`
+2. Select the desired audio interface, e.g. "Sound 1"
+3. In the "Drivers" section, find the driver name, e.g. "USBAUDIO.sys"
+
+   ![image](https://user-images.githubusercontent.com/6345473/43925361-121b260e-9bf5-11e8-8c2c-3146e9fd5c11.png)
+   <br>**Note:** You may choose to look for "Default Device: Yes" in the "Devices" section to send to your default interface
+
+4. Type this value into the Settings Dialog, Audio Settings, SDL section.
+
+   ![image](https://user-images.githubusercontent.com/6345473/43925260-d0a5b694-9bf4-11e8-89ad-e1ee1e8e7be9.png)
+
+5. Click OK.  Restart LMMS.  If this did not fix the problem, try another audio interface and repeat.
+
 ### SSD Worn Bits
 * Some solid-state hard drives suffer a condition known as ["worn bits"](https://github.com/LMMS/lmms/issues/3488#issuecomment-292051362). 
  The vendor disk utility or running `chkdsk /f` as administration should help. 

@@ -41,7 +41,7 @@ Alternately, you may download and compile each dependency manually.  This is rec
 #### Build Toolchain
 | Supported | Toolchain | Version | Branch | 
 |-----------|-----------|---------|-------| 
-| ✔️ | [`cmake`](https://cmake.org/) | [`3.1.0`](../blob/master/CMakeLists.txt#L1) |  [`master`](../tree/master) |
+| ✔️ | [`cmake`](https://cmake.org/) | [`3.3.0`](../blob/master/CMakeLists.txt#L1) |  [`master`](../tree/master) |
 | ✔️ | [`cmake`](https://cmake.org/) | [`2.8.7`](../blob/stable-1.2/CMakeLists.txt#L1) | [`stable-1.2`](../tree/stable-1.2) |
 | ✔️ | [`cmake`](https://cmake.org/) | [`2.4.5`](../blob/stable-1.1/CMakeLists.txt#L1) | [`stable-1.1`](../tree/stable-1.1) |
 
@@ -200,7 +200,7 @@ For a comprehensive tutorial, see also [[Debugging LMMS]]
    cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../target/
    # -- OR for better performance --
    cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=../target/
-   # re-run the build
+   # re-run the build
    make -j4
    ``` 
 ### Debugging with `gdb`

@@ -12,7 +12,7 @@ libstk0-dev libsdl1.2-dev portaudio19-dev libjack-dev ladspa-sdk libvorbis-dev \
 libfltk1.3-dev fluid libpulse-dev libfluidsynth-dev libfftw3-dev \
 libxcb-keysyms1-dev libxcb-util0-dev libgig-dev libmp3lame-dev \
 libwine-dev qt5-default libqt5x11extras5-dev qttools5-dev qtbase5-private-dev \
-gcc-multilib g++-multilib libwine-dev:i386 wine32
+gcc-multilib g++-multilib libwine-dev:i386 wine32 libxml-parser-perl liblist-moreutils-perl
 ```
 
 ## Qt4
@@ -22,7 +22,7 @@ sudo apt-get install cmake ladspa-sdk libsamplerate0-dev libsdl1.2-dev \
 libsndfile1-dev libvorbis-dev libmp3lame-dev libjack-dev libstk0-dev libfltk1.3-dev \
 fluid libasound2-dev git libpulse-dev libfluidsynth-dev libfftw3-dev \
 portaudio19-dev libgig-dev libwine-dev qt4-qmake libqt4-dev libxcb-keysyms1-dev \
-libxcb-util0-dev
+libxcb-util0-dev libxml-parser-perl liblist-moreutils-perl
 ```
 
 ### VST

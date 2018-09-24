@@ -15,7 +15,8 @@
 ## Start Coding
 
  * [[Guidelines on coding style|Coding Conventions]]  
- * [[Plugin development]]  
+ * [[Plugin development]]
+ * [[Automation Internals]]
  * [[Submitting a patch]]
  * [[Core architecture|LMMS Architecture]]  
  * [[Unit testing]]

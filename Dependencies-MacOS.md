@@ -37,15 +37,13 @@
 **Note:** This section is for macOS 10.8 only. 
    ```bash
    sudo mv /usr/bin/git /usr/bin/git.old && sudo ln -s /usr/local/bin/git /usr/bin/git # TLS1.0 was highest the OS provided, use brew version instead
-   brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/efa2cf88156c1f14c1b39c315f1f3ec0/raw/stk.rb
+   brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/9b87883886f691d0e6711f8c71d362a4/raw/stk.rb
    brew reinstall --build-from-source https://raw.githubusercontent.com/Homebrew/homebrew-core/9e2b257db3d24c9e5bd7ce2248746688f7e3f6e9/Formula/cmake.rb
    brew reinstall --build-from-source https://raw.githubusercontent.com/tresf/homebrew-core/2f6bd4138f9af6b26b5bcb066f944c9491fb106d/Formula/node.rb
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/c9260c43270abd4ce66ff40359588435/raw/650aa94f29e698b76991ed4db94cd9f0188cb7ef/fluid-synth.rb --ignore-dependencies --env=std
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/43549a998aafef79433d82659abc1922/raw/281b0e295ad29e743bcf3fe2139193976759b809/libgig.rb
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/9b87883886f691d0e6711f8c71d362a4/raw/7ac73754fdeab0ab7243b540c2ca66f272043871/stk.rb
    brew reinstall --build-from-source qt@5.5 # this will take a long, long time
-   # If you get Error: undefined method `undent' for #<String:0x000000010116f1c8>
-   find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' | xargs grep 'EOS.undent' --files-with-matches | xargs sed -i '' 's/EOS.undent/EOS/'
    ```
 
 Then apply some manual patches

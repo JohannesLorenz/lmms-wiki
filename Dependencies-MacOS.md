@@ -44,6 +44,8 @@
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/43549a998aafef79433d82659abc1922/raw/281b0e295ad29e743bcf3fe2139193976759b809/libgig.rb
    brew reinstall --build-from-source https://gist.githubusercontent.com/tresf/9b87883886f691d0e6711f8c71d362a4/raw/7ac73754fdeab0ab7243b540c2ca66f272043871/stk.rb
    brew reinstall --build-from-source qt@5.5 # this will take a long, long time
+   # If you get Error: undefined method `undent' for #<String:0x000000010116f1c8>
+   find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' | xargs grep 'EOS.undent' --files-with-matches | xargs sed -i '' 's/EOS.undent/EOS/'
    ```
 
 Then apply some manual patches

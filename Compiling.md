@@ -123,7 +123,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
    # from "lmms/build" directory
    ../cmake/build_mingw64.sh
    ```
-   > \* For 32-bit,  use `build_mingw32.sh` instead
+   > \* For 32-bit,  use `build_mingw32.sh` instead. On `master`, use `build_win64.sh` or `build_win32.sh` respectively.
 
 
    **Note:**
@@ -145,7 +145,7 @@ Assumes you've already [installed dependencies](#dependencies-quickstart) and [c
 > `cmake -DCMAKE_BUILD_TYPE=Debug`
 
 #### Using Qt5
-Note:  These flags are only required for `stable-1.2` branch.  Newer branches (e.g. `master`) use Qt5 by default and Qt4 support has been removed.
+Note:  These flags are only required for `stable-1.2` branch.  Newer branches (e.g. `master`) use Qt5 by default and Qt4 support has been removed. Skip this section if you're compiling `master`.
 
 
 In order to build LMMS with Qt5, add the following flag when invoking cmake:

@@ -9,11 +9,16 @@
     * [Setup 32-bit Dependencies](#32-bit)
     * [Setup 64-bit Dependencies](#64-bit)
     * [Setup Qt4 (Optional)](#qt4)
- * [**Compiling on Windows OS**](#windows-os)
+ * [**Compiling on Windows using MSYS**](#windows-msys)
     * [Setup Shell](#setup-shell)
     * [Setup Basic Build Environment](#setup-basic-build-environment)
     * [Setup Remaining Dependencies](#setup-remaining-dependencies)
     * [Setup Additional Workarounds](#setup-additional-workarounds)
+ * [**Compiling on Windows using MSVC**](#windows-msvc)
+    * [Prerequisites](#prerequisites)
+    * [Installing dependencies](#installing-dependencies)
+    * [Compile using Qt Creator](#compile-using-qt-creator)
+    * [Compile using the command line](#compile-using-the-command-line)
 
 <br><!-- End Section--><br>
 
@@ -61,7 +66,7 @@ If you want to cross-compile LMMS on Ubuntu later than Trusty(ex. Xenial, Artful
 <br><!-- End Section--><br>
 
 
-## Windows OS
+## Windows MSYS
 Configure a `mingw-w64` environment in Windows using [`msys2`](https://msys2.github.io/) from Start Menu
 
 ### Setup Shell
@@ -137,75 +142,67 @@ mklink /d %SystemDrive%\home %SystemDrive%\msys64\home
 &nbsp;&nbsp;&nbsp;&nbsp;...done installing?  Next, [clone the source code](Compiling#clone-source-code)
 <br><!-- End Section--><br>
 
-## MSVC
-Warning, MSVC building is still experimental.  Use with caution.
+## Windows MSVC
+Warning, MSVC building is still experimental.  Use with caution. Most plugins aren't available when compiling with MSVC.
+
+Use the `master` branch, MSVC is not supported on `stable-1.2`.
+
+```bat
+git clone -b master https://github.com/LMMS/lmms.git
+```
 
 ### Prerequisites
 
-1. Install Visual Studio
-2. Enable MSVC++ compiler in Visual Studio
-3. Install CMake, be sure to add to PATH on install
-3. Install QtCreator with Qt5 for matching MSVC++ platform
-4. Install Git
+1. Install Visual Studio Community from here: https://www.visualstudio.com/downloads/
+2. Install Qt Open Source version from here: https://www.qt.io/download
+   Select the newest Qt version for MSVC 2017 or MSVC 2015, installing Qt Creator is recommended. If you want to build for 64bit, make sure to install Qt 32bit as well to support 32bit VSTs. Because Qt doesn't offer any 32bit binaries for MSVC 2017, you'll have to install Qt for MSVC 2015 instead. This is fine as MSVC 2017 can safely link against binaries compiled with MSVC 2015.
+3. Install CMake from here: https://cmake.org/download/
+4. Installl Git
 
-### Clone Source Code
+### Installing dependencies
 
-* Until merged, please use `appveyor` branch on `tresf/lmms`:
+1. Install Vcpkg:
+   ```bat
+   git clone https://github.com/Microsoft/vcpkg
+   cd vcpkg
+   .\bootstrap-vcpkg.bat
+   ```
+2. Install LMMS dependencies using Vcpkg:
+   ```
+   vcpkg install fftw3 libsamplerate libsndfile sdl2
+   ```
+   If targeting 64bit, add the option `--triplet x64-windows`.
 
-```ps1
-git clone -b appveyor https://github.com/tresf/lmms --recursive
-```
+### Compile using Qt Creator
 
-### From PowerShell
+Skip to the [next section](#compile-using-the-command-line) if you want to use the command line instead.
 
-```ps1
+1. Open up Qt Creator
+2. Go to <kbd>Tools</kbd>-><kbd>Options</kbd>->`Build & Run`->`Kits`. Qt Creator should have detected your Qt installation automatically. We need to make adjustments to it so that CMake finds the libraries installed using Vcpkg. Select the detected kit and click <kbd>Change...</kbd> next to "CMake configuration":
 
-# Make sure you have allowed PowerShell to execute local scripts
-set-executionpolicy remotesigned -scope currentuser
+   ![](https://user-images.githubusercontent.com/2879917/41245398-36be3486-6da8-11e8-96b9-8ca98b227404.png)
 
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+3. Assuming Vcpkg is installed at `C:\vcpkg`, add `;C:\vcpkg\installed\x64-windows` to the line starting with `CMAKE_PREFIX_PATH`:
 
-# Setup right architecture for scoop
-$env:PLATFORM='x64' # or x86
+   ![](https://user-images.githubusercontent.com/2879917/41245528-86437dfe-6da8-11e8-9a10-4c1d898dfbf9.png)
 
-scoop bucket add extras
-scoop install sdl2 pkg-config gzip --arch $env:PLATFORM
-scoop install https://gist.github.com/tresf/d95ee9c6649a5dfa010e5196ec56cb19/raw/2f9859638a60411b08988af88cd6aae24a7ebbaa/libsndfile.json --arch $env:PLATFORM
-scoop install https://gist.github.com/tresf/537ed72730a8b18341a35eaa3759e36f/raw/5ab74152d2c2b30fb762a22118ef511b004abea9/fftw.json --arch $env:PLATFORM 
-scoop install https://gist.githubusercontent.com/SecondFlight/1b11e858bff5243788bf2e888eab3331/raw/63a40b6d92b24b8bbecc0d7dbc55a025b1c12308/libsamplerate.json --arch $env:PLATFORM
+4. Exit the options and open `CMakeLists.txt`.
 
-# Setup right architecture for cmake
-$env:CMAKE_PLATFORM="$(if ($env:PLATFORM -eq 'x64') { 'x64' } else { '' })"
-```
+### Compile using the command line
 
-```ps1
+Configure using CMake. This assumes you are using MSVC2017, installed Qt 5.9.5 MSVC 2015 64bit & 32bit using the default path and installed Vcpkg to `C:\vcpkg`. Change paths accordingly.
+
+```bat
 cd lmms
 mkdir build
 cd build
-cmake .. -DCMAKE_GENERATOR_PLATFORM="$env:CMAKE_PLATFORM"
+cmake .. -DCMAKE_PREFIX_PATH=C:\Qt\5.9.5\msvc2015_64;C:\vcpkg\installed\x64-windows -DCMAKE_GENERATOR="Visual Studio 15 2017 Win64"
 ```
 
-### Add libraries to path
-
-Add the following folders to your user path:
-
-```
-C:\Qt\[QT version]\[MSVC version]\bin
-C:\Users\[user]\scoop\apps\sdl2\current\lib
-C:\Users\[user]\scoop\apps\libsndfile\current\bin
-```
-
-See [here](http://www.itprotoday.com/management-mobility/how-can-i-add-new-folder-my-system-path) for instructions on changing path.
-
-You can now either use
-
-```
+If configuring succeeded, compile using
+```bat
 cmake --build . --config Release
 ```
-
-to build in the command line, or open `lmms.sln` in Visual Studio.
-
-If you're using Visual Studio, change the startup project to `lmms` by right clicking on `lmms` project in the solution explorer and clicking on `Set as StartUp Project`.
 
 ## Troubleshooting
 

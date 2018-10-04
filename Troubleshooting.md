@@ -8,6 +8,7 @@ Troubleshooting guide for running LMMS on various platforms.  You may also ask i
 ### Clean Install
 
  * Reboot your computer (ensures no instances of `lmms.exe` are already running)
+   * Additionally you may terminate the following running processes: `lmms.exe`, `RemoteZynAddSubFx.exe`, `RemoteVstPlugin.exe`, `RemoteVstPlugin32.exe` 
  * Uninstall LMMS from Control Panel
  * Locate `C:\Program Files\LMMS\` if present, remove it (if paranoid, move it to your desktop).
  * If you have a `C:\Program Files (x86)\LMMS`, remove it (again, if paranoid, move it instead).

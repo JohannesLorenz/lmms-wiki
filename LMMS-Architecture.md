@@ -38,3 +38,7 @@ LMMS has a class for audio rendering, named `Mixer`. `Mixer::renderNextBuffer` c
 One goal is that the mixer runs normally without using locks. The mixer will lock at an appropriate moment when changes to the song are requested, such as removing tracks and changing sample files, avoiding the use of freed data.
 
 When a non-automated change to the song is needed, instead of calling `lock()` and `unlock()` on a mutex, the mixer functions `requestChangeInModel()` and `doneChangeInModel()` are used. These functions synchronize GUI threads to do changes when the mixer deems appropriate. The functions do nothing if they are called from the mixer main thread. If they were called from a mixer worker thread, that would be a design error.
+
+## Example: Instruments
+
+An Instrument can initially add an `InstrumentPlayHandle` with its `AudioPort` to the `Mixer`. This will register the handle at the `Mixer` and also to the `AudioPort`. When audio shall be processed, the `InstrumentPlayHandle` thread lets the `Instrument` send audio to the `InstrumentPlayHandle`. Then, the AudioPorts checks all its `InstrumentPlayHandles`, processes this through its Effects, and finally sends the result to `FxMixer`.
